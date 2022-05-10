@@ -1,10 +1,14 @@
 <%=_.template(require('../templates/header.html'))({
-    title: "Главная | Solvik",
+    title: "Корзина | Solvik",
     menu: {}
 }) %>
 
 <main class="main">
-    <%=_.template(require('../templates/home/banner.html'))() %>
+    <div class="section">
+        <div class="container">
+            <h1>Корзина</h1>
+        </div>
+    </div>
 </main>
 
 <%=_.template(require('../templates/footer.html'))() %>
