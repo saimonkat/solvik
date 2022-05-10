@@ -6,10 +6,16 @@
   font-size: 16px;
   background: $color-blue;
   color: #fff;
+  font-size: 14px;
   user-select: none;
   text-align: center;
   transition: background-color .3s;
+  border-radius: 24px;
   cursor: pointer;
+
+  @include media-up(md) {
+    font-size: 16px;
+  }
 
   &:hover {
     background: $color-blue-hover;

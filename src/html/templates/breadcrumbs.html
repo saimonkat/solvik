@@ -1,0 +1,13 @@
+<ul class="breadcrumbs">
+    <% for (var i = 0; i < pages.length; i++) { %>
+        <li>
+            <% if (i != (pages.length - 1)) { %>
+                <a href="<%= pages[i].url %>">
+                    <%= pages[i].name %>
+                </a>
+            <% } else { %>
+                <%= pages[i].name %>
+            <% } %>
+        </li>
+    <% } %>
+</ul>

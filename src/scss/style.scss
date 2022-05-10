@@ -18,5 +18,11 @@
 @import "components/footer";
 @import "components/wow";
 
+// PARTS
+@import "parts/breadcrumbs";
+
 // HOMEPAGE
 @import "pages/home/banner";
+
+// SERVICES
+@import "pages/services/banner";

@@ -1,0 +1,45 @@
+.service-banner {
+  height: 505px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  background: url(../img/base/service-banner-mob.png) center / cover no-repeat;
+  background-color: $color-light;
+  border-radius: 24px;
+  overflow: hidden;
+  text-align: center;
+
+  @include media-up(md) {
+    height: 272px;
+    margin-bottom: 60px;
+    background-image:url(../img/base/service-banner.png);
+  }
+
+  &__wrapper {
+    padding: 0 30px;
+
+    @include media-up(md) {
+      max-width: 515px;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 500;
+
+    @include media-up(md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @include media-up(md) {
+      margin-top: 24px;
+    }
+  }
+}

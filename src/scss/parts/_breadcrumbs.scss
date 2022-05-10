@@ -1,0 +1,52 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-gray;
+  margin-bottom: 32px;
+  font-size: 12px;
+  line-height: 24px;
+
+  @include media-up(md) {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  @include media-up(xl) {
+    margin-bottom: 60px;
+  }
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+
+      @include media-up(md) {
+        margin-right: 38px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-gray;
+
+        @include media-up(md) {
+          right: -22px;
+        }
+      }
+    }
+  }
+
+  a {
+    @include link;
+  }
+}

@@ -65,7 +65,7 @@
       }
 
       @include media-down(lg) {
-        background: $color-text;
+        background: $color-gray;
         width: 16px;
         left: 8px;
         top: calc(50% - 1px) !important;

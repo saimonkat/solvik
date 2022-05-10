@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: $font;
-  color: $color-text;
+  color: $color-gray;
   letter-spacing: 0.02em;
   word-wrap: break-word;
   background-color: #fff;
@@ -79,10 +79,12 @@ h1, .h1,
 h2, .h2 {
   font-size: 24px;
   line-height: 36px;
+  margin-bottom: 24px;
 
   @include media-up(md) {
     font-size: 36px;
     line-height: 48px;
+    margin-bottom: 40px;
   }
 
   @include media-up(xl) {
@@ -133,7 +135,7 @@ textarea {
   height: 30px;
   padding: 0 20px;
   font-family: inherit;
-  color: $color-text;
+  color: $color-gray;
   background-color: #fff;
   border: none;
 
@@ -143,14 +145,24 @@ textarea {
   }
 }
 
-.section {
-  padding: 16px 0;
+.page {
+  padding: 24px 0 60px;
 
   @include media-up(md) {
-    padding: 32px 0;
+    padding: 40px 0 100px;
+  }
+}
+
+.page-wrapper {
+  display: grid;
+  grid-gap: 32px;
+
+  @include media-up(md) {
+    grid-gap: 40px;
   }
 
   @include media-up(xl) {
-    padding: 60px 0;
+    grid-template-columns: 1fr 306px;
+    grid-gap: 32px;
   }
 }
