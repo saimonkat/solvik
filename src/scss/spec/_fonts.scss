@@ -6,8 +6,4 @@ $font-directory: "../fonts";
 @include font($font_directory, 'GolosText', 'GolosText-Bold', 700, 'normal');
 
 // Montserrat
-@include font($font_directory, 'Montserrat', 'Montserrat-Light', 300, 'normal');
-@include font($font_directory, 'Montserrat', 'Montserrat-Regular', 400, 'normal');
-@include font($font_directory, 'Montserrat', 'Montserrat-Medium', 500, 'normal');
-@include font($font_directory, 'Montserrat', 'Montserrat-SemiBold', 600, 'normal');
 @include font($font_directory, 'Montserrat', 'Montserrat-Bold', 700, 'normal');

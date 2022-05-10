@@ -1,4 +1,5 @@
 // LIBS
+@import "~nice-select2/dist/css/nice-select2.css";
 
 // SPECIFICATION
 @import "spec/variables";
@@ -9,9 +10,13 @@
 
 // COMPONENTS
 @import "components/container";
+@import "components/btn";
+@import "components/socials";
 @import "components/hamburger";
+@import "components/nav";
 @import "components/header";
 @import "components/footer";
+@import "components/wow";
 
 // HOMEPAGE
 @import "pages/home/banner";

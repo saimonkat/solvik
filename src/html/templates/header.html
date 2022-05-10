@@ -19,7 +19,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Preloading fonts -->
-    <link rel="preload" href="fonts/FontName.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/GolosText/GolosText-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/GolosText/GolosText-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -28,36 +30,248 @@
 
 <header class="header">
     <div class="header__top">
-        <div class="container">
-
+        <div class="header__container container">
+            <div class="header__info">
+                <svg width="20" height="20">
+                    <use xlink:href="#map"></use>
+                </svg>
+                г. Санкт-Петербург, улица, дом. 4
+            </div>
+            <div class="header__info">
+                <svg width="20" height="20">
+                    <use xlink:href="#clock"></use>
+                </svg>
+                8:00 - 24:00
+            </div>
+            <a href="tel:+7 (663) 999 99 99" class="header__info">
+                <svg width="20" height="20">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                +7 (663) 999 99 99
+            </a>
         </div>
     </div>
+
     <div class="header__main">
-        <div class="container">
+        <div class="header__container container">
+            <a href="/" class="header__logo">
+                <img src="img/base/logo.svg" alt="">
+            </a>
+            <div class="header__service">
+                <img src="img/base/service.svg" alt="">
+            </div>
 
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="repair-link">
+                        <a href="#">Ремонт</a>
+                    </li>
+                    <li>
+                        <a href="#">ТО</a>
+                    </li>
+                    <li class="menu-item-hidden">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="menu-item-hidden">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="menu-item-hidden">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#">Диагностика</a>
+                    </li>
+                </ul>
+
+                <div class="nav__contacts">
+                    <p>г. Санкт-Петербург, улица, дом. 4</p>
+                    <p>Время работы : пн-вс 8:00 - 24:00 </p>
+                    <p>name@gmail.com по всем попросам</p>
+                </div>
+
+                <div class="nav__socials socials">
+                    <a href="https://www.instagram.com/"
+                       class="social"
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       title="Instagram">
+                        <svg width="32" height="32">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                        <span>*</span>
+                    </a>
+                    <a href="http://vk.com/"
+                       class="social"
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       title="VK">
+                        <svg width="32" height="32">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-backdrop"></div>
+
+            <div class="repair-nav">
+                <div class="container">
+                    <div class="repair-nav__back repair-close">
+                        Ремонт
+                    </div>
+                    <div class="repair-nav__togglers">
+                        <div class="repair-nav__toggler" data-menu="services">
+                            По услугам
+                        </div>
+                        <div class="repair-nav__toggler" data-menu="brands">
+                            По маркам
+                        </div>
+                    </div>
+                    <div class="repair-nav__menus">
+                        <div class="repair-nav__menu" data-menu="services">
+                            <div class="repair-nav__back repair-back">
+                                По услугам
+                            </div>
+                            <div class="repair-nav__title">
+                                Выберите услугу по ремонту
+                            </div>
+                            <ul class="repair-nav__list">
+                                <li><a href="#">Ремонт подвески</a></li>
+                                <li><a href="#">Ремонт тормозной системы</a></li>
+                                <li><a href="#">Ремонт рулевого управления</a></li>
+                                <li><a href="#">Ремонт трансмиссии</a></li>
+                                <li><a href="#">Ремонт электрооборудования</a></li>
+                                <li><a href="#">Ремонт кондиционера и печки</a></li>
+                                <li><a href="#">Замена жидкостей</a></li>
+                                <li><a href="#">Ремонт выхлопной системы</a></li>
+                                <li><a href="#">Техническое обслуживание</a></li>
+                                <li><a href="#">Ремонт двигателя</a></li>
+                                <li><a href="#">Шиномонтаж</a></li>
+                            </ul>
+                        </div>
+                        <div class="repair-nav__menu" data-menu="brands">
+                            <div class="repair-nav__back repair-back">
+                                По маркам
+                            </div>
+                            <div class="repair-nav__title">
+                                Выберите марку автомобиля
+                            </div>
+                            <ul class="repair-nav__brands">
+                                <li>
+                                    <span class="letter">B</span>
+                                    <ul>
+                                        <li><a href="#">Buick</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">C</span>
+                                    <ul>
+                                        <li><a href="#">Cadillac</a></li>
+                                        <li><a href="#">Chevrolet</a></li>
+                                        <li><a href="#">Chrysler</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">D</span>
+                                    <ul>
+                                        <li><a href="#">Dodge</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">F</span>
+                                    <ul>
+                                        <li><a href="#">Ford</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">G</span>
+                                    <ul>
+                                        <li><a href="#">GMC</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">H</span>
+                                    <ul>
+                                        <li><a href="#">Hummer</a></li>
+                                        <li><a href="#">Hyundai</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">J</span>
+                                    <ul>
+                                        <li><a href="#">Jeep</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">K</span>
+                                    <ul>
+                                        <li><a href="#">Kia</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">L</span>
+                                    <ul>
+                                        <li><a href="#">Lincoln</a></li>
+                                        <li><a href="#">Lexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">M</span>
+                                    <ul>
+                                        <li><a href="#">Mercury</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">P</span>
+                                    <ul>
+                                        <li><a href="#">Pontiac</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">O</span>
+                                    <ul>
+                                        <li><a href="#">Opel</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">S</span>
+                                    <ul>
+                                        <li><a href="#">Ssang-Yong</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="letter">T</span>
+                                    <ul>
+                                        <li><a href="#">Toyota</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__btns">
+                <a href="#" class="header__btn">
+                    <svg width="32" height="32">
+                        <use xlink:href="#user"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__btn basket-btn">
+                    <svg width="32" height="32">
+                        <use xlink:href="#basket"></use>
+                    </svg>
+                    <span>1</span>
+                </a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-burger">
+                    <ul class="nav-burger__list"></ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container header__content">
-        <a href="/" class="header__logo"></a>
-
-        <nav class="header__nav nav">
-            <ul class="nav__list">
-                <li class="<%=menu.name1%>">
-                    <a href="#">link</a>
-                </li>
-                <li class="<%=menu.name2%> menu-item-has-children">
-                    <a href="#">link</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav><!-- / .nav -->
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header><!-- / .header -->
+</header>

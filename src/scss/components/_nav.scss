@@ -1,0 +1,344 @@
+.nav {
+  @include nav;
+
+  @include media-down(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .show-nav & {
+      transform: translateX(0);
+    }
+  }
+
+  a {
+    @include link;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  &__list {
+    @include media-up(xl) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include media-down(lg) {
+      margin-bottom: 16px;
+    }
+
+    & > li {
+      @include media-down(lg) {
+        padding: 16px 0;
+        border-bottom: 1px solid $color-border;
+      }
+
+      @include media-up(xl) {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &.menu-item-hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    margin-top: auto;
+
+    @include media-up(xl) {
+      display: none;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__socials {
+    margin-top: 16px;
+
+    @include media-up(xl) {
+      display: none;
+    }
+
+    .social {
+      color: $color-text;
+    }
+  }
+}
+
+.nav-backdrop {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+
+  .show-nav & {
+    display: block;
+  }
+}
+
+.nav-burger {
+  position: absolute;
+  z-index: 101;
+  top: 44px;
+  right: 0;
+  z-index: 1;
+  width: 158px;
+  padding: 12px 0 12px 24px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0px 2px 13px rgba(156, 167, 180, 0.29);
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s;
+  transform: translateY(-20px);
+
+  .show-nav & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @include media-down(lg) {
+    display: none;
+  }
+
+  li {
+    padding: 12px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    @include link;
+    font-weight: 500;
+  }
+}
+
+.repair-link {
+  position: relative;
+  @include nav-arrow;
+
+  @include media-up(xl) {
+    a {
+      padding-right: 24px;
+    }
+  }
+
+  &:before {
+    right: 24px;
+    transform: rotate(-90deg);
+
+    @include media-up(md) {
+      right: 40px;
+    }
+
+    @include media-up(xl) {
+      right: 0;
+      transform: none;
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.repair-nav {
+  @include nav;
+
+  @include media-up(xl) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: 92px;
+    width: 100vw;
+    padding: 40px 0 80px;
+    background: #fff;
+    box-shadow: 0px 2px 13px rgba(156, 167, 180, 0.29);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .25s;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  .container {
+    @include media-up(xl) {
+      display: flex;
+      flex-direction: column
+    }
+
+    @include media-down(lg) {
+      padding: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @include link;
+
+    @include media-up(md) {
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    @include nav-arrow;
+    color: $color-blue;
+    top: 50px;
+    left: 24px;
+    padding-left: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    cursor: pointer;
+
+    @include media-up(md) {
+      left: 40px;
+      top: 65px;
+      padding-left: 40px;
+    }
+
+    @include media-up(xl) {
+      display: none;
+    }
+
+    &:before {
+      left: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__togglers {
+    @include media-up(xl) {
+      display: flex;
+      margin: 0 auto 40px;
+      border: 1px solid $color-border-2;
+      border-radius: 24px;
+    }
+  }
+
+  &__toggler {
+    position: relative;
+    @include nav-arrow;
+
+    @include media-up(xl) {
+      padding: 12px 24px;
+      color: $color-blue;
+      border-radius: 24px;
+      cursor: pointer;
+
+      &.active {
+        background: $color-blue;
+        color: #fff;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      right: 24px;
+      transform: rotate(-90deg);
+
+      @include media-up(md) {
+        right: 40px;
+      }
+    }
+
+    @include media-down(lg) {
+      position: relative;
+      @include link;
+      @include nav-arrow;
+      font-weight: 500;
+      padding: 16px 0;
+      border-bottom: 1px solid $color-border;
+
+      &:before {
+        transform: rotate(-90deg)
+      }
+    }
+  }
+
+  &__menu {
+    @include nav;
+
+    @include media-up(xl) {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    margin-bottom: -24px;
+
+    @include media-up(xl) {
+      columns: 4;
+    }
+  }
+
+  &__brands {
+    margin-bottom: -24px;
+
+    @include media-up(xl) {
+      columns: 5;
+    }
+
+    & > li {
+      display: flex;
+    }
+
+    .letter {
+      color: $color-red;
+      font-weight: 500;
+      margin-right: 24px;
+    }
+
+    ul li {
+      margin-bottom: 16px;
+    }
+  }
+}

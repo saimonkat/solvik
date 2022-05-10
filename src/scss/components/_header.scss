@@ -1,3 +1,169 @@
 .header {
-  
+  height: 88px;
+
+  @include media-up(md) {
+    height: 117px;
+  }
+
+  @include media-up(xl) {
+    height: 139px;
+  }
+
+  &__top {
+    position: relative;
+    z-index: 1001;
+    height: 40px;
+    background: $color-blue;
+    color: #fff;
+
+    @include media-up(md) {
+      height: 42px;
+    }
+
+    @include media-up(xl) {
+      height: 47px;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    box-shadow: 0px 3px 24px rgba(16, 18, 21, 0.08);
+
+    @include media-up(md) {
+      height: 75px;
+    }
+
+    @include media-up(xl) {
+      height: 92px;
+    }
+
+    .page-scrolled & {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      @include media-up(xl) {
+        margin-right: 32px;
+      }
+
+      @include media-down(sm) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
+
+    svg {
+      margin-right: 12px;
+
+      @include media-down(md) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-right: 20px;
+    height: 20px;
+
+    @include media-up(md) {
+      height: 34px;
+    }
+
+    @include media-up(lg) {
+      height: 45px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__service {
+    @include media-down(sm) {
+      display: none;
+    }
+
+    @include media-up(md) {
+      height: 32px;
+      margin-right: auto;
+    }
+
+    @include media-up(lg) {
+      height: 38px;
+    }
+  }
+
+  &__nav {
+    @include media-up(xl) {
+      margin-right: 60px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+
+    @include media-up(xl) {
+      position: relative;
+      z-index: 100;
+      padding-left: 40px;
+      border-left: 1px solid $color-border-2;
+    }
+  }
+
+  &__btn {
+    @include icon;
+    @include link;
+    margin-right: 24px;
+
+    @include media-up(md) {
+      margin-right: 40px;
+    }
+
+    &.basket-btn span {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      height: 11px;
+      padding: 0 3px;
+      border-radius: 5px;
+      font-size: 9px;
+      line-height: 1.2;
+      color: #fff;
+      background: $color-red;
+
+      @include media-up(md) {
+        left: 21px;
+        height: 14px;
+        padding: 0 4px;
+        border-radius: 7px;
+        font-size: 12px;
+        line-height: 1.1;
+      }
+    }
+  }
 }

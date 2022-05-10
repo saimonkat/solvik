@@ -1,10 +1,10 @@
 .container {
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
   width: 100%;
 
   @include media-up(md) {
-    padding: 0 30px;
-    max-width: 1200px;
+    padding: 0 40px;
+    max-width: 1320px;
   }
 }

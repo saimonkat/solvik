@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  width: fit-content;
+  padding: 12px 15px;
+  font-family: $font;
+  font-size: 16px;
+  background: $color-blue;
+  color: #fff;
+  user-select: none;
+  text-align: center;
+  transition: background-color .3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-blue-hover;
+  }
+
+  &:active {
+    background: $color-blue-active;
+  }
+
+  &--red {
+    background: $color-red;
+
+    &:hover {
+      background: $color-red-hover;
+    }
+
+    &:active {
+      background: $color-red-active;
+    }
+  }
+}

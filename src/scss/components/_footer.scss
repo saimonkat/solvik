@@ -1,3 +1,55 @@
 .footer {
-  
+  background: $color-blue;
+  padding: 24px 0 40px;
+  color: $color-footer;
+
+  @include media-up(md) {
+    padding: 60px 0 24px;
+  }
+
+  @include media-up(xl) {
+    padding: 80px 0 40px;
+  }
+
+  &__main {
+    margin-bottom: 30px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__top {
+    @include media-up(md) {
+      display: flex;
+      gap: 150px;
+    }
+  }
+
+  &__nav {
+    width: 300px;
+
+    ul {
+      columns: 2;
+    }
+
+    li {
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: $color-footer;
+      transition: color .15s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
