@@ -28,7 +28,6 @@ body {
 main {
   flex-grow: 1;
   width: 100%;
-  overflow: hidden;
 }
 
 a {
@@ -164,5 +163,19 @@ textarea {
   @include media-up(xl) {
     grid-template-columns: 1fr 306px;
     grid-gap: 32px;
+  }
+}
+
+.page-aside {
+  @include media-up(xl) {
+    position: sticky;
+    top: 102px;
+  }
+}
+
+.page-sidebar {
+  @include media-up(xl) {
+    position: sticky;
+    top: 102px;
   }
 }
