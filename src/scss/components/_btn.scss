@@ -1,12 +1,13 @@
 .btn {
   display: block;
-  width: fit-content;
-  padding: 12px 15px;
+  width: 100%;
+  padding: 15px;
   font-family: $font;
-  font-size: 16px;
   background: $color-blue;
   color: #fff;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
   user-select: none;
   text-align: center;
   transition: background-color .3s;
@@ -14,6 +15,8 @@
   cursor: pointer;
 
   @include media-up(md) {
+    width: fit-content;
+    padding: 16px 40px;
     font-size: 16px;
   }
 

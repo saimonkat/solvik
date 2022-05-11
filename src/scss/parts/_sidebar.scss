@@ -1,0 +1,152 @@
+.sidebar {
+  border-radius: 16px;
+  border: 1px solid  $color-border-2;
+
+  @include media-up(md) {
+    border-radius: 24px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.sidebar-contacts {
+  padding: 32px;
+
+  @include media-down(lg) {
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $color-blue;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.sidebar-price {
+  $self: &;
+
+  &__title {
+    padding: 16px 24px;
+    border-bottom: 1px solid $color-border;
+
+    @include media-between(md, lg) {
+      text-align: center;
+    }
+
+    @include media-up(xl) {
+      padding: 24px 32px;
+    }
+  }
+
+  &__content {
+    @include media-between(md, lg) {
+      display: flex;
+    }
+  }
+
+  &__items {
+    padding: 16px 24px;
+    border-bottom: 1px solid $color-border;
+
+    @include media-between(md, lg) {
+      display: flex;
+      flex: 1 1 0;
+      padding: 0;
+      border-bottom: 0;
+    }
+
+    @include media-up(xl) {
+      padding: 24px 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @include media-between(md, lg) {
+      display: block;
+      flex: 1 1 0;
+      padding: 0;
+      border-bottom: 0;
+      padding: 18px;
+      border-right: 1px solid $color-border;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-only(lg) {
+      padding: 18px 32px;
+    }
+  }
+
+  &__span {
+    @include media-between(md, lg) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__sum {
+    color: $color-blue;
+    white-space: nowrap;
+  }
+
+  &__total {
+    padding: 16px 24px;
+
+    @include media-between(md, lg) {
+      display: flex;
+      align-items: center;
+      flex: 1 1 0;
+      padding: 0;
+      padding-right: 24px;
+      border-bottom: 0;
+    }
+
+    @include media-up(xl) {
+      padding: 24px 32px;
+    }
+
+    #{$self}__item {
+      border: 0;
+    }
+
+    #{$self}__sum {
+      color: $color-red;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 24px;
+
+    @include media-between(md, lg) {
+      margin-top: 0;
+      max-width: 220px;
+    }
+  }
+}

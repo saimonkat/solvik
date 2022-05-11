@@ -1,28 +1,27 @@
 .service-banner {
-  height: 505px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 140px 0 145px;
   margin-bottom: 32px;
-  background: url(../img/base/service-banner-mob.png) center / cover no-repeat;
-  background-color: $color-light;
   border-radius: 24px;
   overflow: hidden;
   text-align: center;
+  background: url(../img/base/service-banner-mob.png) center / cover no-repeat;
+  background-color: $color-light;
+
+  @include media-up(sm) {
+    padding: 40px 0;
+  }
 
   @include media-up(md) {
-    height: 272px;
     margin-bottom: 60px;
     background-image:url(../img/base/service-banner.png);
   }
 
   &__wrapper {
-    padding: 0 30px;
-
-    @include media-up(md) {
-      max-width: 515px;
-      padding: 0;
-    }
+    padding: 0 32px;
+    max-width: 575px;
   }
 
   &__title {
@@ -34,9 +33,22 @@
     }
   }
 
+  &__text {
+    font-size: 12px;
+    line-height: 24px;
+    color: $color-blue;
+
+    @include media-up(md) {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
   &__btn {
+    width: fit-content;
+    min-width: 224px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 12px;
 
     @include media-up(md) {
       margin-top: 24px;

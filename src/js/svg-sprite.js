@@ -9,3 +9,7 @@ import '../img/icon/basket.svg';
 // Socials
 import '../img/icon/instagram.svg';
 import '../img/icon/vk.svg';
+
+// Services
+import '../img/icon/service-clock.svg';
+import '../img/icon/service-phone.svg';
