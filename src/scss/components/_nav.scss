@@ -158,7 +158,12 @@
 }
 
 .repair-nav {
+  $self: &;
   @include nav;
+
+  .show-nav &.active {
+    transform: translateX(0);
+  }
 
   @include media-up(xl) {
     position: absolute;
@@ -320,6 +325,10 @@
 
   &__menu {
     @include nav;
+
+    #{$self}.active &.active {
+      transform: translateX(0);
+    }
 
     @include media-up(xl) {
       display: none;
