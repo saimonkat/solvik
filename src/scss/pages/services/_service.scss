@@ -1,0 +1,10 @@
+.service-wrapper {
+  @include media-down(sm) {
+    display: flex;
+    flex-direction: column;
+
+    .service-calc {
+      order: -1;
+    }
+  }
+}

@@ -3,10 +3,11 @@ export default function(){
     const headerTopH = headerTop.offsetHeight;
 
     const pageScroll = () => {
-        document.documentElement.classList.toggle(
-            'page-scrolled',
-            window.scrollY > headerTopH
-        )
+        if (!document.documentElement.classList.contains('show-nav'))
+            document.documentElement.classList.toggle(
+                'page-scrolled',
+                window.scrollY > headerTopH
+            )
     }
 
     pageScroll();

@@ -156,8 +156,7 @@
     z-index: 100;
     right: 0;
     top: 0;
-    width: 100%;
-    max-width: 475px;
+    width: 475px;
     height: 100vh;
     height: var(--app-height);
     padding: 140px 0 40px 40px;
@@ -175,6 +174,7 @@
   }
 
   @include media-down(sm) {
+    width: 100%;
     padding: 100px 0 40px 24px;
     box-shadow: none;
   }
@@ -192,5 +192,25 @@
     height: 16px;
     background: url(../img/icon/nav-arrow.svg);
     pointer-events: none;
+  }
+}
+
+@mixin fz12 {
+  font-size: 12px;
+  line-height: 24px;
+
+  @include media-up(md) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@mixin fz14 {
+  font-size: 14px;
+  line-height: 26px;
+
+  @include media-up(xl) {
+    font-size: 16px;
+    line-height: 28px;
   }
 }

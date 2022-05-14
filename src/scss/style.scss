@@ -17,6 +17,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/wow";
+@import "components/select";
 
 // PARTS
 @import "parts/breadcrumbs";
@@ -26,5 +27,7 @@
 @import "pages/home/banner";
 
 // SERVICES
+@import "pages/services/service";
 @import "pages/services/banner";
 @import "pages/services/calc";
+@import "pages/services/works";

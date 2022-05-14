@@ -22,7 +22,7 @@
     margin-bottom: 16px;
   }
 
-  &__item {
+  &__row {
     display: flex;
     align-items: center;
     color: $color-blue;
@@ -77,7 +77,7 @@
     }
   }
 
-  &__item {
+  &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,12 +131,13 @@
       padding: 24px 32px;
     }
 
-    #{$self}__item {
+    #{$self}__row {
       border: 0;
     }
 
     #{$self}__sum {
       color: $color-red;
+      font-weight: 500;
     }
   }
 

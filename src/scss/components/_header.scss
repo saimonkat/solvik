@@ -23,6 +23,10 @@
     @include media-up(xl) {
       height: 47px;
     }
+
+    .page-scrolled & {
+      z-index: 0;
+    }
   }
 
   &__main {
