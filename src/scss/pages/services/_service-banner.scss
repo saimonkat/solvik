@@ -21,7 +21,7 @@
 
   &__wrapper {
     padding: 0 32px;
-    max-width: 575px;
+    max-width: 560px;
   }
 
   &__title {
@@ -34,14 +34,8 @@
   }
 
   &__text {
-    font-size: 12px;
-    line-height: 24px;
     color: $color-blue;
-
-    @include media-up(md) {
-      font-size: 14px;
-      line-height: 26px;
-    }
+    @include fz12-14;
   }
 
   &__btn {

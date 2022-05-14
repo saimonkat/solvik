@@ -3,14 +3,11 @@
   flex-wrap: wrap;
   color: $color-gray;
   margin-bottom: 32px;
-  font-size: 12px;
-  line-height: 24px;
+  @include fz12-14;
 
   @include media-up(md) {
     margin-bottom: 40px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
   }
 
   @include media-up(xl) {

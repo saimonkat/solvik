@@ -7,4 +7,10 @@
     padding: 0 40px;
     max-width: 1320px;
   }
+
+  .page & {
+    @include media-up(md) {
+      max-width: 1400px;
+    }
+  }
 }

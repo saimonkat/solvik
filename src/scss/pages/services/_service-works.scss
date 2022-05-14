@@ -6,7 +6,6 @@
   }
 
   &__text {
-    @include fz12;
     margin-top: -12px;
 
     @include media-up(md) {
@@ -31,7 +30,6 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  @include fz14;
 
   & > &__check {
     position: absolute;
@@ -97,7 +95,6 @@
   }
 
   &__title {
-    @include fz12;
     font-weight: 500;
     margin-bottom: 16px;
     padding-right: 16px;
@@ -138,20 +135,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
         background: url(../img/icon/exclaim.svg) center no-repeat;
         background-color: $color-orange;
         border-radius: 50%;
-      }
-    }
 
-    &-text {
-      font-size: 12px;
-      line-height: 24px;
-
-      @include media-up(md) {
-        font-size: 14px;
+        @include media-up(md) {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
@@ -168,6 +161,10 @@
 
   .span {
     color: $color-gray;
+  }
+
+  label.span {
+    width: 100%;
   }
 
   .value {
