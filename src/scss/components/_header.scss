@@ -144,6 +144,11 @@
     @include link;
     margin-right: 24px;
 
+    @include media-down(sm) {
+      width: 24px;
+      height: 24px;
+    }
+
     @include media-up(md) {
       margin-right: 40px;
     }

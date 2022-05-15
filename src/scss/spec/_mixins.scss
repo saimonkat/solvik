@@ -136,13 +136,8 @@
 
 @mixin icon {
   position: relative;
-  width: 24px;
-  height: 24px;
-
-  @include media-up(md) {
-    width: 32px;
-    height: 32px;
-  }
+  width: 32px;
+  height: 32px;
 
   svg {
     width: 100%;

@@ -2,6 +2,12 @@
   background: $color-blue;
   padding: 24px 0 40px;
   color: $color-footer;
+  @include fz14-16;
+
+  @include media-between(md, lg) {
+    font-size: 14px;
+    line-height: 26px;
+  }
 
   @include media-up(md) {
     padding: 60px 0 24px;
@@ -11,29 +17,136 @@
     padding: 80px 0 40px;
   }
 
+  &__row {
+    display: grid;
+
+    @include media-up(sm) {
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+    }
+
+    @include media-only(sm) {
+      grid-template-areas:
+          "first first"
+          "second third";
+
+
+      & > * {
+        &:nth-child(1) {grid-area: first;}
+        &:nth-child(2) {grid-area: second;}
+        &:nth-child(3) {grid-area: third;}
+      }
+    }
+
+    @include media-up(md) {
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @include media-up(xl) {
+      grid-template-columns: repeat(3, 300px);
+    }
+
+    &:first-child {
+      grid-gap: 40px;
+    }
+
+    &:last-child {
+      grid-gap: 16px;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #265B8B;
+
+      @include media-between(md, lg) {
+        margin-top: 60px;
+        padding-top: 24px;
+      }
+    }
+  }
+
   &__main {
-    margin-bottom: 30px;
+    @include media-down(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     display: block;
-    margin-bottom: 16px;
+    width: 77px;
+    margin-bottom: 4px;
+
+    @include media-up(md) {
+      width: 107px;
+      margin-bottom: 14px;
+    }
+
+    @include media-up(xl) {
+      width: 147px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__service {
+    display: block;
+    width: 82px;
+
+    @include media-up(md) {
+      width: 113px;
+    }
+
+    @include media-up(xl) {
+      width: 156px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__call {
+    @include media-only(sm) {
+      width: 250px;
+    }
+
+    @include media-up(md) {
+      margin-top: 35px;
+    }
+
+    p {
+      margin-bottom: 4px;
+
+      @include media-up(xl) {
+        margin-bottom: 16px;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-weight: 500;
+
+      @include media-up(xl) {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: bold;
+      }
+    }
   }
 
   &__title {
     color: #fff;
     margin-bottom: 20px;
-  }
 
-  &__top {
-    @include media-up(md) {
-      display: flex;
-      gap: 150px;
+    @include media-up(xl) {
+      margin-bottom: 24px;
     }
   }
 
   &__nav {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 
     ul {
       columns: 2;
@@ -50,6 +163,72 @@
       &:hover {
         color: #fff;
       }
+    }
+  }
+
+  &__contacts {
+    @include media-up(xl) {
+      width: 330px;
+    }
+
+    p {
+      margin-bottom: 16px;
+
+      @include media-up(md) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 16px;
+
+    @include media-up(md) {
+      margin-top: 20px;
+    }
+
+    .social {
+      color: $color-footer;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 16px;
+    }
+
+    img {
+      height: 13px;
+
+      &:last-child {
+        height: 15px;
+      }
+    }
+  }
+
+  &__authors {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+
+    @include media-only(sm) {
+      width: 250px;
+    }
+
+    span {
+      margin-right: 12px;
+    }
+
+    img {
+      height: 22px;
     }
   }
 }
