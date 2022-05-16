@@ -1,0 +1,30 @@
+.swiper-horizontal {
+  position: relative;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+
+  &-bullet {
+    width: 20px;
+    height: 3px;
+    background: #CFC7BF;
+    border-radius: 3px;
+    opacity: 1;
+    transition: .5s;
+
+    @include media-up(md) {
+      width: 28px;
+    }
+
+    &-active {
+      width: 93px;
+      background: $color-red;
+
+      @include media-up(md) {
+        width: 132px;
+      }
+    }
+  }
+}

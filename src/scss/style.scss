@@ -1,4 +1,5 @@
 // LIBS
+@import "~swiper/swiper-bundle.css";
 @import "~nice-select2/dist/css/nice-select2.css";
 
 // SPECIFICATION
@@ -20,9 +21,10 @@
 @import "components/select";
 @import "components/breadcrumbs";
 @import "components/sidebar";
+@import "components/sliders";
 
 // HOMEPAGE
-@import "pages/home/banner";
+@import "pages/home/hero";
 
 // SERVICES
 @import "pages/services/service";

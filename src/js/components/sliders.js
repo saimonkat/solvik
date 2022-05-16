@@ -1,10 +1,27 @@
-import Swiper from 'swiper/swiper-bundle.min.js';
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
 
 export default function () {
-    const testSlider = document.querySelector('.design-slider');
+    const homeHeroSlider = document.querySelector('.home-hero-slider');
+    homeHeroSlider && new Swiper(homeHeroSlider, {
+        slidesPerView: 1,
+        autoHeight: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        speed: 700,
+        breakpoints: {
+            768: {
+                autoHeight: false,
+            }
+        }
+    });
 
+    const testSlider = document.querySelector('.test-slider');
     testSlider && new Swiper(testSlider, {
-        direction: "horizontal",
+        direction: 'horizontal',
         slidesPerView: 1,
         autoHeight: true,
         loop: true,
