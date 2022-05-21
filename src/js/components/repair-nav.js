@@ -5,6 +5,8 @@ export default function(){
     const repairTogglers = document.querySelectorAll('.repair-nav__toggler');
     const repairMenus = document.querySelectorAll('.repair-nav__menu');
     const repairBacks = document.querySelectorAll('.repair-back');
+    const repairBrands = document.querySelector('.repair-nav__brands');
+    const repairBrandsToggler = document.querySelector('.repair-nav__brands-toggler');
     const isDesktop = window.matchMedia('(min-width: 1200px)').matches;
 
     if (isDesktop) {
@@ -46,6 +48,11 @@ export default function(){
         repairBack.addEventListener('click', () => {
             removeActiveMenu();
         })
+    })
+
+    repairBrandsToggler.addEventListener('click', () => {
+        repairBrands.classList.toggle('active');
+        repairBrandsToggler.classList.toggle('active');
     })
 
     function removeActiveMenu() {

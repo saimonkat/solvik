@@ -68,6 +68,10 @@
       display: flex;
       justify-content: space-between;
     }
+
+    @include media-only(lg) {
+      margin-right: 100px;
+    }
   }
 
   &__logo {
@@ -148,6 +152,10 @@
     width: 100%;
     max-width: 300px;
 
+    @include media-up(lg) {
+      width: 300px;
+    }
+
     ul {
       columns: 2;
     }
@@ -176,6 +184,15 @@
 
       @include media-up(md) {
         margin-bottom: 20px;
+      }
+    }
+
+    a {
+      color: $color-footer;
+      transition: color .15s;
+
+      &:hover {
+        color: #fff;
       }
     }
   }

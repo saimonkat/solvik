@@ -56,6 +56,12 @@
     p:not(:last-child) {
       margin-bottom: 16px;
     }
+
+    a {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
   }
 
   &__socials {
@@ -334,12 +340,15 @@
       display: none;
 
       &.active {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
       }
     }
   }
 
   &__title {
+    width: 100%;
     font-size: 16px;
     line-height: 28px;
     font-weight: 500;
@@ -347,6 +356,7 @@
   }
 
   &__list {
+    width: 100%;
     margin-bottom: -24px;
 
     @include media-up(xl) {
@@ -358,7 +368,24 @@
     margin-bottom: -24px;
 
     @include media-up(xl) {
-      columns: 5;
+      width: 640px;
+      columns: 4;
+      transition: .3s;
+
+      &:not(.active) {
+        & > li:nth-child(n + 9) {
+          display: none;
+        }
+
+        ul li:not(:first-child) {
+          display: none;
+        }
+      }
+
+      &.active {
+        width: 800px;
+        columns: 5;
+      }
     }
 
     & > li {
@@ -373,6 +400,69 @@
 
     ul li {
       margin-bottom: 16px;
+    }
+
+    &.active {
+
+    }
+
+    &-toggler {
+      position: relative;
+      padding-left: 36px;
+      margin-left: 60px;
+      color: $color-gray;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+      cursor: pointer;
+      transition: color .15s;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 13px;
+        display: block;
+        width: 14px;
+        height: 2px;
+        background: $color-gray;
+        border-radius: 2px;
+        transition: .15s;
+      }
+
+      &:after {
+        transform: rotate(90deg);
+      }
+
+      &:hover {
+        color: $color-red;
+
+        &:before,
+        &:after {
+          background-color: $color-red;
+        }
+      }
+
+      span:last-child {
+        display: none;
+      }
+
+      &.active {
+        &:after {
+          opacity: 0;
+        }
+
+        span {
+          &:first-child {
+            display: none;
+          }
+
+          &:last-child {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
