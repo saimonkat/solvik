@@ -3,13 +3,15 @@
   flex-direction: column;
   gap: 16px;
   padding-bottom: 32px;
-  margin-bottom: 32px;
   border-bottom: 1px solid $color-border;
+
+  @include media-down(sm) {
+    order: -1;
+  }
 
   @include media-up(md) {
     grid-template: 32px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
   }
 
   &__row {

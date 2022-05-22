@@ -1,8 +1,6 @@
 .service-works {
-  margin-bottom: 40px;
-
-  @include media-up(md) {
-    margin-bottom: 60px;
+  @include media-down(sm) {
+    order: 1;
   }
 
   &__text {

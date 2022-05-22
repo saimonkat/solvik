@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   @include fz12-14-14;
+  order: 1;
 
   &:before {
     content: '';
@@ -57,46 +58,5 @@
     @include media-up(xl) {
       padding-right: 160px;
     }
-  }
-}
-
-.service-files {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding-top: 24px;
-  margin-top: 32px;
-  border-top: 1px solid $color-border-2;
-
-  @include media-up(md) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  @include media-up(xl) {
-    padding-top: 40px;
-    margin-top: 48px;
-  }
-}
-
-.service-file {
-  position: relative;
-  font-size: 16px;
-  line-height: 28px;
-  padding: 14px 19px 14px 55px;
-  @include link;
-  background: url(../img/icon/file-wrap.svg) center / contain no-repeat;
-
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 16px;
-    left: 19px;
-    width: 24px;
-    height: 24px;
-    background: url(../img/icon/file.svg) center no-repeat;
   }
 }

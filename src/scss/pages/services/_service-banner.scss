@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   padding: 140px 0 145px;
-  margin-bottom: 32px;
   border-radius: 24px;
   overflow: hidden;
   text-align: center;
@@ -15,7 +14,6 @@
   }
 
   @include media-up(md) {
-    margin-bottom: 60px;
     background-image:url(../img/base/service/banner.png);
   }
 

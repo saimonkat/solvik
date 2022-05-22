@@ -1,4 +1,4 @@
-// Import Components
+// Components
 import navMenu from './components/nav-menu';
 import repairNav from './components/repair-nav';
 import pageScroll from './components/page-scroll';
@@ -8,6 +8,9 @@ import textarea from './components/textarea';
 import wow from './components/wow';
 import select from './components/select';
 import sliders from './components/sliders';
+
+// Pages
+import service from './pages/service';
 
 // DOM content load
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
     wow();
     select();
     sliders();
+    service();
 })
