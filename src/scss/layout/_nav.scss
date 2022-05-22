@@ -370,7 +370,7 @@
     @include media-up(xl) {
       width: 640px;
       columns: 4;
-      transition: .3s;
+      transition: width .3s;
 
       &:not(.active) {
         & > li:nth-child(n + 9) {
@@ -402,10 +402,6 @@
       margin-bottom: 16px;
     }
 
-    &.active {
-
-    }
-
     &-toggler {
       position: relative;
       padding-left: 36px;
@@ -416,6 +412,10 @@
       line-height: 28px;
       cursor: pointer;
       transition: color .15s;
+
+      @include media-down(lg) {
+        display: none;
+      }
 
       &:before,
       &:after {
