@@ -2,7 +2,7 @@ export default function() {
     let scrollEls = document.querySelectorAll('.wow');
 
     const elementInView = (el) => {
-        let elTop = el.getBoundingClientRect().top;
+        let elTop = el.getBoundingClientRect().top + 100;
         return elTop <= window.innerHeight;
     }
 

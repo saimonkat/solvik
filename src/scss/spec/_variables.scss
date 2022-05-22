@@ -1,5 +1,6 @@
 $grid-breakpoints: (
-  xs: 0,
+  xxs: 0,
+  xs: 375px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -19,9 +20,9 @@ $color-red: #D34B3B;
 $color-red-hover: #D34130;
 $color-red-active: #B93626;
 $color-gray: #5E768B;
+$color-gray-2: #C3CDDC;
 $color-light: #F5EEE7;
 $color-orange: #EAC9A9;
-$color-footer: #C3CDDC;
 $color-border: #E9F0F7;
 $color-border-2: #C2CDD8;
 $color-border-3: #DFD8D1;

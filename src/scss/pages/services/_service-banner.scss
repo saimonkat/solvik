@@ -7,7 +7,7 @@
   border-radius: 24px;
   overflow: hidden;
   text-align: center;
-  background: url(../img/base/service-banner-mob.png) center / cover no-repeat;
+  background: url(../img/base/service/banner-mob.png) center / cover no-repeat;
   background-color: $color-light;
 
   @include media-up(sm) {
@@ -16,7 +16,7 @@
 
   @include media-up(md) {
     margin-bottom: 60px;
-    background-image:url(../img/base/service-banner.png);
+    background-image:url(../img/base/service/banner.png);
   }
 
   &__wrapper {
@@ -35,7 +35,7 @@
 
   &__text {
     color: $color-blue;
-    @include fz12-14;
+    @include fz12-14-14;
   }
 
   &__btn {

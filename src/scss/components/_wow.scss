@@ -1,7 +1,9 @@
 .wow {
   opacity: 0;
   visibility: hidden;
-  transition: .5s;
+  transition-duration: .7s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
 
   &.wow-init {
     opacity: 1;

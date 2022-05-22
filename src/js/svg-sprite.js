@@ -7,7 +7,7 @@ import '../img/icon/user.svg';
 import '../img/icon/basket.svg';
 
 // Socials
-import '../img/icon/instagram.svg';
+// import '../img/icon/instagram.svg';
 import '../img/icon/vk.svg';
 
 // Services

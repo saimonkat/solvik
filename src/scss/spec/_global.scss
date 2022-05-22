@@ -18,7 +18,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   min-height: var(--app-height);
-  @include fz12-16;
+  @include fz12-14-16;
   overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -42,7 +42,7 @@ img {
   max-width: 100%;
   height: auto;
   border-style: none;
-  pointer-events: none;
+  user-select: none;
 }
 
 picture {
@@ -112,6 +112,18 @@ h3, .h3 {
   @include media-up(xl) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.d-none-mob {
+  @include media-down(sm) {
+    display: none;
+  }
+}
+
+.d-none-dsk {
+  @include media-up(md) {
+    display: none;
   }
 }
 

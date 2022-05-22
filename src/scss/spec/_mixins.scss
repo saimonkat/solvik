@@ -190,7 +190,7 @@
   }
 }
 
-@mixin fz12-14 {
+@mixin fz12-14-14 {
   font-size: 12px;
   line-height: 24px;
 
@@ -200,7 +200,17 @@
   }
 }
 
-@mixin fz12-16 {
+@mixin fz12-12-14 {
+  font-size: 12px;
+  line-height: 24px;
+
+  @include media-up(xl) {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+@mixin fz12-14-16 {
   font-size: 12px;
   line-height: 24px;
 
@@ -215,7 +225,7 @@
   }
 }
 
-@mixin fz14-16 {
+@mixin fz14-16-16 {
   font-size: 14px;
   line-height: 26px;
 

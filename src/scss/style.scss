@@ -13,18 +13,21 @@
 @import "components/container";
 @import "components/btn";
 @import "components/socials";
-@import "components/hamburger";
-@import "components/nav";
-@import "components/header";
-@import "components/footer";
 @import "components/wow";
 @import "components/select";
 @import "components/breadcrumbs";
 @import "components/sidebar";
 @import "components/sliders";
+@import "components/hamburger";
+
+// LAYOUT
+@import "layout/nav";
+@import "layout/header";
+@import "layout/footer";
 
 // HOMEPAGE
 @import "pages/home/hero";
+@import "pages/home/advantages";
 
 // SERVICES
 @import "pages/services/service";

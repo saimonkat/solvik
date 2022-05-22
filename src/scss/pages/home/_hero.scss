@@ -45,7 +45,7 @@
 
     @include media-up(xl) {
       left: 80px;
-      bottom: 60px;
+      bottom: 80px;
     }
   }
 }
@@ -72,8 +72,12 @@
     }
 
     @include media-up(xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       max-width: 660px;
-      padding: 95px 80px;
+      height: 500px;
+      padding: 30px 80px;
     }
   }
 
@@ -90,7 +94,7 @@
   }
 
   &__text {
-    @include fz14-16;
+    @include fz14-16-16;
   }
 
   &__btn {
