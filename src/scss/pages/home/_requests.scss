@@ -1,0 +1,128 @@
+.home-requests {
+  &__title {
+    @include title-margin;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 16px;
+
+    @include media-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-up(xl) {
+      grid-gap: 40px;
+    }
+  }
+}
+
+.home-request {
+  border: 1px solid #C2CDD8;
+  border-radius: 16px;
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+
+  @include media-down(xxs) {
+    padding: 24px 24px 32px;
+  }
+
+  @include media-up(lg) {
+    padding: 50px 40px;
+  }
+
+  @include media-up(xl) {
+    padding: 60px 95px 80px;
+  }
+
+  &:first-child {
+    background-image: url(../img/vector/bg-el-1.svg);
+    background-position: bottom left;
+    background-size: 30%;
+  }
+
+  &:last-child {
+    background-image: url(../img/vector/bg-el-2.svg);
+    background-position: bottom right -100px;
+    background-size: 250px;
+
+    @include media-up(lg) {
+      background-size: 300px;
+    }
+
+    @include media-up(xl) {
+      background-size: 350px;
+    }
+  }
+
+  &__icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/vector/icon-box.svg) center / contain no-repeat;
+    margin-bottom: 24px;
+
+    @include media-up(md) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include media-up(xl) {
+      width: 104px;
+      height: 104px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 40px;
+
+      @include media-up(md) {
+        width: 50px;
+      }
+
+      @include media-up(xl) {
+        width: 56px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @include media-up(md) {
+      margin-bottom: 12px;
+    }
+
+    @include media-up(xl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    @include fz14-14-16;
+    margin-bottom: 24px;
+
+    @include media-between(md, lg) {
+      margin-bottom: 40px;
+    }
+
+    a {
+      @include link-red;
+      @include link-under;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

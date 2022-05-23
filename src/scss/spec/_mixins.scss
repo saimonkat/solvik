@@ -134,6 +134,14 @@
   }
 }
 
+@mixin link-under {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @mixin icon {
   position: relative;
   width: 32px;
@@ -242,5 +250,17 @@
   @include media-up(md) {
     font-size: 16px;
     line-height: 28px;
+  }
+}
+
+@mixin title-margin {
+  margin-bottom: 32px;
+
+  @include media-up(md) {
+    margin-bottom: 60px;
+  }
+
+  @include media-up(xl) {
+    margin-bottom: 80px;
   }
 }
