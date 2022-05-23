@@ -115,18 +115,6 @@ h3, .h3 {
   }
 }
 
-.d-none-mob {
-  @include media-down(sm) {
-    display: none;
-  }
-}
-
-.d-none-dsk {
-  @include media-up(md) {
-    display: none;
-  }
-}
-
 .title-big {
   font-size: 32px;
   line-height: 50px;
@@ -139,6 +127,18 @@ h3, .h3 {
   @include media-up(xl) {
     font-size: 82px;
     line-height: 92px;
+  }
+}
+
+.d-none-mob {
+  @include media-down(sm) {
+    display: none;
+  }
+}
+
+.d-none-dsk {
+  @include media-up(md) {
+    display: none;
   }
 }
 

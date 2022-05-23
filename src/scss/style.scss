@@ -8,6 +8,7 @@
 @import "spec/fonts";
 @import "spec/global";
 @import "spec/visually-hidden";
+@import "spec/animations";
 
 // COMPONENTS
 @import "components/container";
@@ -28,6 +29,7 @@
 // HOMEPAGE
 @import "pages/home/hero";
 @import "pages/home/advantages";
+@import "pages/home/items";
 
 // SERVICES
 @import "pages/services/service-wrapper";
