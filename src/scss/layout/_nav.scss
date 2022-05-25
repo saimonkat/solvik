@@ -173,23 +173,36 @@
 
   @include media-up(xl) {
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     top: 92px;
     width: 100vw;
+    max-height: calc(100vh - 139px);
     padding: 40px 0 80px;
     background: #fff;
     box-shadow: 0px 2px 13px rgba(156, 167, 180, 0.29);
+    overflow: auto;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: .25s;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &.active,
     &:hover {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+    }
+
+    .page-scrolled & {
+      max-height: calc(100vh - 92px);
     }
   }
 
