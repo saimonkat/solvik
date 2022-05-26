@@ -50,7 +50,7 @@ export default function () {
                 return ip;
             })
             .then((ip) => {
-                getCookie('location') !== ip
+                getCookie('location') === ip
                     ? cookies.classList.remove(showClass)
                     : cookies.classList.add(showClass);
             });
