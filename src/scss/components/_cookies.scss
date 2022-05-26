@@ -22,10 +22,12 @@
     width: auto;
     box-shadow: 0px 4px 16px rgba(101, 104, 109, 0.32);
     border-radius: 32px;
+    transform: translateY(150%);
   }
 
-  @include media-up(xl) {
-    max-width: 1240px;
+  @include media-up(xxl) {
+    width: 1240px;
+    left: calc(50% - 620px);
   }
 
   &--show {
