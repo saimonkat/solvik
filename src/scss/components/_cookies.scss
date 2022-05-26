@@ -1,0 +1,73 @@
+.cookies {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 16px rgba(116, 126, 131, 0.25);
+  border-radius: 32px 32px 0 0;
+  @include fz14-16-16;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0s .3s,
+              visibility 0s .3s,
+              transform .3s;
+
+  @include media-up(md) {
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: auto;
+    box-shadow: 0px 4px 16px rgba(101, 104, 109, 0.32);
+    border-radius: 32px;
+  }
+
+  @include media-up(xl) {
+    max-width: 1240px;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      padding: 32px 40px;
+    }
+
+    @include media-up(lg) {
+      gap: 95px;
+    }
+
+    @include media-up(xl) {
+      gap: 112px;
+    }
+  }
+
+  &__text {
+    color: $color-blue;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    @include media-up(lg) {
+      padding: 14px 65px;
+      border-radius: 32px;
+    }
+  }
+}

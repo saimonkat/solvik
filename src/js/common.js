@@ -7,6 +7,7 @@ import forms from './components/forms';
 import textarea from './components/textarea';
 import wow from './components/wow';
 import select from './components/select';
+import cookies from './components/cookies';
 import sliders from './components/sliders';
 
 // Pages
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     textarea();
     wow();
     select();
+    cookies();
     sliders();
     service();
 })
