@@ -33,10 +33,13 @@
 @import "pages/home/items";
 @import "pages/home/requests";
 
+// 404
+@import "pages/404/404";
+
 // SERVICES
-@import "pages/services/service-wrapper";
-@import "pages/services/service-banner";
-@import "pages/services/service-calc";
-@import "pages/services/service-works";
-@import "pages/services/service-footer";
-@import "pages/services/service-files";
+@import "pages/services/wrapper";
+@import "pages/services/banner";
+@import "pages/services/calc";
+@import "pages/services/works";
+@import "pages/services/footer";
+@import "pages/services/files";
