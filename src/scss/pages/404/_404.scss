@@ -1,6 +1,78 @@
 .page404 {
-  height: 100vh;
-	height: var(--app-height);
-	display: grid;
-	place-items: center;
+  position: relative;
+  @include section100vh;
+  background: $color-light;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @include media-up(md) {
+      gap: 90px;
+    }
+
+    @include media-up(xl) {
+      gap: 70px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 330px;
+
+    @include media-up(md) {
+      max-width: 630px;
+    }
+
+    @include media-up(xl) {
+      max-width: 830;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    text-align: center;
+  }
+
+  &__text {
+    @include media-down(sm) {
+      max-width: 240px;
+    }
+  }
+
+  &__btn {
+    margin-top: 24px;
+
+    @include media-up(md) {
+      max-width: 290px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 5%;
+    top: 32%;
+    width: 90%;
+    animation: scale-rotate 5s infinite;
+
+    @include media-up(xl) {
+      left: 10%;
+      top: 200px;
+      width: 75%;
+    }
+
+    @include media-down(sm) {
+      display: none;
+    }
+  }
 }
