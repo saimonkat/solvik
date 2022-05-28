@@ -137,6 +137,10 @@
 
       #{$self}__icon {
         grid-area: d;
+
+        img {
+          width: 92%;
+        }
       }
     }
 
@@ -166,12 +170,18 @@
 
       #{$self}__content {
         grid-area: a;
-        max-width: 532px;
+        max-width: 384px;
       }
 
       #{$self}__img {
         grid-area: b;
         margin-top: -36px;
+      }
+    }
+
+    @include media-up(xl) {
+      #{$self}__content {
+        max-width: 532px;
       }
     }
   }
@@ -226,7 +236,7 @@
 
       #{$self}__text {
         grid-area: b;
-        max-width: 550px;
+        margin-left: auto;
       }
 
       #{$self}__img {
@@ -258,18 +268,27 @@
 
       #{$self}__title {
         grid-area: a;
-        max-width: 550px;
       }
 
       #{$self}__text {
         grid-area: b;
-        max-width: 430px;
+        margin-left: auto;
       }
 
       #{$self}__img {
         grid-area: c;
         margin-top: -36px;
       }
+    }
+  }
+
+  &__content {
+    @include media-up(md) {
+      max-width: 372px;
+    }
+
+    @include media-up(xl) {
+      max-width: 532px;
     }
   }
 
@@ -290,7 +309,12 @@
     margin-bottom: 24px;
 
     @include media-up(md) {
+      max-width: 372px;
       margin-bottom: 0;
+    }
+
+    @include media-up(xl) {
+      max-width: 532px;
     }
   }
 

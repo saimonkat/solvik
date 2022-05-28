@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding-top: 24px;
+  padding-top: 32px;
   border-top: 1px solid $color-border-2;
   order: 1;
 
@@ -11,10 +11,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+    padding-top: 40px;
   }
 
   @include media-up(xl) {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 }
 
