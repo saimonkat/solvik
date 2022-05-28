@@ -132,13 +132,13 @@ h3, .h3 {
 
 .d-none-mob {
   @include media-down(sm) {
-    display: none;
+    display: none !important;
   }
 }
 
 .d-none-dsk {
   @include media-up(md) {
-    display: none;
+    display: none !important;
   }
 }
 

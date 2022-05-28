@@ -9,7 +9,10 @@ export default function () {
         slidesPerView: 1,
         autoHeight: true,
         loop: true,
-        // autoplay: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
