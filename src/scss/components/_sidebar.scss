@@ -111,12 +111,16 @@
   }
 
   .new-price {
-    font-weight: 500;
-    color: $color-red;
     white-space: nowrap;
 
+    @include media-down(sm) {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: $color-red;
+    }
+
     @include media-up(md) {
-      font-weight: 400;
       color: $color-blue;
     }
   }
