@@ -55,8 +55,8 @@
     "jquery": "^3.6.0",
     "nice-select2": "^2.0.0",
     "normalize.css": "^8.0.1",
+    "patch-package": "^6.4.7",
     "swiper": "^8.1.4",
-    "uglify-js": "github:mishoo/UglifyJS2#harmony",
     "webp-loader": "^0.6.0",
     "webpack-fix-style-only-entries": "^0.6.1"
   }
