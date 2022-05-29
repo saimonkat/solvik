@@ -1,0 +1,37 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "История ремонтов | Solvik"
+}) %>
+
+<main class="main">
+    <div class="page">
+        <div class="container">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'История ремонтов'}
+                ]
+            }) %>
+            <div class="lk-wrapper">
+                <div class="lk-sidebar">
+                    <div class="page-sidebar">
+                        <%=_.template(require("../templates/lk/menu.html"))({
+                            menu: {history: 'active'}
+                        }) %>
+                        <!-- PHP if (desktop): -->
+                        <%=_.template(require("../templates/lk/bonus.html"))() %>
+                    </div>
+                </div>
+
+                <div class="lk-main">
+                    <h1>История ремонтов</h1>
+                    <%=_.template(require("../templates/lk/history.html"))() %>
+                </div>
+
+                <!-- PHP if (mobile): -->
+                <%=_.template(require("../templates/lk/bonus.html"))() %>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>

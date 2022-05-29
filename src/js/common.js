@@ -12,6 +12,7 @@ import sliders from './components/sliders';
 
 // Pages
 import service from './pages/service';
+import lk from './pages/lk';
 
 // DOM content load
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,5 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     select();
     cookies();
     sliders();
+
     service();
+    lk();
 })

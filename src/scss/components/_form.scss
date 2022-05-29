@@ -1,0 +1,76 @@
+.form {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-up(md) {
+    gap: 16px;
+  }
+
+  @include media-up(lg) {
+    gap: 24px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    @include media-up(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include media-up(md) {
+      flex: 1 1 0;
+    }
+
+    #{$self}.active & input {
+      animation: input-active .5s;
+    }
+
+    &--hidden {
+      #{$self}:not(.active) & {
+        display: none;
+      }
+    }
+
+    &--hide {
+      #{$self}.active & {
+        display: none;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: auto;
+
+      @include media-down(sm) {
+        margin-top: 12px;
+      }
+
+      @include media-up(lg) {
+        padding: 14px 40px;
+        border-radius: 32px;
+      }
+    }
+
+    label {
+      margin-bottom: 9px;
+
+      @include media-up(lg) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

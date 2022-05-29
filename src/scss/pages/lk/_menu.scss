@@ -1,0 +1,23 @@
+.lk-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-between(md, lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include media-up(xl) {
+    gap: 16px;
+  }
+
+  a {
+    @include link;
+    font-weight: 500;
+
+    &.active {
+      @include link-red;
+    }
+  }
+}

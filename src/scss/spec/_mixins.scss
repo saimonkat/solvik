@@ -108,6 +108,7 @@
   }
 }
 
+// LINKS
 @mixin link {
   color: $color-blue;
   transition: color .15s;
@@ -153,6 +154,7 @@
   }
 }
 
+// NAV
 @mixin nav {
   @include media-down(lg) {
     position: fixed;
@@ -198,6 +200,7 @@
   }
 }
 
+// FONT-SIZE
 @mixin fz12-14-14 {
   font-size: 12px;
   line-height: 24px;
@@ -265,11 +268,15 @@
   }
 }
 
+// SECTION
 @mixin section100vh {
   height: 100vh;
-	height: var(--app-height);
   margin-top: -88px;
   padding-top: 88px;
+
+  @include media-down(lg) {
+    height: var(--app-height);
+  }
 
   @include media-up(md) {
     margin-top: -117px;

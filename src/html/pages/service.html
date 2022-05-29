@@ -1,11 +1,10 @@
 <%=_.template(require('../templates/header.html'))({
-    title: "Страница услуги | Solvik",
-    menu: {}
+    title: "Страница услуги | Solvik"
 }) %>
 
 <main class="main">
     <div class="page">
-        <div class="container">
+        <div class="container container--wide">
             <%=_.template(require('../templates/breadcrumbs.html'))({
                 pages: [
                     {name: 'Главная', url: 'home.html'},
@@ -22,12 +21,15 @@
                         <%=_.template(require("../templates/service/works.html"))() %>
                         <%=_.template(require("../templates/service/footer.html"))() %>
                         <%=_.template(require("../templates/service/files.html"))() %>
+                        <!-- PHP if (mobile): -->
+                        <%=_.template(require("../templates/service/price.html"))() %>
                     </div>
                 </div>
                 <div class="page-aside">
                     <div class="page-sidebar">
-                        <%=_.template(require("../templates/service/sidebar-contacts.html"))() %>
-                        <%=_.template(require("../templates/service/sidebar-price.html"))() %>
+                        <%=_.template(require("../templates/sidebar/contacts.html"))() %>
+                        <!-- PHP if (desktop): -->
+                        <%=_.template(require("../templates/service/price.html"))() %>
                     </div>
                 </div>
             </div>

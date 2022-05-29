@@ -8,7 +8,7 @@
     max-width: 1320px;
   }
 
-  .page & {
+  &--wide {
     @include media-up(md) {
       max-width: 1400px;
     }

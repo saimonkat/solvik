@@ -5,7 +5,7 @@
   font-family: $font;
   background: $color-blue;
   color: #fff;
-  @include fz14-16-16;
+  @include fz14-14-16;
   font-weight: 500;
   user-select: none;
   text-align: center;
@@ -15,6 +15,9 @@
 
   @include media-up(md) {
     width: fit-content;
+  }
+
+  @include media-up(lg) {
     padding: 10px 40px;
   }
 

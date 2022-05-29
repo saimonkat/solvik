@@ -1,0 +1,90 @@
+<form class="form lk-form" action="#">
+    <div class="form__row">
+        <div class="form__item">
+            <label for="user_name">Имя</label>
+            <input type="text"
+                   name="name"
+                   id="user_name"
+                   placeholder="Имя"
+                   value="Екатерина"
+                   disabled>
+        </div>
+        <div class="form__item">
+            <label for="user_lastname">Фамилия</label>
+            <input type="text"
+                   name="lastname"
+                   id="user_lastname"
+                   placeholder="Фамилия"
+                   value="Русакова"
+                   disabled>
+        </div>
+        <div class="form__item">
+            <label for="user_email">Почта</label>
+            <input type="email"
+                   name="email"
+                   id="user_email"
+                   placeholder="Почта"
+                   value="rusakova@serenity.spb.ru"
+                   disabled>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__item">
+            <label for="user_phone">Номер телефона</label>
+            <input type="text"
+                   name="phone"
+                   id="user_phone"
+                   placeholder="Номер телефона"
+                   value="+7 (937) 306-08-56"
+                   disabled>
+        </div>
+        <div class="form__item form__item--hide">
+            <label for="user_password">Пароль</label>
+            <input type="password"
+                   name="password"
+                   id="user_password"
+                   placeholder="Пароль"
+                   value="Password"
+                   disabled>
+        </div>
+        <div class="form__item form__item--hidden">
+            <label for="user_password">Текущий пароль</label>
+            <input type="password"
+                   name="current_password"
+                   id="user_current_password"
+                   placeholder="Пароль"
+                   value=""
+                   disabled>
+        </div>
+        <div class="form__item form__item--hidden">
+            <label for="user_password">Новый пароль</label>
+            <input type="password"
+                   name="new_password"
+                   id="user_new_password"
+                   placeholder="Пароль"
+                   value=""
+                   disabled>
+        </div>
+        <div class="form__item form__item--hide">
+            <button type="button" class="btn lk-btn-edit">
+                Редактировать
+            </button>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__item form__item--hidden">
+            <label for="user_password">Повторите новый пароль</label>
+            <input type="password"
+                   name="new_password_repeat"
+                   id="user_new_password_repeat"
+                   placeholder="Пароль"
+                   value=""
+                   disabled>
+        </div>
+        <div class="form__item form__item--hidden">
+            <button type="submit" class="btn btn--red">
+                Сохранить изменения
+            </button>
+        </div>
+    </div>
+</form>

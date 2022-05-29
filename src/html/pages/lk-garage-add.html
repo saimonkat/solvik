@@ -1,0 +1,38 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Добавить автомобиль | Solvik"
+}) %>
+
+<main class="main">
+    <div class="page">
+        <div class="container">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Мой гараж', url: 'lk-garage.html'},
+                    {name: 'Добавить автомобиль'}
+                ]
+            }) %>
+            <div class="lk-wrapper">
+                <div class="lk-sidebar">
+                    <div class="page-sidebar">
+                        <%=_.template(require("../templates/lk/menu.html"))({
+                            menu: {garage: 'active'}
+                        }) %>
+                        <!-- PHP if (desktop): -->
+                        <%=_.template(require("../templates/lk/bonus.html"))() %>
+                    </div>
+                </div>
+
+                <div class="lk-main">
+                    <h1>Добавить автомобиль</h1>
+                    <%=_.template(require("../templates/lk/garage-add.html"))() %>
+                </div>
+
+                <!-- PHP if (mobile): -->
+                <%=_.template(require("../templates/lk/bonus.html"))() %>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%=_.template(require('../templates/footer.html'))() %>

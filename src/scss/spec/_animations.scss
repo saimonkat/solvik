@@ -39,3 +39,15 @@
     transform: scale(0.9);
   }
 }
+
+@keyframes input-active {
+  0% {
+    border-color: $color-border-2;
+  }
+  50% {
+    border-color: $color-blue;
+  }
+  100% {
+    border-color: $color-border-2;
+  }
+}

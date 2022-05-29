@@ -1,7 +1,4 @@
 .service-calc {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   padding-bottom: 32px;
   border-bottom: 1px solid $color-border;
 
@@ -10,35 +7,6 @@
   }
 
   @include media-up(md) {
-    grid-template: 32px;
     padding-bottom: 40px;
-  }
-
-  &__row {
-    display: flex;
-    gap: 16px;
-
-    @include media-down(sm) {
-      flex-direction: column;
-    }
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-
-    @include media-up(md) {
-      flex: 1 1 0;
-    }
-
-    .btn {
-      width: 100%;
-      margin-top: auto;
-
-      @include media-up(md) {
-        padding: 14px 40px;
-        border-radius: 32px;
-      }
-    }
   }
 }

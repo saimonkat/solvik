@@ -13,9 +13,11 @@
 // COMPONENTS
 @import "components/container";
 @import "components/btn";
+@import "components/select";
+@import "components/input";
+@import "components/form";
 @import "components/socials";
 @import "components/wow";
-@import "components/select";
 @import "components/cookies";
 @import "components/breadcrumbs";
 @import "components/sidebar";
@@ -38,8 +40,15 @@
 
 // SERVICES
 @import "pages/services/wrapper";
+@import "pages/services/price";
 @import "pages/services/banner";
 @import "pages/services/calc";
 @import "pages/services/works";
 @import "pages/services/footer";
 @import "pages/services/files";
+
+// LK
+@import "pages/lk/wrapper";
+@import "pages/lk/menu";
+@import "pages/lk/bonus";
+@import "pages/lk/personal";

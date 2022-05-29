@@ -1,14 +1,14 @@
 <%=_.template(require("../templates/header.html"))({
-    title: 'Solvik',
-    menu: {}
+    title: 'Solvik'
 }) %>
 
 <style>
     header {display: none;}
-    nav {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;}
-    nav ul {list-style: none; text-align: center;}
+    main {width: 100%;height: 100vh; }
+    nav {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: auto;}
+    nav ul {list-style: none; text-align: center; margin: auto; padding: 20px;}
     nav li {margin-bottom: 5px;}
-    nav a {font-size: 20px; color: #164168;}
+    nav a {font-size: 16px; color: #164168;}
     nav a:hover {color: #1C568A;}
 </style>
 
@@ -29,7 +29,14 @@
             <li><a href="service.html">Страница услуги</a></li>
             <li><a href="director.html">Страница директора</a></li>
             <li><a href="basket.html">Корзина</a></li>
-            <li><a href="account.html">Личный кабинет</a></li>
+            <li><a href="lk.html">Личный кабинет. Профиль</a></li>
+            <li><a href="lk-garage.html">Личный кабинет. Мой гараж</a></li>
+            <li><a href="lk-garage-add.html">Личный кабинет. Добавить автомобиль</a></li>
+            <li><a href="lk-garage-car.html">Личный кабинет. Карточка автомобиля</a></li>
+            <li><a href="lk-history.html">Личный кабинет. История ремонтов</a></li>
+            <li><a href="lk-recommends.html">Личный кабинет. Рекомендации</a></li>
+            <li><a href="lk-service.html">Личный кабинет. Что входит в услугу</a></li>
+            <li><a href="lk-visits.html">Личный кабинет. Запланированные визиты</a></li>
         </ul>
     </nav>
 </main>
