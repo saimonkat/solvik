@@ -1,5 +1,42 @@
-<h1>Мой гараж</h1>
+<div class="title-flex">
+    <h1>Мой гараж</h1>
+    <a href="lk-garage-add.html" class="btn btn--plus">
+        <span>Добавить автомобиль</span>
+        <svg width="24" height="24">
+            <use xlink:href="#plus"></use>
+        </svg>
+    </a>
+</div>
 
-<div class="lk-garage">
-
+<div class="lk-car-cards">
+    <div class="lk-car-card">
+        <div class="lk-car-card__content">
+            <div class="lk-car-card__status active">Главный</div>
+            <div class="lk-car-card__info">
+                <p>Chevrolet Aveo</p>
+                <p>Гос. номер: ххххххх</p>
+            </div>
+            <button class="lk-car-card__remove"
+                    data-fancybox
+                    data-src="#lk-car-remove"
+                    role="button">
+                Удалить из гаража
+            </button>
+        </div>
+    </div>
+    <div class="lk-car-card">
+        <div class="lk-car-card__content">
+            <div class="lk-car-card__status">Главный</div>
+            <div class="lk-car-card__info">
+                <p>Chevrolet Aveo</p>
+                <p>Гос. номер: ххххххх</p>
+            </div>
+            <button class="lk-car-card__remove"
+                    data-fancybox
+                    data-src="#lk-car-remove"
+                    role="button">
+                Удалить из гаража
+            </button>
+        </div>
+    </div>
 </div>

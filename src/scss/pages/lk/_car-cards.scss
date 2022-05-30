@@ -1,0 +1,78 @@
+.lk-car-cards {
+  display: grid;
+  grid-gap: 12px;
+
+  @include media-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  @include media-up(xl) {
+    grid-gap: 32px;
+  }
+}
+
+.lk-car-card {
+  padding: 16px 24px;
+  border-radius: 32px;
+  background: $color-light;
+
+  @include media-up(md) {
+    padding: 24px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 8px 2px 28px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    outline: 1px solid $color-gray;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: $color-gray;
+      border-radius: 50%;
+    }
+
+    &.active {
+      color: $color-blue;
+      background: $color-orange;
+      outline-color: transparent;
+
+      &:before {
+        background: $color-red;
+      }
+    }
+  }
+
+  &__info {
+    padding-right: 100px;
+    color: $color-blue;
+    margin-bottom: 16px;
+
+    @include media-up(md) {
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__remove {
+    font-weight: 500;
+    @include link-red;
+  }
+}
