@@ -40,4 +40,26 @@
       background: $color-red-active;
     }
   }
+
+  &--plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    padding: 0;
+
+    @include media-down(sm) {
+      width: 44px;
+      height: 44px;
+
+      span {
+        display: none;
+      }
+    }
+
+    @include media-up(md) {
+      padding: 8px 20px;
+    }
+  }
 }

@@ -13,3 +13,6 @@ import '../img/icon/vk.svg';
 // Services
 import '../img/icon/service-clock.svg';
 import '../img/icon/service-phone.svg';
+
+// Other
+import '../img/icon/plus.svg';

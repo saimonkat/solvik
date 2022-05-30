@@ -1,6 +1,7 @@
 // LIBS
 @import "~swiper/swiper-bundle.css";
 @import "~nice-select2/dist/css/nice-select2.css";
+@import "~@fancyapps/ui/dist/fancybox";
 
 // SPECIFICATION
 @import "spec/variables";
@@ -11,6 +12,8 @@
 @import "spec/animations";
 
 // COMPONENTS
+@import "components/fancybox";
+@import "components/modal";
 @import "components/container";
 @import "components/btn";
 @import "components/select";
@@ -52,3 +55,4 @@
 @import "pages/lk/menu";
 @import "pages/lk/bonus";
 @import "pages/lk/personal";
+@import "pages/lk/car-cards";

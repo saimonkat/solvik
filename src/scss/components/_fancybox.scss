@@ -1,0 +1,38 @@
+.fancybox {
+  &__backdrop {
+    background: $color-blue-50;
+  }
+
+  &__slide {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: 0;
+
+    .carousel__button.is-close {
+      top: 24px;
+      right: 24px;
+      width: 32px;
+      height: 32px;
+      background: $color-blue-10;
+      color: $color-gray;
+
+      &:hover {
+        color: $color-blue;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        filter: none;
+      }
+    }
+
+    :focus {
+      outline: inherit !important;
+      box-shadow: inherit !important;
+    }
+  }
+}

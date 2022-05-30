@@ -188,3 +188,24 @@ label {
     padding: 120px 0;
   }
 }
+
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @include media-up(md) {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}

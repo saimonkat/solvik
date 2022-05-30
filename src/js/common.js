@@ -6,6 +6,7 @@ import anchorScroll from './components/anchor-scroll';
 import forms from './components/forms';
 import textarea from './components/textarea';
 import wow from './components/wow';
+import fancybox from './components/fancybox';
 import select from './components/select';
 import cookies from './components/cookies';
 import sliders from './components/sliders';
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     forms();
     textarea();
     wow();
+    fancybox();
     select();
     cookies();
     sliders();
