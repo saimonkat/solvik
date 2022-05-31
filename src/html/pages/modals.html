@@ -2,12 +2,99 @@
     title: "Модальные окна | Solvik"
 }) %>
 
+<style>
+    .modal-btns-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .modal-btns-row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+</style>
+
 <main class="main">
     <div class="section">
         <div class="container">
-            <h1>Модальные окна</h1>
+            <h1 style="text-align: center;">
+                Модальные окна
+            </h1>
+
+            <div class="modal-btns-container">
+                <div class="modal-btns-row">
+                    <button class="btn"
+                            data-fancybox
+                            data-src="#modal-login"
+                            role="button">
+                        Авторизация ЛК
+                    </button>
+                    <button class="btn btn--red"
+                            data-fancybox
+                            data-src="#modal-register"
+                            role="button">
+                        Регистрация
+                    </button>
+                </div>
+                <div class="modal-btns-row">
+                    <button class="btn"
+                            data-fancybox
+                            data-src="#modal-recover-tel"
+                            role="button">
+                        Востановление (телефон)
+                    </button>
+                    <button class="btn btn--red"
+                            data-fancybox
+                            data-src="#modal-recover-email"
+                            role="button">
+                        Востановление (почта)
+                    </button>
+                </div>
+                <div class="modal-btns-row">
+                    <button class="btn"
+                            data-fancybox
+                            data-src="#modal-error-tel"
+                            role="button">
+                        Ошибка (телефон)
+                    </button>
+                    <button class="btn btn--red"
+                            data-fancybox
+                            data-src="#modal-error-email"
+                            role="button">
+                        Ошибка (почта)
+                    </button>
+                </div>
+                <div class="modal-btns-row">
+                    <button class="btn"
+                            data-fancybox
+                            data-src="#modal-success-tel"
+                            role="button">
+                        Успешно (телефон)
+                    </button>
+                    <button class="btn btn--red"
+                            data-fancybox
+                            data-src="#modal-success-email"
+                            role="button">
+                        Успешно (почта)
+                    </button>
+                </div>
+                <div class="modal-btns-row">
+                    <button class="btn"
+                            data-fancybox
+                            data-src="#modal-success-director"
+                            role="button">
+                        Успешно (директор)
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </main>
 
+<%=_.template(require('../templates/modals.html'))() %>
 <%=_.template(require('../templates/footer.html'))() %>

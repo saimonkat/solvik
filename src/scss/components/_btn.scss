@@ -1,5 +1,5 @@
 .btn {
-  display: block;
+  display: inline-block;
   width: 100%;
   padding: 9px 15px;
   font-family: $font;
@@ -15,6 +15,7 @@
 
   @include media-up(md) {
     width: fit-content;
+    padding: 10px 25px;
   }
 
   @include media-up(lg) {

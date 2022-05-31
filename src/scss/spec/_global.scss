@@ -118,6 +118,10 @@ h3, .h3 {
   }
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 .title-big {
   font-size: 32px;
   line-height: 50px;
@@ -153,6 +157,10 @@ ol {
 label {
   width: fit-content;
   cursor: pointer;
+}
+
+.center {
+  text-align: center;
 }
 
 .page {
