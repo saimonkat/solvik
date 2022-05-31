@@ -7,6 +7,7 @@ export default function() {
         dragToClose: false,
         on: {
             init: () => {
+                Fancybox.close();
                 if (document.documentElement.classList.contains('page-scrolled')) {
                     const scrollbarW = window.innerWidth - document.documentElement.clientWidth;
                     fixedHeader.style.paddingRight = scrollbarW + 'px';
