@@ -13,10 +13,14 @@ export default function(){
         repairTogglers[0].classList.add('active');
         repairMenus[0].classList.add('active');
 
-        repairLink.addEventListener('mouseenter', () => {
-            repairNav.classList.add('active');
+        let timer;
+        repairLink.addEventListener('mouseover', () => {
+            timer = window.setTimeout(() => {
+                repairNav.classList.add('active')
+            }, 100);
         })
-        repairLink.addEventListener('mouseleave', () => {
+        repairLink.addEventListener('mouseout', () => {
+            timer && window.clearTimeout(timer)
             setTimeout(() => {
                 repairNav.classList.remove('active');
             }, 500)
