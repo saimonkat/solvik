@@ -4,12 +4,22 @@
   }
 
   &__slide {
-    padding: 0;
-    overflow: hidden;
+    @include media-down(sm) {
+      display: block;
+      padding: 0;
+    }
   }
 
   &__content {
     padding: 0;
+
+    @include media-down(sm) {
+      min-height: 100vh;
+    }
+
+    .fancybox-init & {
+      animation-duration: 0s;
+    }
 
     .carousel__button.is-close {
       top: 24px;

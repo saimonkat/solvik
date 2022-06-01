@@ -141,8 +141,9 @@
 
   &__btn {
     @include icon;
-    @include link;
     margin-right: 24px;
+    @include link;
+    cursor: pointer;
 
     @include media-down(sm) {
       width: 24px;

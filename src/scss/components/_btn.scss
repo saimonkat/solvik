@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   width: 100%;
-  padding: 9px 15px;
+  padding: 9px 20px;
   font-family: $font;
   background: $color-blue;
   color: #fff;
@@ -15,6 +15,7 @@
 
   @include media-up(md) {
     width: fit-content;
+    min-width: 162px;
     padding: 10px 25px;
   }
 

@@ -23,7 +23,7 @@ export default function(){
             timer && window.clearTimeout(timer)
             setTimeout(() => {
                 repairNav.classList.remove('active');
-            }, 500)
+            }, 300)
         })
     }
 

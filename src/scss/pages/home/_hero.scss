@@ -99,14 +99,7 @@
 
   &__btn {
     margin-top: 24px;
-
-    @include media-up(md) {
-      margin-top: 32px;
-    }
-
-    @include media-up(xl) {
-      margin-top: 40px;
-    }
+    @include btn-big;
   }
 
   &__img {

@@ -53,6 +53,10 @@
     &:hover {
       border-color: $color-blue;
     }
+
+    @include media-up(lg) {
+      padding: 0 24px;
+    }
   }
 
   .nice-select-dropdown {

@@ -58,11 +58,6 @@
       @include media-down(sm) {
         margin-top: 12px;
       }
-
-      @include media-up(lg) {
-        padding: 14px 40px;
-        border-radius: 32px;
-      }
     }
 
     label {
@@ -72,5 +67,9 @@
         margin-bottom: 12px;
       }
     }
+  }
+
+  .btn {
+    @include btn-big;
   }
 }

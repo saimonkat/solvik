@@ -1,18 +1,159 @@
-<div class="modal modal--notice" id="modal-recover-tel">
+<div class="modal" id="modal-sign-in">
     <div class="modal__title">
-        Востановление пароля
+        Авторизация
     </div>
-    <form action="#" class="form">
-        <div class="modal__text">
-            Номер телефона не найден.<br> Проверьте номер или попробуйте<br> восстановить доступ по почте.
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="sign_in_login">Логин</label>
+            <input type="text"
+                   name="phone"
+                   id="sign_in_login"
+                   placeholder="+7(___)___ __ __"
+                   minlength="16"
+                   required>
         </div>
-        <button class="modal__btn btn btn--red" role="button" data-fancybox-close>
-            Назад
+        <div class="form__item">
+            <label for="sign_in_password">Пароль</label>
+            <input type="password"
+                   name="password"
+                   id="sign_in_password"
+                   placeholder="Введите пароль"
+                   minlength="8"
+                   required>
+        </div>
+        <span class="modal__forgot"
+              data-fancybox
+              data-src="#modal-recover-phone">
+            Забыли пароль?
+        </span>
+        <div class="modal__sign-in">
+            <div class="modal__remember">
+                <input type="checkbox" name="remember" id="sign_in_remember">
+                <label for="sign_in_remember">Запомнить меня</label>
+            </div>
+            <button type="submit" class="modal__btn btn btn--red">
+                Войти
+            </button>
+        </div>
+        <div class="modal__no-account">
+            Нет аккаунта?
+            <span data-fancybox
+                  data-src="#modal-sign-up">
+                Зарегистрируйтесь
+            </span>
+        </div>
+    </form>
+</div>
+
+<div class="modal" id="modal-sign-up">
+    <div class="modal__title">
+        Регистрация
+    </div>
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="sign_up_name">Имя</label>
+            <input type="text"
+                   name="name"
+                   id="sign_up_name"
+                   placeholder="Введите ваше имя"
+                   minlength="2"
+                   required>
+        </div>
+        <div class="form__item">
+            <label for="sign_up_phone">Телефон</label>
+            <input type="text"
+                   name="phone"
+                   id="sign_up_phone"
+                   placeholder="+7(___)___ __ __"
+                   minlength="16"
+                   required>
+        </div>
+        <div class="form__item">
+            <label for="sign_up_email">Почта (необязательное)</label>
+            <input type="email"
+                   name="email"
+                   id="sign_up_email"
+                   placeholder="name@mail.ru">
+        </div>
+        <div class="form__item">
+            <label for="sign_up_password">Пароль</label>
+            <input type="password"
+                   name="password"
+                   id="sign_up_password"
+                   placeholder="Введите пароль"
+                   minlength="8"
+                   required>
+        </div>
+        <div class="form__item">
+            <label for="sign_up_confirm_password">Подтверждение пароля</label>
+            <input type="password"
+                   name="confirm_password"
+                   id="sign_up_confirm_password"
+                   placeholder="Повторите пароль"
+                   minlength="8"
+                   required>
+        </div>
+        <button type="submit" class="modal__btn btn btn--red">
+            Зарегистрироваться
         </button>
     </form>
 </div>
 
-<div class="modal modal--notice" id="modal-error-tel">
+<div class="modal" id="modal-recover-phone">
+    <div class="modal__title">
+        Востановление пароля
+    </div>
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="recover_phone">Телефон</label>
+            <input type="tel"
+                   name="phone"
+                   id="recover_phone"
+                   placeholder="+7(___)___ __ __"
+                   required>
+        </div>
+        <div class="modal__text">
+            Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
+            <span class="modal__link"
+                  data-fancybox
+                  data-src="#modal-recover-email">
+                Востановить по почте
+            </span>
+        </div>
+        <button type="submit" class="modal__btn btn btn--red">
+            Отправить
+        </button>
+    </form>
+</div>
+
+<div class="modal" id="modal-recover-email">
+    <div class="modal__title">
+        Востановление пароля
+    </div>
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="recover_email">Email</label>
+            <input type="email"
+                   name="email"
+                   id="recover_email"
+                   placeholder="name@mail.ru"
+                   required>
+        </div>
+        <div class="modal__text">
+            Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
+            <span class="modal__link"
+                  data-fancybox
+                  data-src="#modal-recover-phone">
+                Востановить по телефону
+            </span>
+        </div>
+        <button type="submit" class="modal__btn btn btn--red">
+            Отправить
+        </button>
+    </form>
+</div>
+
+<div class="modal modal--notice" id="modal-error-phone">
     <div class="modal__title">
         Ошибка
     </div>
@@ -36,7 +177,7 @@
     </button>
 </div>
 
-<div class="modal modal--notice" id="modal-success-tel">
+<div class="modal modal--notice" id="modal-success-phone">
     <div class="modal__title">
         Успешно
     </div>

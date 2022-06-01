@@ -1,4 +1,5 @@
 .modal {
+  $self: &;
   display: none;
   align-items: center;
   padding: 24px;
@@ -6,7 +7,6 @@
 
   @include media-down(sm) {
     width: 100%;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
   }
@@ -23,6 +23,10 @@
 
     @include media-up(md) {
       width: 526px;
+    }
+
+    #{$self}__title {
+      margin-bottom: 16px;
     }
   }
 
@@ -63,14 +67,16 @@
   }
 
   &__title {
+    width: 100%;
+    margin-bottom: 24px;
     font-family: $font-title;
-    color: $color-blue;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 16px;
+    color: $color-blue;
 
     @include media-up(md) {
+      margin-bottom: 40px;
       font-size: 32px;
       line-height: 44px;
     }
@@ -80,12 +86,29 @@
     color: $color-blue;
   }
 
+  &__form {
+    width: 100%;
+
+    @include media-up(md) {
+      gap: 20px;
+    }
+
+    .btn {
+      margin-top: 12px;
+    }
+  }
+
+  .btn {
+    @include btn-big;
+  }
+
   &__btn {
     width: 100%;
     margin-top: 24px;
 
     @include media-up(md) {
       margin-top: 32px;
+      border-radius: 32px;
     }
   }
 
@@ -105,6 +128,66 @@
     .btn {
       @include media-up(md) {
         width: 100%;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    margin-top: 16px;
+    font-weight: 500;
+    @include link-red;
+    @include link-under;
+    cursor: pointer;
+  }
+
+  &__forgot {
+    display: block;
+    width: fit-content;
+    @include fz12-14-14;
+    @include link-red;
+    cursor: pointer;
+
+    @include media-up(md) {
+      margin-top: -8px;
+    }
+  }
+
+  &__sign-in {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      margin: 0;
+
+      @include media-up(md) {
+        width: auto;
+      }
+    }
+  }
+
+  &__remember {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__no-account {
+    margin: 0 auto;
+
+    span {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
