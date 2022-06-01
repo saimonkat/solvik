@@ -23,7 +23,7 @@ input {
   }
 
   &:focus,
-  &.is-filed {
+  &.is-filled {
     color: $color-blue;
   }
 
@@ -69,6 +69,17 @@ input[type="checkbox"] {
       transform: scale(1) rotate(0);
     }
   }
+
+  &.red {
+    &:hover {
+      border-color: $color-red;
+    }
+
+    &:checked {
+      border-color: $color-red;
+      background-color: $color-red;
+    }
+  }
 }
 
 input[type="radio"] {
@@ -112,4 +123,11 @@ input[type="radio"] {
       transform: translate(-50%, -50%) scale(1);
     }
   }
+}
+
+.input-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $color-blue;
 }

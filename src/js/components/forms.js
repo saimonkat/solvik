@@ -1,10 +1,22 @@
 import IMask from 'imask';
 
 export default function() {
+    const inputs = document.querySelectorAll('input');
     const phoneInputs = document.querySelectorAll('input[name="phone"]');
     const loginInputs = document.querySelectorAll('input[name="login"]');
     const autoNumInputs = document.querySelectorAll('input[name="auto_number"]');
     const autoVinInputs = document.querySelectorAll('input[name="auto_vin"]');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            console.log(input.value.length);
+            if (input.value.length) {
+                input.classList.add('is-filled');
+            } else {
+                input.classList.remove('is-filled');
+            }
+        })
+    })
 
     phoneInputs.forEach(input => {
         IMask(input, {
