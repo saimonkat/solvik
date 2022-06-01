@@ -1,5 +1,112 @@
-<h1>Добавить автомобиль</h1>
-
-<div class="lk-garage-add">
-
+<div class="title-flex">
+    <h1>Добавить автомобиль</h1>
+    <div class="input-block d-none-mob">
+        <input type="checkbox" name="remember" class="red" id="is_main">
+        <label for="is_main">Сделать главным</label>
+    </div>
 </div>
+
+<form class="form lk-garage-add" action="#">
+    <div class="form__row">
+        <div class="form__item">
+            <label for="auto_brand">Автомобиль</label>
+            <select name="auto_brand" id="auto_brand">
+                <option value="Buick">Buick</option>
+                <option value="Cadillac">Cadillac</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Ford">Ford</option>
+                <option value="GMC">GMC</option>
+                <option value="Hummer">Hummer</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Kia">Kia</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Opel">Opel</option>
+                <option value="Ssang-Yong">Ssang-Yong</option>
+                <option value="Toyota">Toyota</option>
+            </select>
+        </div>
+        <div class="form__item">
+            <label for="auto_model">Модель</label>
+            <select name="auto_model" id="auto_model">
+                <option value="Aveo">Aveo</option>
+                <option value="Aveo">Aveo</option>
+                <option value="Aveo">Aveo</option>
+            </select>
+        </div>
+        <div class="form__item">
+            <label for="auto_year">Год выпуска</label>
+            <select name="auto_year" id="auto_year">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__item">
+            <label for="auto_complect">Комплектация</label>
+            <select name="auto_complect" id="auto_complect">
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+            </select>
+        </div>
+        <div class="form__item">
+            <label for="auto_number">Гос. номер</label>
+            <input type="text"
+                   name="auto_number"
+                   id="auto_number"
+                   placeholder="хх-XXXX-хх">
+        </div>
+        <div class="form__item">
+            <label for="auto_vin">Vin</label>
+            <input type="text"
+                   name="auto_vin"
+                   id="auto_vin"
+                   placeholder="ХХХХ-ХХХХ-ХХХХ-ХХХХ">
+        </div>
+    </div>
+    <div class="form__row">
+        <div class="form__item">
+            <label for="auto_option_1">Опция 1</label>
+            <select name="auto_option_1" id="auto_option_1">
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+            </select>
+        </div>
+        <div class="form__item">
+            <label for="auto_option_2">Опция 2</label>
+            <select name="auto_option_2" id="auto_option_2">
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+                <option value="Нет защиты двигателя">Нет защиты двигателя</option>
+            </select>
+        </div>
+        <div class="input-block d-none-dsk">
+            <input type="checkbox" name="remember" class="red" id="is_main_2">
+            <label for="is_main_2">Сделать главным</label>
+        </div>
+        <div class="form__item">
+            <button type="submit" class="btn btn--red">
+                Сохранить изменения
+            </button>
+        </div>
+    </div>
+</form>
