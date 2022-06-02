@@ -67,6 +67,10 @@
   }
 
   &__btn {
+    @include media-up(md) {
+      flex-shrink: 0;
+    }
+
     @include media-up(lg) {
       padding: 14px 65px;
       border-radius: 32px;
