@@ -52,6 +52,7 @@
   "dependencies": {
     "@babel/runtime": "^7.14.0",
     "@fancyapps/ui": "^4.0.27",
+    "gsap": "^3.10.4",
     "imask": "^6.4.2",
     "jquery": "^3.6.0",
     "nice-select2": "^2.0.0",
