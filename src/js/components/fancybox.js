@@ -27,6 +27,7 @@ export default function() {
                 }
             },
             done: (fancybox) => {
+                // Notice modal touch close
                 fancySlide = fancybox.getSlide().$el;
                 const fancyNotice = fancySlide.querySelector('.modal--notice');
 
@@ -40,12 +41,10 @@ export default function() {
 
                     fancyNotice.addEventListener('touchmove', function(e){
                         touchMoveY = e.touches[0].clientY - touchStartY;
-                        touchMoveY > 0 &&
-                            gsap.to(fancyNotice, {y: touchMoveY});
+                        gsap.to(fancyNotice, {y: touchMoveY});
                     })
 
                     fancyNotice.addEventListener('touchend', function(e) {
-                        console.log(touchMoveY);
                         if (touchMoveY > 40) {
                             Fancybox.close();
                             setTimeout(() => {
@@ -66,5 +65,12 @@ export default function() {
                 }
             }
         },
+    });
+
+    const modalBgs = document.querySelectorAll('.modal__bg');
+    modalBgs && modalBgs.forEach(modalBg => {
+        modalBg.addEventListener('click', () => {
+            Fancybox.close();
+        })
     });
 }
