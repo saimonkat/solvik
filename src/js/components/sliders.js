@@ -18,11 +18,6 @@ export default function () {
           clickable: true,
         },
         speed: 700,
-        breakpoints: {
-            768: {
-                autoHeight: false,
-            }
-        }
     });
 
     const homeAdvSlider = document.querySelector('.home-adv-slider');
