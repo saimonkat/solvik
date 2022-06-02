@@ -1,8 +1,10 @@
 import { Fancybox } from '@fancyapps/ui';
+import {gsap} from "gsap";
 
 export default function() {
     const fixedHeader = document.querySelector('.header__main');
     let fancyCount = 0;
+    let fancySlide;
 
     Fancybox.bind('[data-fancybox]', {
         dragToClose: false,
@@ -19,10 +21,40 @@ export default function() {
                     }
                 }
                 else {
-                    // Close previous fancybox on another oper
-                    const fancy = document.querySelector('.fancybox__container');
-                    fancy.classList.add('fancybox-init');
+                    // Close previous fancybox when another open
+                    fancySlide.classList.add('fancybox-init');
                     Fancybox.close();
+                }
+            },
+            done: (fancybox) => {
+                fancySlide = fancybox.getSlide().$el;
+                const fancyNotice = fancySlide.querySelector('.modal--notice');
+
+                if (fancyNotice) {
+                    let touchStartY = 0;
+                    let touchMoveY = 0;
+
+                    fancyNotice.addEventListener('touchstart', function(e){
+                        touchStartY = e.touches[0].clientY;
+                    })
+
+                    fancyNotice.addEventListener('touchmove', function(e){
+                        touchMoveY = e.touches[0].clientY - touchStartY;
+                        touchMoveY > 0 &&
+                            gsap.to(fancyNotice, {y: touchMoveY});
+                    })
+
+                    fancyNotice.addEventListener('touchend', function(e) {
+                        console.log(touchMoveY);
+                        if (touchMoveY > 40) {
+                            Fancybox.close();
+                            setTimeout(() => {
+                                gsap.to(fancyNotice, {y: 0});
+                            }, 300)
+                        } else {
+                            gsap.to(fancyNotice, {y: 0});
+                        }
+                    })
                 }
             },
             destroy: () => {
