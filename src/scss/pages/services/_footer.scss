@@ -3,6 +3,7 @@
   width: 100%;
   @include fz12-14-14;
   order: 1;
+  margin-bottom: 10px;
 
   &:before {
     content: '';

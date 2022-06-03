@@ -143,6 +143,12 @@ p {
   }
 }
 
+.d-none-tbl {
+  @include media-down(lg) {
+    display: none !important;
+  }
+}
+
 .d-none-dsk {
   @include media-up(md) {
     display: none !important;
