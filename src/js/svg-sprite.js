@@ -5,6 +5,8 @@ import '../img/icon/phone.svg';
 import '../img/icon/nav-arrow.svg';
 import '../img/icon/user.svg';
 import '../img/icon/basket.svg';
+import '../img/icon/search.svg';
+import '../img/icon/cross.svg';
 
 // Socials
 // import '../img/icon/instagram.svg';

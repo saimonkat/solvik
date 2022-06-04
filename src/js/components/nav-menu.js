@@ -6,14 +6,29 @@ export default function(){
     const navBackdrop = document.querySelector('.nav-backdrop');
     const navBurgerList = document.querySelector('.nav-burger__list');
     const burgerItems = document.querySelectorAll('.nav .menu-item-hidden');
+    const search = document.querySelector('.header__search');
+    const searchBtn = document.querySelector('.header__search-btn');
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const menuClass = 'show-nav';
+    const searchClass = 'show-search';
 
     navBtn && navBtn.addEventListener('click', () => {
         dom.classList.toggle(menuClass);
 
         if (isMobile) {
             if (dom.classList.contains(menuClass)) {
+                bodyFixPosition();
+            } else {
+                bodyUnfixPosition();
+            }
+        }
+    });
+
+    searchBtn && searchBtn.addEventListener('click', () => {
+        dom.classList.toggle(searchClass);
+
+        if (isMobile) {
+            if (dom.classList.contains(searchClass)) {
                 bodyFixPosition();
             } else {
                 bodyUnfixPosition();

@@ -31,13 +31,21 @@
 <header class="header">
     <div class="header__top">
         <div class="header__container container">
-            <div class="header__info">
+            <div class="header__search-btn">
+                <svg width="24" height="24">
+                    <use xlink:href="#search"></use>
+                </svg>
+                <svg width="24" height="24">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </div>
+            <div class="header__info d-none-sm">
                 <svg width="20" height="20">
                     <use xlink:href="#map"></use>
                 </svg>
                 г. Санкт-Петербург, улица, дом. 4
             </div>
-            <div class="header__info">
+            <div class="header__info d-none-sm">
                 <svg width="20" height="20">
                     <use xlink:href="#clock"></use>
                 </svg>
@@ -59,6 +67,27 @@
             </a>
             <div class="header__service">
                 <img src="img/logo/service-logo.svg" alt="">
+            </div>
+
+            <div class="header__search h-search">
+                <form action="#" class="h-search__form">
+                    <input type="search"
+                        name="search"
+                        class="h-search__input"
+                        placeholder="Поиск по услугам">
+                    <div class="h-search__results">
+                        <ul>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                            <li><a href="service.html">Ремонт подвески</a></li>
+                        </ul>
+                    </div>
+                </form>
             </div>
 
             <nav class="header__nav nav">
