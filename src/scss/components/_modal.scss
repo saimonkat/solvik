@@ -38,10 +38,6 @@
       padding-bottom: 45px;
       border-radius: 16px 16px 0 0;
 
-      &.fancybox-zoomInUp {
-        animation: 0.3s ease fancybox-slideIn;
-      }
-
       &.fancybox-fadeOut {
         animation: 0.3s ease fancybox-slideOut;
       }
@@ -69,7 +65,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 50vh;
+        height: 10vh;
         transform: translateY(100%);
         background: #FFFFFF;
       }

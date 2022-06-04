@@ -52,15 +52,6 @@
   }
 }
 
-@keyframes fancybox-slideIn {
-  from {
-    transform: translateY(105%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
 @keyframes fancybox-slideOut {
   to {
     transform: translateY(105%);
