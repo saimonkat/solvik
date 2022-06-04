@@ -137,19 +137,19 @@ p {
   }
 }
 
-.d-none-mob {
+.d-none-sm {
   @include media-down(sm) {
     display: none !important;
   }
 }
 
-.d-none-tbl {
+.d-none-lg {
   @include media-down(lg) {
     display: none !important;
   }
 }
 
-.d-none-dsk {
+.d-none-md-up {
   @include media-up(md) {
     display: none !important;
   }
@@ -193,6 +193,7 @@ label {
 
 .section {
   padding: 60px 0;
+  overflow: hidden;
 
   @include media-up(md) {
     padding: 80px 0;

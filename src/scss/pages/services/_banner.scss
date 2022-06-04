@@ -38,9 +38,12 @@
 
   &__btn {
     width: fit-content;
-    min-width: 224px;
     margin: 0 auto;
     margin-top: 12px;
+
+    @include media-up(xs) {
+      min-width: 224px;
+    }
 
     @include media-up(md) {
       margin-top: 24px;
