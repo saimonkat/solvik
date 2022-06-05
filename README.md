@@ -4,7 +4,7 @@
 
 Requirements: node.js 12+, webpack
 
-Domain: solvik.space
+Domain: http://solvik.space/
 
 ### Install dependencies
 
