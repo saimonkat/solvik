@@ -1,0 +1,61 @@
+.lk-wrapper {
+  display: grid;
+  grid-gap: 32px;
+
+  @include media-up(md) {
+    grid-gap: 40px;
+  }
+
+  @include media-up(xl) {
+    grid-gap: 32px;
+    grid-template-columns: 285px 1fr;
+  }
+
+  & > .lk-bonus {
+    @include media-up(xl) {
+      display: none;
+    }
+  }
+}
+
+.lk-sidebar {
+  .lk-bonus {
+    @include media-down(lg) {
+      display: none;
+    }
+  }
+}
+
+.lk-auto-status {
+  position: relative;
+  width: fit-content;
+  padding: 2px 8px 2px 28px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  outline: 1px solid $color-gray;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: $color-gray;
+    border-radius: 50%;
+  }
+
+  &.active {
+    color: $color-blue;
+    background: $color-orange;
+    outline-color: transparent;
+
+    &:before {
+      background: $color-red;
+    }
+  }
+}

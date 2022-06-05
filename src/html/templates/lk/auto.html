@@ -1,0 +1,76 @@
+<h1>Chevrolet Aveo</h1>
+
+<form class="lk-auto lk-form">
+    <div class="lk-auto__header">
+        <div class="lk-auto__header-block">
+            <div class="lk-auto__title h3">Основные данные</div>
+            <div class="lk-auto__status lk-auto-status active">Главный</div>
+        </div>
+        <div class="lk-auto__header-block">
+            <button type="submit"
+                    class="lk-auto__save">
+                Сохранить
+            </button>
+            <button type="button"
+                    class="lk-auto__edit lk-edit-btn btn">
+                <svg width="24" height="24">
+                    <use xlink:href="#edit"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="lk-auto__content">
+        <div class="lk-auto__info">
+            <span class="lk-auto__info-value">Chevrolet Aveo</span>
+            <span class="lk-auto__info-value">Vin: SJNBAAN16UO411167</span>
+        </div>
+        <div class="lk-auto__info">
+            <span class="lk-auto__info-title">Год выпуска</span>
+            <span class="lk-auto__info-value">2015 г.</span>
+        </div>
+        <div class="lk-auto__info lk-auto__info--hide">
+            <span class="lk-auto__info-title">Комплектация</span>
+            <span class="lk-auto__info-value">2011-2020 T300</span>
+        </div>
+        <div class="lk-auto__info">
+            <span class="lk-auto__info-title">Опция 1</span>
+            <span class="lk-auto__info-value">Нет защиты двигателя</span>
+        </div>
+        <div class="lk-auto__info">
+            <span class="lk-auto__info-title">Опция 2</span>
+            <span class="lk-auto__info-value">Нет защиты двигателя</span>
+        </div>
+        <!-- Инлайн-стили для демо, на бэке не нужны -->
+        <div class="lk-auto__info" style="grid-column-start: 1;">
+            <span class="lk-auto__info-title">Опция 3</span>
+            <span class="lk-auto__info-value">Мощность двигателя:72KW</span>
+        </div>
+        <div class="lk-auto__info">
+            <span class="lk-auto__info-title">Опция 4</span>
+            <span class="lk-auto__info-value">Мощность двигателя:72KW</span>
+        </div>
+    </div>
+    <div class="lk-auto__footer">
+        <div class="form__item">
+            <label for="auto_complect">Комплектация</label>
+            <select name="auto_complect" id="auto_complect">
+                <option value="2011–2020 T300" selected>2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+                <option value="2011–2020 T300">2011–2020 T300</option>
+            </select>
+        </div>
+        <div class="lk-auto__is-main input-block">
+            <input type="checkbox" name="remember" class="red" id="is_main_auto" checked>
+            <label for="is_main_auto">Сделать главным</label>
+        </div>
+        <button type="submit"
+                class="lk-auto__save-btn btn btn--red">
+            Сохранить изменения
+        </button>
+    </div>
+</form>

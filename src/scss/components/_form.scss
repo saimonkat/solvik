@@ -35,25 +35,26 @@
       flex: 1 1 0;
     }
 
-    #{$self}.active & input {
-      animation: input-active .5s;
-    }
-
     &--hidden {
-      #{$self}:not(.active) & {
+      #{$self}:not(.edited) & {
         display: none;
       }
     }
 
     &--hide {
-      #{$self}.active & {
+      #{$self}.edited & {
         display: none;
       }
+    }
+
+    #{$self}.edited & input {
+      animation: input-active .5s;
     }
 
     .btn {
       width: 100%;
       margin-top: auto;
+      @include btn-big;
 
       @include media-down(sm) {
         margin-top: 12px;
@@ -67,9 +68,5 @@
         margin-bottom: 12px;
       }
     }
-  }
-
-  .btn {
-    @include btn-big;
   }
 }

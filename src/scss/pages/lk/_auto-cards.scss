@@ -30,35 +30,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    padding: 2px 8px 2px 28px;
-    border-radius: 40px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
-    outline: 1px solid $color-gray;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: block;
-      width: 12px;
-      height: 12px;
-      background: $color-gray;
-      border-radius: 50%;
-    }
-
-    &.active {
-      color: $color-blue;
-      background: $color-orange;
-      outline-color: transparent;
-
-      &:before {
-        background: $color-red;
-      }
-    }
   }
 
   &__info {
