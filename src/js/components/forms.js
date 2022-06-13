@@ -9,7 +9,6 @@ export default function() {
 
     inputs.forEach(input => {
         input.addEventListener('input', () => {
-            console.log(input.value.length);
             if (input.value.length) {
                 input.classList.add('is-filled');
             } else {

@@ -10,6 +10,7 @@ import fancybox from './components/fancybox';
 import select from './components/select';
 import cookies from './components/cookies';
 import sliders from './components/sliders';
+import modals from './components/modals';
 
 // Pages
 import service from './pages/service';
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     select();
     cookies();
     sliders();
+    modals();
 
     service();
     lk();

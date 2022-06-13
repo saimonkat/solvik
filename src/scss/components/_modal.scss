@@ -97,6 +97,14 @@
     }
   }
 
+  &__timeout {
+    display: none;
+
+    span {
+      color: $color-red;
+    }
+  }
+
   &__text {
     color: $color-blue;
   }

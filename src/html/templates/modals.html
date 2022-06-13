@@ -103,7 +103,7 @@
     <div class="modal__title">
         Востановление пароля
     </div>
-    <form action="#" class="modal__form form">
+    <form action="#" class="modal__form form" id="form-recover-phone">
         <div class="form__item">
             <label for="recover_phone">Телефон</label>
             <input type="tel"
@@ -111,6 +111,9 @@
                    id="recover_phone"
                    placeholder="+7(___)___ __ __"
                    required>
+        </div>
+        <div class="modal__timeout">
+            Запросить повторно код можно через <span>60</span> секунд.
         </div>
         <div class="modal__text">
             Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.

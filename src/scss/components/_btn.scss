@@ -31,6 +31,11 @@
     background: $color-blue-active;
   }
 
+  &:disabled {
+    background: $color-gray-2;
+    pointer-events: none;
+  }
+
   &--red {
     background: $color-red;
 
