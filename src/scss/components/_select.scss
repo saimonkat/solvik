@@ -1,5 +1,10 @@
 select {
   display: none;
+
+  &:disabled + .nice-select {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .nice-select {
