@@ -1,27 +1,13 @@
-.lk-visits {
-  display: grid;
-  grid-gap: 12px;
-
-  @include media-up(sm) {
-    grid-template-columns: repeat(2, 2fr);
-  }
-
-  @include media-up(lg) {
-    grid-template-columns: repeat(3, 2fr);
-    grid-gap: 16px;
-  }
-
-  @include media-up(xl) {
-    grid-gap: 32px;
-  }
-}
-
-.lk-visit {
+.lk-work {
   padding: 24px;
   background: $color-light;
   border-radius: 24px;
   font-size: 16px;
   line-height: 28px;
+
+  &__status {
+    margin-bottom: 16px;
+  }
 
   &__auto {
     margin-bottom: 8px;
@@ -33,9 +19,16 @@
     margin-bottom: 8px;
   }
 
+
   &__title {
     font-weight: 500;
     color: $color-blue;
+    margin-bottom: 12px;
+  }
+
+  &__works {
+    font-size: 12px;
+    line-height: 24px;
     margin-bottom: 12px;
   }
 

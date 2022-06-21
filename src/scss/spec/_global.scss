@@ -224,3 +224,21 @@ button {
     margin-bottom: 0;
   }
 }
+
+.grid {
+  display: grid;
+  grid-gap: 12px;
+
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  @include media-up(lg) {
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 16px;
+  }
+
+  @include media-up(xl) {
+    grid-gap: 32px;
+  }
+}

@@ -1,4 +1,5 @@
 .lk-sort {
+  $self: &;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,16 +11,22 @@
 
   &__title {
     @include media-up(md) {
-      margin-right: 165px;
+      margin-right: 40px;
+
+      #{$self}--center & {
+        margin-right: 165px;
+      }
     }
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
     font-weight: 500;
     color: $color-blue;
+    overflow: hidden;
     cursor: pointer;
 
     &:not(:last-child) {
@@ -28,10 +35,27 @@
       }
     }
 
+    svg {
+      transition: transform .15s;
+
+      &:last-child {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(100%) rotate(180deg);
+        color: $color-red;
+      }
+    }
+
     &.active {
       svg {
-        transform: rotate(180deg);
-        color: $color-red;
+        &:first-child {
+          transform: translateY(-100%);
+        }
+
+        &:last-child {
+          transform: translateY(0) rotate(180deg);
+        }
       }
     }
   }

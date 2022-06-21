@@ -12,18 +12,7 @@
   }
 
   &__items {
-    display: grid;
-    grid-gap: 16px;
     margin-top: 24px;
-
-    @include media-up(md) {
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 36px;
-    }
-
-    @include media-up(xl) {
-      grid-gap: 32px;
-    }
   }
 }
 
