@@ -1,0 +1,111 @@
+.lk-service {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include media-up(md) {
+    gap: 40px;
+  }
+
+  @include media-up(md) {
+    gap: 60px;
+  }
+
+  &__text {
+    color: $color-blue;
+    margin-top: -8px;
+
+    @include media-up(md) {
+      margin-top: -24px;
+    }
+  }
+}
+
+.lk-service-banner {
+  $self: &;
+  background: $color-light;
+  border-radius: 32px;
+  padding: 24px;
+
+  @include media-up(md) {
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+  }
+
+  &__items {
+    display: flex;
+
+    @include media-down(sm) {
+      border-bottom: 1px solid $color-border;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__item {
+    @include fz14-16-16;
+
+    @include media-down(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media-up(md) {
+      padding: 0 28px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $color-border-2;
+      }
+    }
+  }
+
+  .price-title {
+    margin-right: auto;
+
+    @include media-up(md) {
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+
+  .new-price {
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-red;
+  }
+
+  .old-price {
+    font-weight: 500;
+    color: $color-blue;
+    white-space: nowrap;
+    text-decoration: line-through;
+    margin-left: 12px;
+  }
+
+  &__btn {
+    @include btn-big;
+
+    @include media-down(sm) {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    @include media-up(md) {
+      margin-left: auto;
+      min-width: 182px;
+    }
+  }
+}
+

@@ -21,9 +21,10 @@
 
 
   &__title {
+    display: block;
     font-weight: 500;
-    color: $color-blue;
     margin-bottom: 12px;
+    @include link;
   }
 
   &__works {

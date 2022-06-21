@@ -2,21 +2,28 @@
 
 <div class="lk-filter">
     <div class="lk-filter__item active" data-filter="*">Все</div>
-    <div class="lk-filter__item" data-filter="chevrolet">Chevrolet Aveo</div>
-    <div class="lk-filter__item" data-filter="chevrolet">Chevrolet Aveo</div>
-    <div class="lk-filter__item" data-filter="chevrolet">Chevrolet Aveo</div>
+    <div class="lk-filter__item" data-filter="MD00000001">Chevrolet Aveo</div>
+    <div class="lk-filter__item" data-filter="MD00000002">Chevrolet Camaro</div>
+    <div class="lk-filter__item" data-filter="MD00000003">Cadillac STS</div>
+    <div class="lk-filter__item" data-filter="MD00000004">Ford Mustang</div>
 </div>
 
 <div class="lk-sort lk-sort--center">
     <div class="lk-sort__title">Сортировка по:</div>
-    <div class="lk-sort__item active">
+    <div class="lk-sort__item active" data-sort="date">
         Дате
         <svg width="24" height="24">
             <use xlink:href="#arrow"></use>
         </svg>
+        <svg width="24" height="24">
+            <use xlink:href="#arrow"></use>
+        </svg>
     </div>
-    <div class="lk-sort__item">
+    <div class="lk-sort__item" data-sort="price">
         Стоимости
+        <svg width="24" height="24">
+            <use xlink:href="#arrow"></use>
+        </svg>
         <svg width="24" height="24">
             <use xlink:href="#arrow"></use>
         </svg>
@@ -24,7 +31,10 @@
 </div>
 
 <div class="lk-history">
-    <div class="lk-history-card">
+    <div class="lk-history-card"
+         data-model="MD00000001"
+         data-date="01.03.2021"
+         data-price="4000">
         <div class="lk-history-card__header">
             <span class="lk-history-card__modal"
                   data-fancybox
@@ -53,7 +63,10 @@
             <button class="lk-history-card__btn btn btn--red">В корзину</button>
         </div>
     </div>
-    <div class="lk-history-card">
+    <div class="lk-history-card"
+         data-model="MD00000002"
+         data-date="02.03.2021"
+         data-price="3500">
         <div class="lk-history-card__header">
             <span class="lk-history-card__modal"
                   data-fancybox
@@ -61,7 +74,7 @@
                 Подробнее
             </span>
             <div class="lk-history-card__info">
-                <span>Chevrolet Aveo</span>
+                <span>Chevrolet Camaro</span>
                 <span>Гос. номер: ххххххх</span>
             </div>
         </div>
@@ -72,17 +85,20 @@
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Дата</div>
-                    <div class="lk-history-card__data-value">01.03.2021г.</div>
+                    <div class="lk-history-card__data-value">02.03.2021г.</div>
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Стоимость</div>
-                    <div class="lk-history-card__data-value">4 000 ₽</div>
+                    <div class="lk-history-card__data-value">3 500 ₽</div>
                 </div>
             </div>
             <button class="lk-history-card__btn btn btn--red">В корзину</button>
         </div>
     </div>
-    <div class="lk-history-card">
+    <div class="lk-history-card"
+         data-model="MD00000003"
+         data-date="03.03.2021"
+         data-price="3700">
         <div class="lk-history-card__header">
             <span class="lk-history-card__modal"
                   data-fancybox
@@ -90,7 +106,7 @@
                 Подробнее
             </span>
             <div class="lk-history-card__info">
-                <span>Chevrolet Aveo</span>
+                <span>Cadillac STS</span>
                 <span>Гос. номер: ххххххх</span>
             </div>
         </div>
@@ -101,17 +117,20 @@
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Дата</div>
-                    <div class="lk-history-card__data-value">01.03.2021г.</div>
+                    <div class="lk-history-card__data-value">03.03.2021г.</div>
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Стоимость</div>
-                    <div class="lk-history-card__data-value">4 000 ₽</div>
+                    <div class="lk-history-card__data-value">3 700 ₽</div>
                 </div>
             </div>
             <button class="lk-history-card__btn btn btn--red">В корзину</button>
         </div>
     </div>
-    <div class="lk-history-card">
+    <div class="lk-history-card"
+         data-model="MD00000004"
+         data-date="04.03.2021"
+         data-price="4200">
         <div class="lk-history-card__header">
             <span class="lk-history-card__modal"
                   data-fancybox
@@ -119,7 +138,7 @@
                 Подробнее
             </span>
             <div class="lk-history-card__info">
-                <span>Chevrolet Aveo</span>
+                <span>Ford Mustang</span>
                 <span>Гос. номер: ххххххх</span>
             </div>
         </div>
@@ -130,11 +149,11 @@
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Дата</div>
-                    <div class="lk-history-card__data-value">01.03.2021г.</div>
+                    <div class="lk-history-card__data-value">04.03.2021г.</div>
                 </div>
                 <div class="lk-history-card__data">
                     <div class="lk-history-card__data-title">Стоимость</div>
-                    <div class="lk-history-card__data-value">4 000 ₽</div>
+                    <div class="lk-history-card__data-value">4 200 ₽</div>
                 </div>
             </div>
             <button class="lk-history-card__btn btn btn--red">В корзину</button>
