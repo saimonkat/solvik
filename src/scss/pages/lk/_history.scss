@@ -1,0 +1,129 @@
+.lk-history {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-up(md) {
+    gap: 16px;
+  }
+
+  @include media-up(xl) {
+    gap: 24px;
+  }
+
+  &__title {
+    @include media-down(sm) {
+      padding-right: 40px;
+    }
+  }
+}
+
+.lk-history-card {
+  background: $color-light;
+  border-radius: 32px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 32px;
+    border: 1px solid $color-blue;
+
+    @include media-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 24px;
+    }
+  }
+
+  &__modal {
+    width: fit-content;
+    color: $color-red;
+    font-weight: 500;
+    cursor: pointer;
+
+    @include media-up(md) {
+      margin-right: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-up(md) {
+      flex-shrink: 0;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 24px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 24px 22px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include media-up(xl) {
+      gap: 60px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-blue;
+
+    @include media-up(md) {
+      width: 170px;
+    }
+
+    @include media-up(lg) {
+      width: 192px;
+      margin-right: 24px;
+    }
+  }
+
+  &__data {
+    &-title {
+      margin-bottom: 8px;
+
+      @include media-up(md) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-value {
+      font-weight: 500;
+      color: $color-blue;
+    }
+  }
+
+  &__btn {
+    @include btn-big;
+
+    @include media-up(md) {
+      min-width: 178px;
+    }
+  }
+}

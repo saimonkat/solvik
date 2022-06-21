@@ -13,7 +13,7 @@ import sliders from './components/sliders';
 import modals from './components/modals';
 
 // Pages
-import lkEdit from './pages/lk-edit';
+import lk from './pages/lk';
 import autoSelect from './pages/auto-select';
 
 // DOM content load
@@ -31,6 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sliders();
     modals();
 
-    lkEdit();
+    lk();
     autoSelect();
 })

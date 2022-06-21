@@ -19,3 +19,4 @@ import '../img/icon/service-phone.svg';
 // Other
 import '../img/icon/plus.svg';
 import '../img/icon/edit.svg';
+import '../img/icon/arrow.svg';

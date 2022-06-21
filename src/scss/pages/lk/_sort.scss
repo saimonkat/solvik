@@ -1,0 +1,38 @@
+.lk-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @include media-up(md) {
+    justify-content: flex-start;
+  }
+
+  &__title {
+    @include media-up(md) {
+      margin-right: 165px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: $color-blue;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      @include media-up(md) {
+        margin-right: 40px;
+      }
+    }
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+        color: $color-red;
+      }
+    }
+  }
+}
