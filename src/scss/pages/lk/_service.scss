@@ -10,15 +10,6 @@
   @include media-up(md) {
     gap: 60px;
   }
-
-  &__text {
-    color: $color-blue;
-    margin-top: -8px;
-
-    @include media-up(md) {
-      margin-top: -24px;
-    }
-  }
 }
 
 .lk-service-banner {
@@ -84,6 +75,12 @@
     font-size: 18px;
     line-height: 28px;
     color: $color-red;
+
+    @include media-up(md) {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   .old-price {
@@ -92,6 +89,15 @@
     white-space: nowrap;
     text-decoration: line-through;
     margin-left: 12px;
+
+    @include media-only(md) {
+      display: block;
+      margin-left: 0;
+    }
+
+    @include media-up(lg) {
+      margin-left: 16px;
+    }
   }
 
   &__btn {

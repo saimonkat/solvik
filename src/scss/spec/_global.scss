@@ -149,7 +149,7 @@ p {
   }
 }
 
-.d-none-md-up {
+.d-none-md {
   @include media-up(md) {
     display: none !important;
   }
@@ -222,6 +222,17 @@ button {
 
   h1 {
     margin-bottom: 0;
+  }
+}
+
+.header-text {
+  color: $color-blue;
+  margin-top: -12px;
+  margin-bottom: 24px;
+
+  @include media-up(md) {
+    margin-top: -24px;
+    margin-bottom: 40px;
   }
 }
 

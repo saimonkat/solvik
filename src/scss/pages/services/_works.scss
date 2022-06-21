@@ -3,14 +3,6 @@
     order: 1;
   }
 
-  &__text {
-    margin-top: -12px;
-
-    @include media-up(md) {
-      margin-top: -16px;
-    }
-  }
-
   &__items {
     margin-top: 24px;
   }
