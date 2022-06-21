@@ -9,7 +9,8 @@
   font-weight: 500;
   user-select: none;
   text-align: center;
-  transition: background-color .3s;
+  transition-property: color, outline-color, background-color;
+  transition-duration: .25s;
   border-radius: 24px;
   cursor: pointer;
 
@@ -45,6 +46,24 @@
 
     &:active {
       background: $color-red-active;
+    }
+  }
+
+  &--transparent {
+    color: $color-blue;
+    outline: 1px solid $color-border-2;
+    background: transparent;
+
+    &:hover {
+      color: $color-blue-hover;
+      outline-color: $color-blue-hover;
+      background: transparent;
+    }
+
+    &:active {
+      color: $color-blue-active;
+      outline-color: $color-blue-active;
+      background: transparent;
     }
   }
 

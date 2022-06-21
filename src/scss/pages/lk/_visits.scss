@@ -1,0 +1,63 @@
+.lk-visits {
+  display: grid;
+  grid-gap: 12px;
+
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  @include media-up(lg) {
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 16px;
+  }
+
+  @include media-up(xl) {
+    grid-gap: 32px;
+  }
+}
+
+.lk-visit {
+  padding: 24px;
+  background: $color-light;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 28px;
+
+  &__auto {
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    font-weight: 500;
+    color: $color-red;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-blue;
+    margin-bottom: 12px;
+  }
+
+  &__total {
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-red;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  &__btn {
+    min-width: unset;
+    flex: 1 1 0;
+    padding: 7px 0;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
