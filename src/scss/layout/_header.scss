@@ -57,6 +57,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-up(md) {
+      gap: 24px;
+    }
+
+    @include media-up(xl) {
+      gap: 48px;
+    }
   }
 
   &__search-btn {
@@ -97,14 +105,6 @@
     color: #fff;
     font-weight: 500;
 
-    &:not(:last-child) {
-      margin-right: 24px;
-
-      @include media-up(xl) {
-        margin-right: 32px;
-      }
-    }
-
     &:last-child {
       margin-left: auto;
     }
@@ -118,8 +118,18 @@
     }
   }
 
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include media-up(xl) {
+      gap: 20px;
+    }
+  }
+
   &__logo {
-    margin-right: 20px;
+    display: block;
     height: 20px;
 
     @include media-up(md) {
@@ -142,7 +152,6 @@
 
     @include media-up(md) {
       height: 30px;
-      margin-right: auto;
     }
 
     @include media-up(xl) {
@@ -151,12 +160,6 @@
 
     img {
       height: 100%;
-    }
-  }
-
-  &__nav {
-    @include media-up(xl) {
-      margin-right: 60px;
     }
   }
 
@@ -236,11 +239,6 @@
   @include media-up(md) {
     position: relative;
     flex: 1 1 0;
-    margin: 0 20px;
-  }
-
-  @include media-up(lg) {
-    margin: 0 40px;
   }
 
   &__input {

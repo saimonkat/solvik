@@ -3,6 +3,10 @@
     background: $color-blue-50;
   }
 
+  &__container {
+    color: inherit;
+  }
+
   &__slide {
     @include media-down(sm) {
       display: block;
@@ -12,6 +16,7 @@
 
   &__content {
     padding: 0;
+    color: inherit;
 
     @include media-down(sm) {
       min-height: 100vh;
