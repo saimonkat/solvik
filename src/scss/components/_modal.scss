@@ -31,10 +31,6 @@
     @include media-up(md) {
       width: 526px;
     }
-
-    #{$self}__title {
-      margin-bottom: 16px;
-    }
   }
 
   &--notice {
@@ -83,19 +79,43 @@
     }
   }
 
+  &--cancel {
+    text-align: center;
+
+    @include media-up(md) {
+      width: 513px;
+    }
+  }
+
   &__title {
     width: 100%;
-    margin-bottom: 24px;
     font-family: $font-title;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     color: $color-blue;
+    margin-bottom: 24px;
 
     @include media-up(md) {
-      margin-bottom: 40px;
       font-size: 32px;
       line-height: 44px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    color: $color-blue;
+    margin-top: -8px;
+    margin-bottom: 24px;
+
+    @include media-up(md) {
+      margin-top: -24px;
+      margin-bottom: 32px;
+    }
+
+    & + #{$self}__buttons,
+    & + #{$self}__btn {
+      margin-top: 0;
     }
   }
 
@@ -105,10 +125,6 @@
     span {
       color: $color-red;
     }
-  }
-
-  &__text {
-    color: $color-blue;
   }
 
   &__form {
@@ -140,10 +156,10 @@
   &__buttons {
     width: 100%;
     max-width: 350px;
+    margin: 32px auto 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 32px;
 
     @include media-up(md) {
       flex-direction: row;
@@ -208,6 +224,50 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  &__cancel-form {
+    @include media-up(md) {
+      width: 100%;
+    }
+
+    #{$self}__buttons {
+      @include media-down(sm) {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  &__options {
+    position: relative;
+    left: 0;
+    width: 100vw;
+
+    @include media-up(md) {
+      left: -80px;
+      width: calc(100% + 160px);
+    }
+  }
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    font-weight: 500;
+    text-align: left;
+
+    @include media-up(md) {
+      padding: 16px 80px;
+    }
+
+    &:nth-child(odd) {
+      background: $color-light;
+    }
+
+    label {
+      width: 100%;
     }
   }
 
@@ -431,4 +491,8 @@
   &__btn {
     @include btn-big;
   }
+}
+
+.modal-options {
+
 }

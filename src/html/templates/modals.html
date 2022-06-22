@@ -363,3 +363,37 @@
         </div>
     </div>
 </div>
+
+<div class="modal modal--cancel" id="modal-cancel-visit">
+    <div class="modal__title">
+        Отмена записи
+    </div>
+    <div class="modal__text">
+        Выберите причину отмены записи
+    </div>
+    <form action="#" class="modal__cancel-form">
+        <div class="modal__options">
+            <div class="modal__option">
+                <label for="reason_secret">Секрет</label>
+                <input type="radio" name="cancel_reason" id="reason_secret" checked>
+            </div>
+            <div class="modal__option">
+                <label for="reason_overprice">Нашел Дешевле</label>
+                <input type="radio" name="cancel_reason" id="reason_overprice">
+            </div>
+            <div class="modal__option">
+                <label for="reason_wait">Долго ждать</label>
+                <input type="radio" name="cancel_reason" id="reason_wait">
+            </div>
+            <div class="modal__option">
+                <label for="reason_actual">Уже неактуально</label>
+                <input type="radio" name="cancel_reason" id="reason_actual">
+            </div>
+        </div>
+        <div class="modal__buttons">
+            <button class="btn" type="submit">
+                Отменить запись
+            </button>
+        </div>
+    </form>
+</div>
