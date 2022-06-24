@@ -2,7 +2,7 @@
 
 <div class="lk-sort">
     <div class="lk-sort__title">Сортировка по:</div>
-    <div class="lk-sort__item active">
+    <div class="lk-sort__item active" data-sort="date">
         Дате
         <svg width="24" height="24">
             <use xlink:href="#arrow"></use>
@@ -11,7 +11,7 @@
             <use xlink:href="#arrow"></use>
         </svg>
     </div>
-    <div class="lk-sort__item">
+    <div class="lk-sort__item" data-sort="price">
         Стоимости
         <svg width="24" height="24">
             <use xlink:href="#arrow"></use>
@@ -22,8 +22,10 @@
     </div>
 </div>
 
-<div class="lk-works grid">
-    <div class="lk-work">
+<div class="lk-works lk-cards grid">
+    <div class="lk-work lk-card"
+         data-date="02.21.2021"
+         data-price="4343">
         <div class="lk-work__status lk-auto-status active">До 21.02.2021</div>
         <div class="lk-work__auto">Chevrolet Aveo</div>
         <a href="lk-service.html" class="lk-work__title">Замена задних дисков и&nbsp;колодок&nbsp;(комплект)</a>
@@ -34,23 +36,27 @@
             <button class="lk-work__btn btn">В корзину</button>
         </div>
     </div>
-    <div class="lk-work">
-        <div class="lk-work__status lk-auto-status active">До 21.02.2021</div>
+    <div class="lk-work lk-card"
+         data-date="02.25.2021"
+         data-price="4543">
+        <div class="lk-work__status lk-auto-status active">До 25.02.2021</div>
         <div class="lk-work__auto">Chevrolet Aveo</div>
         <a href="lk-service.html" class="lk-work__title">Замена задних дисков и&nbsp;колодок&nbsp;(комплект)</a>
         <div class="lk-work__works">Работы + запчасти</div>
-        <div class="lk-work__total">4 343 ₽</div>
+        <div class="lk-work__total">4 543 ₽</div>
         <div class="lk-work__btns">
             <a href="lk-service.html" class="lk-work__btn btn btn--transparent">К работам</a>
             <button class="lk-work__btn btn">В корзину</button>
         </div>
     </div>
-    <div class="lk-work">
-        <div class="lk-work__status lk-auto-status active">До 21.02.2021</div>
+    <div class="lk-work lk-card"
+         data-date="02.27.2021"
+         data-price="3850">
+        <div class="lk-work__status lk-auto-status active">До 27.02.2021</div>
         <div class="lk-work__auto">Chevrolet Aveo</div>
         <a href="lk-service.html" class="lk-work__title">Замена задних дисков и&nbsp;колодок&nbsp;(комплект)</a>
         <div class="lk-work__works">Работы + запчасти</div>
-        <div class="lk-work__total">4 343 ₽</div>
+        <div class="lk-work__total">3 850 ₽</div>
         <div class="lk-work__btns">
             <a href="lk-service.html" class="lk-work__btn btn btn--transparent">К работам</a>
             <button class="lk-work__btn btn">В корзину</button>

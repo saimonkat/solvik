@@ -10,18 +10,49 @@ export default function() {
         })
     })
 
+    const lkCards = document.querySelectorAll('.lk-card');
+    const lkCardsWrapper = document.querySelector('.lk-cards');
+
     const lkFilterItems = document.querySelectorAll('.lk-filter__item');
-    lkFilterItems && lkFilterItems.forEach(filter => {
-        filter.addEventListener('click', () => {
+    lkFilterItems && lkFilterItems.forEach(filterItem => {
+        filterItem.addEventListener('click', () => {
+            const filterBy = filterItem.getAttribute('data-filter');
             lkFilterItems.forEach(item => item.classList.remove('active'));
-            filter.classList.add('active');
+            filterItem.classList.add('active');
+            lkCards.forEach(item => {
+                const itemModel = item.getAttribute('data-model');
+                if (filterBy === '*' || itemModel === filterBy) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         })
     })
 
     const lkSortItems = document.querySelectorAll('.lk-sort__item');
-    lkSortItems && lkSortItems.forEach(sort => {
-        sort.addEventListener('click', () => {
-            sort.classList.toggle('active');
+    lkSortItems && lkSortItems.forEach(sortItem => {
+        sortItem.addEventListener('click', () => {
+            const sortBy = sortItem.getAttribute('data-sort');
+            const dataSort = `data-${sortBy}`;
+
+            if (!sortItem.classList.contains('active')) {
+                lkSortItems.forEach(item => item.classList.remove('active', 'reverse'));
+                sortItem.classList.add('active');
+            } else {
+                sortItem.classList.toggle('reverse');
+            }
+
+            let sortArr = [...lkCards].sort(function (a, b) {
+                return a.getAttribute(dataSort) > b.getAttribute(dataSort) ? 1 : -1;
+            });
+
+            if (sortItem.classList.contains('reverse'))
+                sortArr = sortArr.reverse();
+
+            sortArr.forEach(sortEl => {
+                lkCardsWrapper.appendChild(sortEl);
+            });
         })
     })
 }
