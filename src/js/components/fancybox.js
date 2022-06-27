@@ -35,50 +35,63 @@ export default function() {
 
                 // Notice modal touch close
                 const fancySlide = fancybox.getSlide().$el;
-                const fancyNotice = fancySlide.querySelector('.modal--notice');
+                const modalNotice = fancySlide.querySelector('.modal--notice');
 
-                if (fancyNotice) {
+                if (modalNotice) {
                     let touchStartY = 0;
                     let touchMoveY = 0;
 
-                    fancyNotice.addEventListener('touchstart', function(e){
+                    function noticeStart(e) {
                         touchStartY = e.touches[0].clientY;
-                    })
+                    }
 
-                    fancyNotice.addEventListener('touchmove', function(e){
+                    function noticeMove(e) {
                         touchMoveY = e.touches[0].clientY - touchStartY;
                         if (touchMoveY > 0) {
-                            gsap.to(fancyNotice, {y: touchMoveY});
+                            gsap.to(modalNotice, {y: touchMoveY});
                         }
-                    })
+                    }
 
-                    fancyNotice.addEventListener('touchend', function(e) {
-                        if (touchMoveY > 40) {
-                            gsap.to(fancyNotice, {
-                                yPercent: 100,
-                            });
-                            setTimer(() => {
-                                fancyNotice.style.animationDuration = '0s'
-                                Fancybox.close();
-                                gsap.to(fancyNotice, {clearProps: 'all'});
-                            }, 300)
+                    function noticeEnd(e) {
+                        if (touchMoveY < 40) {
+                            gsap.to(modalNotice, {y: 0});
                         } else {
-                            gsap.to(fancyNotice, {y: 0});
+                            Fancybox.close();
+                            setTimeout(() => {
+                                gsap.to(modalNotice, {clearProps: 'all'});
+                            }, 300)
+
+                            modalNotice.removeEventListener('touchstart', noticeStart);
+                            modalNotice.removeEventListener('touchmove', noticeMove);
+                            modalNotice.removeEventListener('touchend', noticeEnd);
                         }
-                    })
+                    }
+
+                    modalNotice.addEventListener('touchstart', noticeStart);
+                    modalNotice.addEventListener('touchmove', noticeMove);
+                    modalNotice.addEventListener('touchend', noticeEnd);
                 }
             },
-            destroy: () => {
+            destroy: (fancybox) => {
                 fancyCount--;
                 // Is last fancybox
                 if (fancyCount == 0) {
                     // Remove fixed header padding fix
                     fixedHeader.style.paddingRight = '';
                 }
+
+                const fancySlide = fancybox.getSlide().$el;
+                const modalNotice = fancySlide.querySelector('.modal--notice');
+
+                if (modalNotice) {
+                    const modalBtn = modalNotice.querySelector('.modal__btn');
+                    modalBtn.click();
+                }
             }
         },
     });
 
+    let timerInterval;
     function modalTimer(modal) {
         const timer = modal.querySelector('.modal__timer');
         if (timer) {
@@ -89,14 +102,16 @@ export default function() {
             newCode.style.display = 'none';
             let seconds = 60;
 
-            const timerInterval = setInterval(() => {
+            timerInterval && clearInterval(timerInterval);
+            timerSec.innerHTML = seconds;
+
+            timerInterval = setInterval(() => {
                 seconds--;
                 timerSec.innerHTML = seconds;
 
                 if (seconds == 0) {
                     timer.style.display = 'none';
                     newCode.style.display = 'block';
-                    timerSec.innerHTML = 60;
                     clearInterval(timerInterval);
                 }
             }, 1000);
