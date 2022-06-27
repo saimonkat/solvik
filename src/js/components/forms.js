@@ -1,13 +1,9 @@
 import IMask from 'imask';
 
 export default function() {
+    // Inputs is filled check
     const inputs = document.querySelectorAll('input');
-    const phoneInputs = document.querySelectorAll('input[name="phone"]');
-    const loginInputs = document.querySelectorAll('input[name="login"]');
-    const autoNumInputs = document.querySelectorAll('input[name="auto_number"]');
-    const autoVinInputs = document.querySelectorAll('input[name="auto_vin"]');
-
-    inputs.forEach(input => {
+    inputs && inputs.forEach(input => {
         input.addEventListener('input', () => {
             if (input.value.length) {
                 input.classList.add('is-filled');
@@ -17,13 +13,17 @@ export default function() {
         })
     })
 
-    phoneInputs.forEach(input => {
+    // Phone inputs mask
+    const phoneInputs = document.querySelectorAll('input[name="phone"]');
+    phoneInputs && phoneInputs.forEach(input => {
         IMask(input, {
             mask: '+{7}(000)000 00 00'
         });
     })
 
-    loginInputs.forEach(input => {
+    // Login inputs mask
+    const loginInputs = document.querySelectorAll('input[name="login"]');
+    loginInputs && loginInputs.forEach(input => {
         IMask(input, {
             mask: [
                 {
@@ -36,15 +36,29 @@ export default function() {
         });
     })
 
-    autoNumInputs.forEach(input => {
+    // Auto numbers inputs mask
+    const autoNumInputs = document.querySelectorAll('input[name="auto_number"]');
+    autoNumInputs && autoNumInputs.forEach(input => {
         IMask(input, {
             mask: '00-aaaa-00'
         });
     })
 
-    autoVinInputs.forEach(input => {
+    // Auto VINs inputs mask
+    const autoVinInputs = document.querySelectorAll('input[name="auto_vin"]');
+    autoVinInputs && autoVinInputs.forEach(input => {
         IMask(input, {
             mask: '0000-0000-0000'
         });
     })
+
+    // Recover forms on submit
+    const recoverForms = document.querySelectorAll('.form-recover');
+    recoverForms && recoverForms.forEach(recoverForm => {
+        recoverForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const newModal = recoverForm.querySelector('.on-submit');
+            newModal.click();
+        })
+    });
 }

@@ -87,7 +87,7 @@ export default function() {
 
             timer.style.display = 'block';
             newCode.style.display = 'none';
-            let seconds = 5;
+            let seconds = 60;
 
             const timerInterval = setInterval(() => {
                 seconds--;
