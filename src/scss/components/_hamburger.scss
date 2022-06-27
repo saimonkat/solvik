@@ -61,7 +61,7 @@
 
     .show-nav & {
       @include media-up(xl) {
-        background: #fff;
+        background: $color-white;
       }
 
       @include media-down(lg) {

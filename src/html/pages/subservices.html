@@ -3,9 +3,30 @@
 }) %>
 
 <main class="main">
-    <div class="section">
-        <div class="container">
-            <h1>Подуслуги</h1>
+    <div class="page">
+        <div class="container container--wide">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Услуги по работам', url: 'services.html'},
+                    {name: 'Ремонт подвески'},
+                ]
+            }) %>
+            <div class="page-wrapper">
+                <div class="page-main">
+                    <div class="service-wrapper">
+                        <h1>Ремонт подвески</h1>
+                        <%=_.template(require("../templates/service/banner.html"))() %>
+                        <%=_.template(require("../templates/services/form.html"))() %>
+                        <%=_.template(require("../templates/services/works.html"))() %>
+                    </div>
+                </div>
+                <div class="page-aside">
+                    <div class="page-sidebar">
+                        <%=_.template(require("../templates/sidebar/features.html"))() %>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>

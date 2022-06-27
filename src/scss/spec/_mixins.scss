@@ -185,7 +185,7 @@
     height: 100vh;
     height: var(--app-height);
     padding: 140px 0 40px 40px;
-    background: #fff;
+    background: $color-white;
     overflow: auto;
     transition: transform .5s;
     transform: translateX(101%);
@@ -221,7 +221,12 @@
 }
 
 // FONT-SIZE
-@mixin fz12-14-14 {
+@mixin fz12 {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+@mixin fz12-14 {
   font-size: 12px;
   line-height: 24px;
 
@@ -231,17 +236,7 @@
   }
 }
 
-@mixin fz12-12-14 {
-  font-size: 12px;
-  line-height: 24px;
-
-  @include media-up(xl) {
-    font-size: 14px;
-    line-height: 26px;
-  }
-}
-
-@mixin fz12-14-16 {
+@mixin fz12-16 {
   font-size: 12px;
   line-height: 24px;
 
@@ -256,17 +251,7 @@
   }
 }
 
-@mixin fz14-14-16 {
-  font-size: 14px;
-  line-height: 26px;
-
-  @include media-up(xl) {
-    font-size: 16px;
-    line-height: 28px;
-  }
-}
-
-@mixin fz14-16-16 {
+@mixin fz14-16 {
   font-size: 14px;
   line-height: 26px;
 

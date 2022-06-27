@@ -35,7 +35,7 @@
   }
 
   &__item {
-    @include fz14-16-16;
+    @include fz14-16;
 
     @include media-down(sm) {
       display: flex;

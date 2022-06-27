@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include fz14-16-16;
+    @include fz14-16;
 
     @include media-between(md, lg) {
       flex: 1 1 0;

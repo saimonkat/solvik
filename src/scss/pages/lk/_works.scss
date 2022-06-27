@@ -28,8 +28,7 @@
   }
 
   &__works {
-    font-size: 12px;
-    line-height: 24px;
+    @include fz12-14;
     margin-bottom: 12px;
   }
 

@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   color: $color-gray;
   margin-bottom: 32px;
-  @include fz12-14-14;
+  @include fz12-14;
 
   @include media-up(md) {
     margin-bottom: 40px;

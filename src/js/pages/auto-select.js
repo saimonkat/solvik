@@ -2,7 +2,7 @@ import NiceSelect from "nice-select2/dist/js/nice-select2";
 import marksJSON from './marks.json';
 
 export default function() {
-    const autoSelects = document.querySelector('.lk-add-auto');
+    const autoSelects = document.querySelector('.auto-selects');
     if (autoSelects) {
         const ajaxUrl = 'https://api-test.americar.spb.ru/';
         const ajaxToken = 'lfjWcmtui-4573w-FDSe';

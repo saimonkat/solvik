@@ -14,10 +14,10 @@ body {
   color: $color-gray;
   letter-spacing: 0.02em;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: $color-white;
   min-width: 320px;
   min-height: 100vh;
-  @include fz12-14-16;
+  @include fz12-16;
   overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -241,11 +241,11 @@ button {
   grid-gap: 12px;
 
   @include media-up(sm) {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include media-up(lg) {
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
   }
 

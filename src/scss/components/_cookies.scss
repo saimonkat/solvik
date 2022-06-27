@@ -4,10 +4,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #FFFFFF;
+  background: $color-white;
   box-shadow: 0px -4px 16px rgba(116, 126, 131, 0.25);
   border-radius: 32px 32px 0 0;
-  @include fz14-16-16;
+  @include fz14-16;
   opacity: 0;
   visibility: hidden;
   transform: translateY(100%);

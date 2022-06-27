@@ -3,9 +3,26 @@
 }) %>
 
 <main class="main">
-    <div class="section">
-        <div class="container">
-            <h1>Услуги</h1>
+    <div class="page">
+        <div class="container container--wide">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Услуги по работам'},
+                ]
+            }) %>
+            <div class="page-wrapper">
+                <div class="page-main">
+                    <h1>Услуги по работам</h1>
+                    <%=_.template(require("../templates/services/nav.html"))() %>
+                    <%=_.template(require("../templates/services/cards.html"))() %>
+                </div>
+                <div class="page-aside">
+                    <div class="page-sidebar">
+                        <%=_.template(require("../templates/sidebar/features.html"))() %>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>

@@ -16,6 +16,14 @@
       display: none;
     }
   }
+
+  h1 {
+    margin-bottom: -8px;
+
+    @include media-up(xl) {
+      margin-bottom: -20px;
+    }
+  }
 }
 
 .page-sidebar {

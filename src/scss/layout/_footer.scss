@@ -2,7 +2,7 @@
   background: $color-blue;
   padding: 24px 0 40px;
   color: $color-gray-2;
-  @include fz14-16-16;
+  @include fz14-16;
 
   @include media-between(md, lg) {
     font-size: 14px;
@@ -128,7 +128,7 @@
     }
 
     a {
-      color: #fff;
+      color: $color-white;
       font-weight: 500;
 
       @include media-up(xl) {
@@ -140,7 +140,7 @@
   }
 
   &__title {
-    color: #fff;
+    color: $color-white;
     margin-bottom: 20px;
 
     @include media-up(xl) {
@@ -169,7 +169,7 @@
       transition: color .15s;
 
       &:hover {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -192,7 +192,7 @@
       transition: color .15s;
 
       &:hover {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -208,7 +208,7 @@
       color: $color-gray-2;
 
       &:hover {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -233,8 +233,7 @@
   &__authors {
     display: flex;
     align-items: center;
-    font-size: 12px;
-    line-height: 18px;
+    @include fz12;
 
     @include media-only(sm) {
       width: 250px;

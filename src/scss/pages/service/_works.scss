@@ -1,0 +1,215 @@
+.service-works {
+  @include media-down(sm) {
+    order: 1;
+  }
+
+  &__items {
+    margin-top: 24px;
+  }
+}
+
+.service-item {
+  $self: &;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  & > &__check {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgba(33, 150, 83, 0.1);
+    background-image: url(../img/icon/btn-check.svg);
+
+    &:hover {
+      background-color: rgba(33, 150, 83, 0.15);
+    }
+
+    &:checked {
+      background-color: rgba(22, 65, 104, 0.1);
+      background-image: url(../img/icon/btn-close.svg);
+
+      &:hover {
+        background-color: rgba(22, 65, 104, 0.15);
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    background: $color-light;
+    padding: 16px;
+    border-radius: 16px;
+
+    @include media-up(md) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 32px;
+      border-radius: 24px;
+    }
+  }
+
+  &__check:not(:checked) ~ &__wrapper {
+    background: #F5F8FB;
+    pointer-events: none;
+    user-select: none;
+
+    * {
+      color: $color-border-2;
+    }
+
+    input[type="checkbox"] {
+      opacity: 0.3;
+      filter: grayscale(1);
+    }
+
+    #{$self}__hint-title:before {
+      opacity: 0.3;
+      filter: grayscale(1);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding-right: 16px;
+    color: $color-blue;
+
+    @include media-up(md) {
+      padding-bottom: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    @include media-down(sm) {
+      display: none;
+    }
+
+    @include media-up(md) {
+      flex: 1 1 0;
+      border-top: 1px solid $color-border-3;
+      padding-top: 16px;
+    }
+  }
+
+  .item-title {
+    color: $color-gray;
+    margin-right: auto;
+  }
+
+  label.item-title {
+    width: 100%;
+  }
+
+  .item-value {
+    color: $color-blue;
+  }
+
+  .item-total {
+    font-weight: 500;
+    color: $color-red;
+  }
+
+  .new-price {
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-red;
+  }
+
+  .old-price {
+    font-weight: 500;
+    color: $color-blue;
+    white-space: nowrap;
+    text-decoration: line-through;
+    margin-left: 12px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fz14-16;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__total {
+    margin-top: 12px;
+
+    @include media-down(sm) {
+      display: none;
+    }
+
+    @include media-up(md) {
+      border-top: 1px solid $color-border-3;
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  &__hint {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-title {
+      position: relative;
+      padding-left: 36px;
+      color: $color-blue;
+      font-weight: 500;
+      margin-bottom: 12px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        background: url(../img/icon/exclaim.svg) center no-repeat;
+        background-color: $color-orange;
+        border-radius: 50%;
+
+        @include media-up(md) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  &__self {
+    margin-top: 12px;
+
+    @include media-up(md) {
+      border-top: 1px solid $color-border-3;
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  &__mobile {
+    font-weight: 500;
+
+    @include media-up(md) {
+      display: none;
+    }
+  }
+}

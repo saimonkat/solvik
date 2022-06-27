@@ -49,3 +49,48 @@
     }
   }
 }
+
+.sidebar-features {
+  padding: 40px 32px;
+
+  @include media-between(md, lg) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+
+    @include media-only(md) {
+      margin-right: 30px;
+    }
+
+    @include media-only(lg) {
+      margin-right: 90px;
+    }
+  }
+
+  &__list {
+    @include media-between(md, lg) {
+      flex: 1 1 0;
+      columns: 2;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $color-blue;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+      margin-right: 16px;
+    }
+  }
+}

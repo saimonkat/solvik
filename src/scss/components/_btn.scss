@@ -4,8 +4,8 @@
   padding: 9px 20px;
   font-family: $font;
   background: $color-blue;
-  color: #fff;
-  @include fz14-14-16;
+  color: $color-white;
+  @include fz14-16;
   font-weight: 500;
   user-select: none;
   text-align: center;

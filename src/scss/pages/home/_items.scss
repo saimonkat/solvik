@@ -305,7 +305,7 @@
   }
 
   &__text {
-    @include fz14-14-16;
+    @include fz14-16;
     margin-bottom: 24px;
 
     @include media-up(md) {

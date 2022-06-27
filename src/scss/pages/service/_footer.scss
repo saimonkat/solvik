@@ -1,7 +1,7 @@
 .service-footer {
   position: relative;
   width: 100%;
-  @include fz12-14-14;
+  @include fz12-14;
   order: 1;
   margin-bottom: 10px;
 
@@ -30,25 +30,12 @@
     }
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 0;
-    right: 0;
-    bottom: -8px;
-    display: block;
-    background: $color-blue;
-    border-radius: 24px;
-  }
-
   &__content {
-    position: relative;
-    z-index: 1;
     width: 100%;
-    background: #FFF;
+    background: $color-white;
     padding: 24px 24px 24px 48px;
-    border: 1px solid $color-blue;
+    border: solid $color-blue;
+    border-width: 1px 1px 8px 1px;
     border-radius: 24px;
     color: $color-blue;
 

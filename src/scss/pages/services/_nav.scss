@@ -1,0 +1,50 @@
+.services-nav {
+  display: flex;
+  width: fit-content;
+  border: 1px solid $color-border-2;
+  border-radius: 24px;
+  margin-bottom: 24px;
+
+  @include media-up(md) {
+    margin-bottom: 40px;
+  }
+
+  @include media-up(lg) {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    $self: &;
+    position: relative;
+    padding: 11px 24px;
+    border-radius: 24px;
+
+    &:hover {
+      color: $color-red;
+    }
+
+    &:not(:first-child) {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 1px;
+        height: 16px;
+        background: $color-border-2;
+      }
+    }
+
+    &.active {
+      color: $color-white;
+      background: $color-blue;
+
+      &:before,
+      & + #{$self}:before {
+        display: none;
+      }
+    }
+  }
+}

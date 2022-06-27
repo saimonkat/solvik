@@ -117,10 +117,10 @@
 
   &--blue {
     background: $color-blue;
-    color: #fff;
+    color: $color-white;
 
     .h3 {
-      color: #fff;
+      color: $color-white;
     }
 
     #{$self}__text {
@@ -160,7 +160,7 @@
   }
 
   &__text {
-    @include fz12-12-14;
+    @include fz12-14;
   }
 
   &__img {

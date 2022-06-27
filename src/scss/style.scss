@@ -41,14 +41,20 @@
 // 404
 @import "pages/404/404";
 
+// SERVICE
+@import "pages/service/wrapper";
+@import "pages/service/price";
+@import "pages/service/banner";
+@import "pages/service/calc";
+@import "pages/service/works";
+@import "pages/service/footer";
+@import "pages/service/files";
+
 // SERVICES
-@import "pages/services/wrapper";
-@import "pages/services/price";
-@import "pages/services/banner";
-@import "pages/services/calc";
+@import "pages/services/nav";
+@import "pages/services/cards";
+@import "pages/services/form";
 @import "pages/services/works";
-@import "pages/services/footer";
-@import "pages/services/files";
 
 // LK
 @import "pages/lk/global";

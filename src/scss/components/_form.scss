@@ -12,6 +12,15 @@
     gap: 24px;
   }
 
+  &__title {
+    font-weight: 500;
+    color: $color-blue;
+
+    @include media-up(md) {
+      margin-bottom: 8px;
+    }
+  }
+
   &__row {
     display: flex;
     flex-direction: column;

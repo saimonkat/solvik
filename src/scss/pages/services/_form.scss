@@ -1,0 +1,8 @@
+.services-form {
+  padding-bottom: 32px;
+  border-bottom: 1px solid $color-border;
+
+  @include media-up(md) {
+    padding-bottom: 40px;
+  }
+}
