@@ -103,7 +103,7 @@
     <div class="modal__title">
         Востановление пароля
     </div>
-    <form action="#" class="modal__form form" id="form-recover-phone">
+    <form action="#" class="modal__form form form-recover">
         <div class="form__item">
             <label for="recover_phone">Телефон</label>
             <input type="tel"
@@ -112,20 +112,20 @@
                    placeholder="+7(___)___ __ __"
                    required>
         </div>
-        <div class="modal__timeout">
-            Запросить повторно код можно через <span>60</span> секунд.
-        </div>
         <div class="modal__text">
-            Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
+            Укажите телефон, который привязывали к личному кабинету. Мы пришлем новый пароль по СМС.
             <span class="modal__link"
-                  data-fancybox
-                  data-src="#modal-recover-email">
+                data-fancybox
+                data-src="#modal-recover-email">
                 Востановить по почте
             </span>
         </div>
         <button type="submit" class="modal__btn btn btn--red">
             Отправить
         </button>
+        <div class="on-submit"
+              data-fancybox
+              data-src="#modal-success-phone"></div>
     </form>
 </div>
 
@@ -133,7 +133,7 @@
     <div class="modal__title">
         Востановление пароля
     </div>
-    <form action="#" class="modal__form form">
+    <form action="#" class="modal__form form form-recover">
         <div class="form__item">
             <label for="recover_email">Email</label>
             <input type="email"
@@ -145,14 +145,17 @@
         <div class="modal__text">
             Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
             <span class="modal__link"
-                  data-fancybox
-                  data-src="#modal-recover-phone">
+                data-fancybox
+                data-src="#modal-recover-phone">
                 Востановить по телефону
             </span>
         </div>
         <button type="submit" class="modal__btn btn btn--red">
             Отправить
         </button>
+        <div class="on-submit"
+              data-fancybox
+              data-src="#modal-success-email"></div>
     </form>
 </div>
 
@@ -163,7 +166,9 @@
     <div class="modal__text">
         Номер телефона не найден.<br> Проверьте номер или попробуйте<br> восстановить доступ по почте.
     </div>
-    <button class="modal__btn btn btn--red" data-fancybox-close>
+    <button class="modal__btn btn btn--red"
+            data-fancybox
+            data-src="#modal-recover-phone">
         Назад
     </button>
     <div class="modal__bg"></div>
@@ -174,9 +179,11 @@
         Ошибка
     </div>
     <div class="modal__text">
-        Указанная почта не найдена.<br> Проверьте почту или попробуйте<br> восстановить доступ по телефону.
+        Указанная почта не найдена.<br> Проверьте почту или попробуйте<br> восстановить доступ по СМС.
     </div>
-    <button class="modal__btn btn btn--red" data-fancybox-close>
+    <button class="modal__btn btn btn--red"
+            data-fancybox
+            data-src="#modal-recover-email">
         Назад
     </button>
     <div class="modal__bg"></div>
@@ -189,7 +196,9 @@
     <div class="modal__text">
         На ваш телефон выслан пароль<br> в личный кабинет
     </div>
-    <button class="modal__btn btn btn--red" data-fancybox-close>
+    <button class="modal__btn btn btn--red"
+            data-fancybox
+            data-src="#modal-new-pass-phone">
         Понятно
     </button>
     <div class="modal__bg"></div>
@@ -202,10 +211,82 @@
     <div class="modal__text">
         Скоро на вашу почту придут данные<br> для входа в личный кабинет
     </div>
-    <button class="modal__btn btn btn--red" data-fancybox-close>
+    <button class="modal__btn btn btn--red"
+            data-fancybox
+            data-src="#modal-new-pass-email">
         Понятно
     </button>
     <div class="modal__bg"></div>
+</div>
+
+<div class="modal" id="modal-new-pass-phone">
+    <div class="modal__title">
+        Востановление пароля
+    </div>
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="new_pass_phone">Новый пароль</label>
+            <input type="password"
+                   name="password"
+                   id="new_pass_phone"
+                   placeholder="Введите пароль"
+                   minlength="8"
+                   required>
+        </div>
+        <div class="modal__text">
+            <div class="modal__timer">
+                Запросить повторно код можно через <span>60</span> секунд.
+            </div>
+            <div class="modal__new-code"
+                data-fancybox
+                data-src="#modal-success-phone">
+                Запросить повторно код
+            </div>
+            <span class="modal__link"
+                data-fancybox
+                data-src="#modal-recover-email">
+                Востановить по почте
+            </span>
+        </div>
+        <button type="submit" class="modal__btn btn btn--red">
+            Войти
+        </button>
+    </form>
+</div>
+
+<div class="modal" id="modal-new-pass-email">
+    <div class="modal__title">
+        Востановление пароля
+    </div>
+    <form action="#" class="modal__form form">
+        <div class="form__item">
+            <label for="new_pass_email">Новый пароль</label>
+            <input type="password"
+                   name="password"
+                   id="new_pass_email"
+                   placeholder="Введите пароль"
+                   minlength="8"
+                   required>
+        </div>
+        <div class="modal__text">
+            <div class="modal__timer">
+                Запросить повторно код можно через <span>60</span> секунд.
+            </div>
+            <div class="modal__new-code"
+                data-fancybox
+                data-src="#modal-success-phone">
+                Запросить повторно код
+            </div>
+            <span class="modal__link"
+                data-fancybox
+                data-src="#modal-recover-phone">
+                Востановить по телефону
+            </span>
+        </div>
+        <button type="submit" class="modal__btn btn btn--red">
+            Войти
+        </button>
+    </form>
 </div>
 
 <div class="modal modal--notice" id="modal-success-director">

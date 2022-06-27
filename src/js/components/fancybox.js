@@ -26,6 +26,10 @@ export default function() {
                     Fancybox.close();
                 }
             },
+            reveal: (fancybox) => {
+                const fancySlide = fancybox.getSlide().$el;
+                modalTimer(fancySlide);
+            },
             done: (fancybox) => {
                 dom.classList.remove('fancybox-change');
 
@@ -53,7 +57,7 @@ export default function() {
                             gsap.to(fancyNotice, {
                                 yPercent: 100,
                             });
-                            setTimeout(() => {
+                            setTimer(() => {
                                 fancyNotice.style.animationDuration = '0s'
                                 Fancybox.close();
                                 gsap.to(fancyNotice, {clearProps: 'all'});
@@ -74,6 +78,30 @@ export default function() {
             }
         },
     });
+
+    function modalTimer(modal) {
+        const timer = modal.querySelector('.modal__timer');
+        if (timer) {
+            const newCode = modal.querySelector('.modal__new-code');
+            const timerSec = timer.querySelector('span');
+
+            timer.style.display = 'block';
+            newCode.style.display = 'none';
+            let seconds = 5;
+
+            const timerInterval = setInterval(() => {
+                seconds--;
+                timerSec.innerHTML = seconds;
+
+                if (seconds == 0) {
+                    timer.style.display = 'none';
+                    newCode.style.display = 'block';
+                    timerSec.innerHTML = 60;
+                    clearInterval(timerInterval);
+                }
+            }, 1000);
+        }
+    }
 
     const modalBgs = document.querySelectorAll('.modal__bg');
     modalBgs && modalBgs.forEach(modalBg => {
