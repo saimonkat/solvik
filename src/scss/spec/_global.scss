@@ -175,6 +175,10 @@ label {
   @include media-up(md) {
     padding: 40px 0 100px;
   }
+
+  &--bg {
+    background: $color-light;
+  }
 }
 
 .page-wrapper {

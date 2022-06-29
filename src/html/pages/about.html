@@ -3,9 +3,14 @@
 }) %>
 
 <main class="main">
-    <div class="section">
+    <div class="page page--bg">
         <div class="container">
-            <h1>О компании</h1>
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'О компании'}
+                ]
+            }) %>
             <%=_.template(require('../templates/about/hero.html'))() %>
             <%=_.template(require('../templates/about/history.html'))() %>
             <%=_.template(require('../templates/about/why.html'))() %>
