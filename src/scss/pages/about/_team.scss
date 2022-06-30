@@ -1,3 +1,94 @@
 .about-team {
+  &__filters {
+    width: calc(100% + 24px);
+    padding-right: 24px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    overflow: auto;
 
+    @include media-up(md) {
+      width: calc(100% + 40px);
+      padding-right: 40px;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__filter {
+    padding: 12px 24px;
+    border: 1px solid $color-blue;
+    border-radius: 24px;
+    color: $color-blue;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.active {
+      background: $color-blue;
+      color: $color-white;
+    }
+  }
+
+  &__slider {
+    .swiper-navigation {
+      position: absolute;
+      right: 0;
+      top: -90px;
+
+      @include media-down(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.about-team-slide {
+  width: 325px;
+  padding: 10px;
+  border: 2px solid $color-blue;
+  background: $color-light;
+  border-radius: 32px;
+
+  @include media-up(md) {
+    width: 392px;
+  }
+
+  @include media-up(xl) {
+
+  }
+
+  &__photo {
+    width: 100%;
+    height: 250px;
+    border-radius: 32px 32px 0 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    background: #fff;
+    padding: 16px 24px 24px;
+    border-radius: 0 0 32px 32px;
+
+    @include media-up(md) {
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__role {
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    color: $color-blue;
+  }
 }

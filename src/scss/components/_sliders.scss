@@ -28,3 +28,32 @@
     }
   }
 }
+
+.swiper-navigation {
+  display: flex;
+  gap: 24px;
+}
+
+.swiper-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E9DBCE;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .15s;
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+  &--next {
+
+  }
+
+  &-disabled {
+    opacity: 0.5;
+  }
+}

@@ -14,6 +14,7 @@ import modals from './components/modals';
 
 // Pages
 import lk from './pages/lk';
+import about from './pages/about';
 import autoSelect from './pages/auto-select';
 
 // DOM content load
@@ -32,5 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modals();
 
     lk();
+    about();
     autoSelect();
 })

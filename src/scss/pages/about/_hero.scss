@@ -1,4 +1,10 @@
 .about-hero {
+  padding: 0 0 20px;
+
+  @include media-up(md) {
+    padding: 0 0 60px;
+  }
+
   &__title {
     @include media-up(xl) {
       margin-bottom: 60px;
@@ -41,8 +47,6 @@
     }
 
     span {
-      color: $color-red;
-
       @include media-up(md) {
         font-size: 28px;
         line-height: 38px;

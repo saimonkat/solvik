@@ -1,3 +1,119 @@
 .about-history {
+  padding: 20px 0 30px;
 
+  @include media-up(md) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    @include media-up(xl) {
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-gap: 10px;
+
+    @include media-up(md) {
+      grid-gap: 100px;
+    }
+
+    @include media-up(lg) {
+      grid-gap: 160px;
+    }
+
+    @include media-up(xl) {
+      grid-gap: 120px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    padding-top: 68%;
+    background-image: url(../img/base/about/history-bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include media-up(md) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      background-image: url(../img/base/about/history-bg-tablet.svg);
+    }
+
+    @include media-up(xl) {
+      background-image: url(../img/base/about/history-bg-desktop.svg);
+    }
+  }
+}
+
+.about-history-card {
+  background: $color-light;
+  border: 1px solid $color-blue;
+  border-width: 1px 7px 7px 1px;
+  border-radius: 32px;
+  padding: 24px;
+  text-align: center;
+
+  @include media-up(md) {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding: 40px;
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  @include media-up(xl) {
+    width: 500px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-red;
+    margin-bottom: 8px;
+
+    @include media-up(md) {
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 26px;
+    }
+
+    @include media-up(xl) {
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    &:after {
+      content: attr(title);
+      position: absolute;
+      z-index: -1;
+      top: 2px;
+      left: 2px;
+      width: 100%;
+      display: block;
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $color-orange;
+    }
+  }
+
+  &__text {
+    color: $color-blue;
+  }
 }

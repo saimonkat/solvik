@@ -30,4 +30,20 @@ export default function () {
         },
         speed: 700
     });
+
+    const aboutTeamSlider = document.querySelector('.about-team__slider');
+    aboutTeamSlider && new Swiper(aboutTeamSlider, {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        navigation: {
+            nextEl: '.swiper-button--next',
+            prevEl: '.swiper-button--prev',
+        },
+        speed: 700,
+        breakpoints: {
+            768: {
+                spaceBetween: 32,
+            }
+        },
+    });
 }

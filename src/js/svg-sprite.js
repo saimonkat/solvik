@@ -28,3 +28,4 @@ import '../img/icon/feature-wait.svg';
 import '../img/icon/plus.svg';
 import '../img/icon/edit.svg';
 import '../img/icon/arrow.svg';
+import '../img/icon/slider-arrow.svg';

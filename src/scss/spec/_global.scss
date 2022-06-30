@@ -67,6 +67,10 @@ h5, .h5 {
   color: $color-blue;
   font-weight: 700;
   padding: 0;
+
+  span {
+    color: $color-red;
+  }
 }
 
 h1, .h1 {
@@ -170,6 +174,7 @@ label {
 }
 
 .page {
+  overflow: hidden;
   padding: 24px 0 60px;
 
   @include media-up(md) {
