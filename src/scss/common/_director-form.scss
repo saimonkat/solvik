@@ -1,0 +1,72 @@
+.director-form {
+  background: #fff;
+  border-radius: 32px;
+  padding: 40px 24px;
+
+  @include media-up(md) {
+    padding: 40px 60px;
+  }
+
+  @include media-up(xl) {
+    padding: 60px 80px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include media-up(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 24px;
+
+    @include media-up(md) {
+      grid-gap: 40px;
+    }
+
+    @include media-up(xl) {
+      grid-template-columns: 50% 1fr;
+      align-items: center;
+      grid-gap: 70px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    @include media-down(lg) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media-up(md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__submit {
+    @include btn-big;
+    flex-shrink: 0;
+
+    @include media-up(md) {
+      width: 243px;
+    }
+  }
+}

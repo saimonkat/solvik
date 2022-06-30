@@ -184,6 +184,10 @@ label {
   &--bg {
     background: $color-light;
   }
+
+  .section:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .page-wrapper {
@@ -210,6 +214,10 @@ label {
 
   @include media-up(xl) {
     padding: 120px 0;
+  }
+
+  &--bg {
+    background: $color-light;
   }
 }
 

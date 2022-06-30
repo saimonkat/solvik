@@ -27,5 +27,6 @@ import '../img/icon/feature-wait.svg';
 // Other
 import '../img/icon/plus.svg';
 import '../img/icon/edit.svg';
+import '../img/icon/file.svg';
 import '../img/icon/arrow.svg';
 import '../img/icon/slider-arrow.svg';

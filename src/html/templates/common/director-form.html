@@ -1,0 +1,75 @@
+<div class="section section--bg">
+    <form class="director-form">
+        <div class="director-form__wrapper">
+            <div class="director-form__main">
+                <h2 class="director-form__title">
+                    Написать директору лично
+                </h2>
+                <div class="director-form__fields form">
+                    <div class="form-toggler">
+                        <span class="form-toggler__item active">На почту</span>
+                        <span class="form-toggler__item">На телефон</span>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__item">
+                            <label for="user_name">Имя</label>
+                            <input type="text"
+                                   name="name"
+                                   id="user_name"
+                                   placeholder="Введите ваше имя"
+                                   minlength="2"
+                                   required>
+                        </div>
+                        <div class="form__item form__item--hide">
+                            <label for="user_email">Email</label>
+                            <input type="email"
+                                   name="email"
+                                   id="user_email"
+                                   placeholder="name@mail.ru">
+                        </div>
+                        <div class="form__item form__item--hidden">
+                            <label for="user_phone">Номер телефона</label>
+                            <input type="tel"
+                                   name="phone"
+                                   id="user_phone"
+                                   placeholder="+7(___)___ __ __"
+                                   minlength="16">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__item">
+                            <label for="user_text">Сообщение</label>
+                            <textarea name="text"
+                                    id="user_text"
+                                    placeholder="Введите сообщение"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__policy input-block">
+                        <input type="checkbox" name="remember" id="agreement">
+                        <label for="agreement">
+                            Согласен на обработку <a href="#">персональных данных</a> и принимаю условия соглашения
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="director-form__sidebar">
+                <div class="director-form__photo">
+                    <img src="img/base/about/director.png" alt="">
+                </div>
+                <div class="director-form__buttons">
+                    <button type="submit" class="director-form__submit btn btn--red">
+                        Отправить
+                    </button>
+                    <label class="file-upload">
+                        <svg width="24" height="24">
+                            <use xlink:href="#file"></use>
+                        </svg>
+                        <input class="file-upload__field" type="file" name="file">
+                        <span class="file-upload__name"></span>
+                        <div class="file-upload__link">Прикрепить файл</div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

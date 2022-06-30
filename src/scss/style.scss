@@ -32,6 +32,8 @@
 @import "layout/header";
 @import "layout/footer";
 
+@import "common/director-form";
+
 // HOMEPAGE
 @import "pages/home/hero";
 @import "pages/home/advantages";
@@ -46,7 +48,6 @@
 @import "pages/about/history";
 @import "pages/about/why";
 @import "pages/about/team";
-@import "pages/about/request";
 
 // SERVICE
 @import "pages/service/wrapper";

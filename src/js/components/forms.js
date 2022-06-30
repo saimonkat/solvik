@@ -61,4 +61,40 @@ export default function() {
             newModal.click();
         })
     });
+
+    // Form toggler
+    const formTogglers = document.querySelectorAll('.form-toggler__item');
+    formTogglers.forEach(toggler => {
+        toggler.addEventListener('click', () => {
+            const form = toggler.closest('.form');
+            form.classList.toggle('active');
+
+            formTogglers.forEach(toggler => {
+                toggler.classList.remove('active')
+            })
+            toggler.classList.add('active');
+        })
+    })
+
+    // File upload
+    const fileUploadFields = document.querySelectorAll('.file-upload__field');
+    fileUploadFields && fileUploadFields.forEach(field => {
+        fileUploadProcessing(field);
+    });
+
+	function fileUploadProcessing(input) {
+		const labelSpan = input.nextElementSibling,
+			  fileParent = input.closest('.file-upload');
+
+		input.addEventListener('change', () => {
+				const fileName = input.files[0].name;
+				if (fileName) {
+					labelSpan.textContent = fileName;
+					fileParent.classList.add('file-upload--loaded');
+				} else {
+					fileParent.classList.remove('file-upload--loaded');
+				}
+			}, { passive: true },
+		);
+	}
 }
