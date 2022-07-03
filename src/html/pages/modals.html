@@ -3,10 +3,25 @@
 }) %>
 
 <style>
-    .modal-btns-container {
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .modal-btns {
+        max-width: 620px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 40px;
+    }
+
+    .modal-btns-block {
+        display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
@@ -14,113 +29,172 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 16px;
     }
 
-    .modal-btns-row .btn {
-        width: auto;
+    .modal-btns .btn {
+        flex: 1 1 0;
+        padding: 10px 15px;
+        line-height: 1.2;
+        min-height: 45px;
     }
 </style>
 
 <main class="main">
     <div class="section">
         <div class="container">
-            <h1 style="text-align: center;">
-                Модальные окна
-            </h1>
+            <h1>Модальные окна</h1>
 
-            <div class="modal-btns-container">
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-sign-in">
-                        Авторизация ЛК
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-sign-up">
-                        Регистрация
-                    </button>
+            <div class="modal-btns">
+                <div class="modal-btns-block">
+                    <h2>Личный кабинет</h2>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-sign-in">
+                            Авторизация
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-sign-up">
+                            Регистрация
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-recover-phone">
+                            Востановление (телефон)
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-recover-email">
+                            Востановление (почта)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-error-phone">
+                            Ошибка (телефон)
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-error-email">
+                            Ошибка (почта)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-phone">
+                            Успешно (телефон)
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-email">
+                            Успешно (почта)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-new-pass-phone">
+                            Новый пароль (телефон)
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-new-pass-email">
+                            Новый пароль (почта)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-sign-up">
+                            Успешно (регистрация)
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-recover-phone">
-                        Востановление (телефон)
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-recover-email">
-                        Востановление (почта)
-                    </button>
+
+                <div class="modal-btns-block">
+                    <h2>Гараж</h2>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-order">
+                            История ремонтов
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-order-clarify">
+                            История ремонтов (уточнение)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-auto-remove">
+                            Удалить автомобиль
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-cancel-visit">
+                            Отмена записи
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-error-phone">
-                        Ошибка (телефон)
+
+                <div class="modal-btns-block">
+                    <h2>Корзина</h2>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-sign-in-cart">
+                            Авторизация
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-sign-in-cart-actual">
+                            Авторизация (актуализация)
+                        </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-appointment">
+                            Успешно (запись)
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-actual">
+                            Успешно (актуализация)
+                        </button>
                     </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-error-email">
-                        Ошибка (почта)
-                    </button>
+                    </div>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-cart-order">
+                            Подробнее
+                        </button>
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-cart-order-clarify">
+                            Подробнее (уточнение)
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-success-phone">
-                        Успешно (телефон)
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-success-email">
-                        Успешно (почта)
-                    </button>
-                </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-new-pass-phone">
-                        Новый пароль (телефон)
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-new-pass-email">
-                        Новый пароль (почта)
-                    </button>
-                </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-success-director">
-                        Успешно (директор)
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-auto-remove">
-                        Удалить автомобиль
-                    </button>
-                </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-history">
-                        История ремонтов
-                    </button>
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-history-clarify">
-                        История ремонтов (уточнение)
-                    </button>
-                </div>
-                <div class="modal-btns-row">
-                    <button class="btn"
-                            data-fancybox
-                            data-src="#modal-cancel-visit">
-                        Отмена записи
-                    </button>
+
+                <div class="modal-btns-block">
+                    <h2>Директор</h2>
+                    <div class="modal-btns-row">
+                        <button class="btn"
+                                data-fancybox
+                                data-src="#modal-success-director">
+                            Успешно
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

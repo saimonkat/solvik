@@ -290,7 +290,7 @@
   }
 }
 
-.modal-history {
+.modal-order {
   width: 100%;
 
   &__table {
@@ -323,7 +323,8 @@
       position: relative;
       padding: 16px 24px;
       background: $color-light;
-      border: 1px solid #164168;
+      border: 1px solid $color-blue;
+      border-width: 1px 3px 3px 1px;
       border-radius: 16px;
 
       &:after {
@@ -460,6 +461,7 @@
 
       @include media-up(md) {
         width: 60px;
+        white-space: nowrap;
 
         &.total-title {
           display: none;
@@ -467,6 +469,7 @@
 
         &.title {
           width: 190px;
+          white-space: inherit;
         }
       }
     }
@@ -500,8 +503,4 @@
   &__btn {
     @include btn-big;
   }
-}
-
-.modal-options {
-
 }

@@ -4,7 +4,7 @@ import '../img/icon/clock.svg';
 import '../img/icon/phone.svg';
 import '../img/icon/nav-arrow.svg';
 import '../img/icon/user.svg';
-import '../img/icon/basket.svg';
+import '../img/icon/cart.svg';
 import '../img/icon/search.svg';
 import '../img/icon/cross.svg';
 
@@ -27,6 +27,8 @@ import '../img/icon/feature-wait.svg';
 // Other
 import '../img/icon/plus.svg';
 import '../img/icon/edit.svg';
+import '../img/icon/hint.svg';
 import '../img/icon/file.svg';
 import '../img/icon/arrow.svg';
+import '../img/icon/remove.svg';
 import '../img/icon/slider-arrow.svg';

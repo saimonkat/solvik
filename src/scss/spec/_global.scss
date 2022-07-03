@@ -123,7 +123,9 @@ h3, .h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .title-big {
@@ -174,7 +176,6 @@ label {
 }
 
 .page {
-  overflow: hidden;
   padding: 24px 0 60px;
 
   @include media-up(md) {
@@ -268,5 +269,41 @@ button {
 
   @include media-up(xl) {
     grid-gap: 32px;
+  }
+}
+
+.hint {
+  position: relative;
+  @include fz12-14;
+  padding-left: 32px;
+
+  @include media-up(md) {
+    padding-left: 40px;
+  }
+
+  @include media-up(xl) {
+    padding-left: 48px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon/hint.svg) center / contain no-repeat;
+
+    @include media-up(md) {
+      top: 1px;
+      width: 24px;
+      height: 24px;
+    }
+
+    @include media-up(xl) {
+      top: -3px;
+      width: 32px;
+      height: 32px;
+    }
   }
 }

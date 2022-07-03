@@ -1,7 +1,7 @@
 export default function() {
     const lkEditBtn = document.querySelector('.lk-edit-btn');
     lkEditBtn && lkEditBtn.addEventListener('click', () => {
-        const form = document.querySelector('.form');
+        const form = document.querySelector('.lk-form');
         const lkInputs = form.querySelectorAll('input');
 
         form.classList.add('active', 'edited');

@@ -1,0 +1,20 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Корзина (уточнение) | Solvik"
+}) %>
+
+<main class="main">
+    <div class="page">
+        <div class="container container--wide">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Корзина'}
+                ]
+            }) %>
+            <%=_.template(require("../templates/cart/clarify.html"))() %>
+        </div>
+    </div>
+</main>
+
+<%=_.template(require('../templates/modals.html'))() %>
+<%=_.template(require('../templates/footer.html'))() %>

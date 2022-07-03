@@ -1,0 +1,21 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Запланировать запись | Solvik"
+}) %>
+
+<main class="main">
+    <div class="page">
+        <div class="container container--wide">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Корзина', url: 'cart.html'},
+                    {name: 'Запись'}
+                ]
+            }) %>
+            <%=_.template(require("../templates/cart/appointment.html"))() %>
+        </div>
+    </div>
+</main>
+
+<%=_.template(require('../templates/modals.html'))() %>
+<%=_.template(require('../templates/footer.html'))() %>

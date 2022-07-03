@@ -188,8 +188,13 @@
         border-radius: 50%;
 
         @include media-up(md) {
+          top: 1px;
           width: 24px;
           height: 24px;
+        }
+
+        @include media-up(xl) {
+          top: 2px;
         }
       }
     }

@@ -13,6 +13,7 @@
 }
 
 .lk-auto-card {
+  $self: &;
   position: relative;
   padding: 16px 24px;
   border-radius: 32px;
@@ -30,9 +31,11 @@
     position: absolute;
     right: 0;
     top: 0;
+    pointer-events: none;
   }
 
   &__info {
+    display: block;
     padding-right: 100px;
     color: $color-blue;
     margin-bottom: 16px;
