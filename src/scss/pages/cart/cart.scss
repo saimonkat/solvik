@@ -210,6 +210,10 @@
       border: 1px solid $color-blue;
       border-radius: 20px;
 
+      @include media-down(sm) {
+        display: none;
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -236,7 +240,59 @@
   }
 
   &__total {
-    color: $color-blue;
+    $self: &;
+    position: relative;
+    background: $color-light;
+    border: 1px solid $color-blue;
+    border-width: 1px 1px 5px 1px;
+    border-radius: 20px;
+    padding: 28px 0 24px;
+
+    @include media-up(md) {
+      display: none;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 0 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-top: 12px;
+        border-top: 1px solid $color-border-3;
+
+        #{$self}-old {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    &-price {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: $color-red;
+      margin-left: auto;
+    }
+
+    &-old {
+      font-weight: 500;
+      color: $color-blue;
+      margin-left: 9px;
+      margin-bottom: auto;
+      text-decoration: line-through;
+    }
+
+    &-clarify {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $color-red;
+      margin-left: auto;
+    }
   }
 
   &__footer {

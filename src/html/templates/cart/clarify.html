@@ -22,7 +22,7 @@
             <span class="number">1</span>
             <span class="title">
                 Замена задних дисков и колодок (комплект)
-                <button data-fancybox data-src="#modal-cart-order">Подробнее</button>
+                <button data-fancybox data-src="#modal-cart-order-clarify">Подробнее</button>
             </span>
             <span class="works">2 995 ₽</span>
             <span class="spares">3 044 ₽</span>
@@ -41,7 +41,7 @@
             <span class="number">2</span>
             <span class="title">
                 Замена задних дисков и колодок (комплект)
-                <button data-fancybox data-src="#modal-cart-order">Подробнее</button>
+                <button data-fancybox data-src="#modal-cart-order-clarify">Подробнее</button>
             </span>
             <span class="clarify">Требует уточнения</span>
             <span class="remove">
@@ -58,11 +58,29 @@
             <span class="clarify">Требует уточнения</span>
             <span class="remove"></span>
         </div>
+        <div class="cart-table__total">
+           <div class="cart-table__total-row">
+                <div class="cart-table__total-title">Работы</div>
+                <div class="cart-table__total-clarify">Требует уточнения</div>
+           </div>
+           <div class="cart-table__total-row">
+                <div class="cart-table__total-title">Запчасти</div>
+                <div class="cart-table__total-clarify">Требует уточнения</div>
+           </div>
+           <div class="cart-table__total-row">
+                <div class="cart-table__total-title">Итого</div>
+                <div class="cart-table__total-clarify">Требует уточнения</div>
+           </div>
+        </div>
     </div>
 
     <div class="cart__footer cart__footer--clarify">
         <div class="cart__buttons">
-            <a href="appointment.html" class="cart__btn btn btn--red">Уточнить цену</a>
+            <button class="cart__btn btn btn--red"
+                    data-fancybox
+                    data-src="#modal-success-actual">
+                Уточнить цену
+            </button>
             <a href="appointment.html" class="cart__btn disabled btn btn--red">Выбрать время для записи</a>
         </div>
         <div class="cart__hint hint">
