@@ -24,6 +24,7 @@
   &__row {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 12px;
 
     @include media-up(md) {
@@ -37,6 +38,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -85,6 +87,27 @@
 
     a {
       @include link-under;
+    }
+  }
+
+  .calendar-input {
+    cursor: pointer;
+
+    & + svg {
+      position: absolute;
+      z-index: 1;
+      right: 16px;
+      bottom: 12px;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+
+      @include media-up(lg) {
+        right: 24px;
+        bottom: 16px;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

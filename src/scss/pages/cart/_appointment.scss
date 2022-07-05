@@ -1,0 +1,158 @@
+.appointment {
+  &__title {
+    @include media-up(xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 40px;
+
+    @include media-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 24px;
+    }
+
+    @include media-up(xl) {
+      grid-template-columns: 420px 1fr;
+      grid-gap: 32px;
+    }
+  }
+
+  &__form {
+    gap: 16px;
+
+    @include media-up(xl) {
+      gap: 20px;
+    }
+
+    .form {
+      &__row {
+        flex-direction: row;
+
+        @include media-up(lg) {
+          gap: 16px;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+
+    @include media-up(md) {
+      margin-top: 16px;
+    }
+
+    @include media-up(xl) {
+      margin-top: 20px;
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+
+  &__btn-fix {
+    @include media-down(sm) {
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 20px 24px;
+      background: $color-blue;
+    }
+  }
+
+  &__timelines {
+    @include media-down(sm) {
+      display: none;
+      margin: 0 -24px;
+    }
+  }
+}
+
+.timelines {
+  background: $color-blue;
+  border-radius: 12px;
+
+  @include media-up(md) {
+    height: 508px;
+    overflow: hidden;
+  }
+
+  @include media-up(lg) {
+    height: 588px;
+  }
+
+  @include media-up(xl) {
+    height: 616px;
+    border-radius: 24px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding: 20px 24px;
+
+    @include media-up(md) {
+      height: 100%;
+      padding: 24px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #365978;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #497399;
+        border-radius: 16px;
+
+        &:hover {
+          background: $color-gray;
+        }
+      }
+    }
+
+    @include media-up(xl) {
+      padding: 40px 60px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: 16px;
+
+    @include media-down(sm) {
+      padding: 0 16px;
+    }
+
+    @include media-up(xl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include media-up(xl) {
+      gap: 16px;
+    }
+  }
+}
+
+.timeline {
+  background: $color-light;
+  border-radius: 20px;
+  height: 100px;
+}

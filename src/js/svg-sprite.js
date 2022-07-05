@@ -31,4 +31,5 @@ import '../img/icon/hint.svg';
 import '../img/icon/file.svg';
 import '../img/icon/arrow.svg';
 import '../img/icon/remove.svg';
+import '../img/icon/calendar.svg';
 import '../img/icon/slider-arrow.svg';

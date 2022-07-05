@@ -26,6 +26,7 @@
 @import "components/sidebar";
 @import "components/sliders";
 @import "components/hamburger";
+@import "components/calendar";
 
 // LAYOUT
 @import "layout/nav";
@@ -66,6 +67,7 @@
 
 // CART
 @import "pages/cart/cart";
+@import "pages/cart/appointment";
 
 // LK
 @import "pages/lk/global";
