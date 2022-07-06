@@ -11,11 +11,11 @@ import select from './components/select';
 import cookies from './components/cookies';
 import sliders from './components/sliders';
 import modals from './components/modals';
+import autoSelect from './components/auto-select';
 
 // Pages
 import lk from './pages/lk';
 import about from './pages/about';
-import autoSelect from './pages/auto-select';
 
 // DOM content load
 document.addEventListener("DOMContentLoaded", () => {
