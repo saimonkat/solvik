@@ -89,27 +89,6 @@
       @include link-under;
     }
   }
-
-  .calendar-input {
-    cursor: pointer;
-
-    & + svg {
-      position: absolute;
-      z-index: 1;
-      right: 16px;
-      bottom: 12px;
-      width: 20px;
-      height: 20px;
-      pointer-events: none;
-
-      @include media-up(lg) {
-        right: 24px;
-        bottom: 16px;
-        width: 24px;
-        height: 24px;
-      }
-    }
-  }
 }
 
 // File upload

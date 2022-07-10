@@ -1,5 +1,5 @@
 import NiceSelect from "nice-select2/dist/js/nice-select2";
-import marksJSON from './marks.json';
+import marksJSON from '../data/marks.json';
 
 export default function() {
     const autoSelects = document.querySelector('.auto-selects');

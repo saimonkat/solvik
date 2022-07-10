@@ -1,0 +1,210 @@
+:host {
+  --color-fg-primary: #164168;
+  --color-btn-secondary-fg: #164168;
+  --color-bg-inrange: #1641681A;
+  --day-width: 40px;
+  --day-height: 40px;
+  --border-radius: 50%;
+}
+
+.container {
+  border-radius: 24px;
+  margin-top: 12px;
+  padding: 40px 20px;
+  background: #fff;
+  transition: .15s !important;
+  transform: scale(0.75);
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.container.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+  box-shadow: 0px 2px 13px rgba(156, 167, 180, 0.29);
+}
+
+.calendar {
+  color: var(--color-fg-primary);
+  padding: 0 20px;
+}
+
+.calendar>.header {
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.calendar>.header button {
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+
+.calendar>.header button>svg {
+  position: relative;
+  transform: none !important;
+  fill: none !important;
+}
+
+.calendar>.header .previous-button svg {
+  left: -2px;
+}
+
+.calendar>.header .next-button svg {
+  left: 2px;
+}
+
+.calendar>.daynames-row,
+.calendar>.days-grid {
+  gap: 8px;
+}
+
+.calendar>.daynames-row {
+  margin-bottom: 12px;
+}
+
+.calendar>.header .month-name {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.calendar>.daynames-row>.dayname {
+  color: inherit;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.calendar>.days-grid>.day {
+  font-weight: 500;
+  font-style: normal !important;
+  font-size: 16px;
+  line-height: 28px;
+  border-radius: 50% !important;
+}
+
+.calendar>.days-grid>.day.today {
+  color: #D34B3B;
+}
+
+.container.range-plugin .calendar>.days-grid>.day.start:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: -5px;
+  height: 100%;
+  border: none;
+  background-color: var(--color-bg-inrange);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.start.flipped:after {
+  left: -5px;
+  right: 50%;
+}
+
+.container.range-plugin .calendar>.days-grid>.day.end:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  right: 50%;
+  height: 100%;
+  border: none;
+  background-color: var(--color-bg-inrange);
+}
+
+.container.range-plugin .calendar>.days-grid>.day.end.flipped:after {
+  left: 50%;
+  right: -5px;
+}
+
+.container.range-plugin .calendar>.days-grid>.day.start.end:after {
+  display: none;
+}
+
+.container.range-plugin .calendar>.days-grid>.day.in-range {
+  background: none;
+}
+
+.container.range-plugin .calendar>.days-grid>.day.in-range:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  height: 100%;
+  border: none;
+  background-color: var(--color-bg-inrange);
+}
+
+.container.lock-plugin .calendar>.days-grid>.day.selected {
+  pointer-events: all;
+}
+
+.container.lock-plugin .calendar>.days-grid>.day.not-available:not(.start):not(.end) {
+  background: none;
+  color: inherit;
+  opacity: 0.4;
+}
+
+.container.lock-plugin .calendar>.days-grid>.day.locked:not(.start):not(.end) {
+  /* background-image: repeating-linear-gradient(135deg,transparent,#164168 2px,transparent 2px,transparent 4px);   */
+  background: none;
+  color: inherit;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+@media (max-width: 991px) {
+  :host {
+    --day-width: 35px;
+    --day-height: 35px;
+  }
+
+  .container.range-plugin .calendar>.days-grid>.day.start.not-available:after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .calendars .calendar:nth-child(n+2) {
+    display: none;
+  }
+
+  .calendars:not(.grid-1) .calendar>.header .next-button {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    --day-width: calc((100vw - 96px) / 7);
+    --day-height: calc((100vw - 96px) / 7);
+  }
+
+  .container {
+    position: fixed !important;
+    z-index: 1000 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    border-radius: 16px 16px 0 0;
+    margin-top: 0;
+    padding: 24px;
+    transition: .25s !important;
+  }
+
+  .container:not(.inline) {
+    transform: translateY(100%) !important;
+  }
+
+  .calendar {
+    padding: 0;
+  }
+
+  .calendar>.header {
+    margin-bottom: 20px;
+  }
+}

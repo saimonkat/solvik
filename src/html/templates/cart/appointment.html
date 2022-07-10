@@ -7,27 +7,28 @@
         <div class="appointment__form form">
             <div class="form__row">
                 <div class="form__item">
-                    <label for="appointment_date_1">Выберите дату</label>
+                    <label for="datepicker_from">Выберите дату</label>
                     <input type="text"
-                           name="appointment_date_1"
-                           id="appointment_date_1"
+                           name="datepicker_from"
+                           id="datepicker_from"
                            placeholder="Начиная с"
-                           class="calendar-input">
+                           class="datepicker"
+                           readonly>
                     <svg width="24" height="24">
                         <use xlink:href="#calendar"></use>
                     </svg>
                 </div>
                 <div class="form__item">
                     <input type="text"
-                           name="appointment_date_2"
-                           id="appointment_date_2"
+                           name="datepicker_to"
+                           id="datepicker_to"
                            placeholder="Заканчивая по"
-                           class="calendar-input">
+                           class="datepicker"
+                           readonly>
                     <svg width="24" height="24">
                         <use xlink:href="#calendar"></use>
                     </svg>
                 </div>
-                <div class="calendar"></div>
             </div>
             <div class="form__item">
                 <label for="appointment_weekdays">Удобный день недели</label>
@@ -92,11 +93,15 @@
                 </select>
             </div>
             <div class="form__item appointment__buttons">
-                <button class="btn">
+                <button class="btn choose-time" disabled>
                     Подобрать
                 </button>
                 <div class="appointment__btn-fix">
-                    <button type="submit" class="btn btn--red">
+                    <button type="submit"
+                            class="btn btn--red"
+                            data-fancybox
+                            data-src="#modal-success-appointment"
+                            disabled>
                         Записаться в автосервис
                     </button>
                 </div>
@@ -108,28 +113,180 @@
                 <div class="timelines__title h3">Доступное время</div>
                 <div class="timelines__list">
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                     <div class="timeline">
-
+                        <label class="timeline__wrapper">
+                            <div class="timeline__pickup">
+                                <div class="timeline__title">Приём</div>
+                                <div class="timeline__data">ср, 21 июл. в 9:20</div>
+                            </div>
+                            <div class="timeline__duration">
+                                <div class="timeline__duration-line"></div>
+                                <div class="timeline__duration-time">
+                                    1 ч. 50 мин.
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline__return">
+                                <div class="timeline__title">Выдача</div>
+                                <div class="timeline__data">ср, 22 июл. в 9:20</div>
+                            </div>
+                            <input type="radio" name="timeline" class="timeline__check">
+                        </label>
                     </div>
                 </div>
             </div>

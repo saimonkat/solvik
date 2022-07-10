@@ -1,750 +1,752 @@
-<!-- Личный кабинет -->
-<div class="modal" id="modal-sign-in">
-    <div class="modal__title">
-        Авторизация
+<div class="modals">
+    <!-- Личный кабинет -->
+    <div class="modal" id="modal-sign-in">
+        <div class="modal__title">
+            Авторизация
+        </div>
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="sign_in_login">Логин</label>
+                <input type="text"
+                    name="login"
+                    id="sign_in_login"
+                    placeholder="+7(___)___ __ __"
+                    minlength="16"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_in_password">Пароль</label>
+                <input type="password"
+                    name="password"
+                    id="sign_in_password"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <span class="modal__forgot"
+                data-fancybox
+                data-src="#modal-recover-phone">
+                Забыли пароль?
+            </span>
+            <div class="modal__sign-in">
+                <div class="input-block">
+                    <input type="checkbox" name="remember" id="sign_in_remember">
+                    <label for="sign_in_remember">Запомнить меня</label>
+                </div>
+                <button type="submit" class="modal__btn btn btn--red">
+                    Войти
+                </button>
+            </div>
+            <div class="modal__no-account">
+                Нет аккаунта?
+                <span data-fancybox
+                    data-src="#modal-sign-up">
+                    Зарегистрируйтесь
+                </span>
+            </div>
+        </form>
     </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="sign_in_login">Логин</label>
-            <input type="text"
-                   name="login"
-                   id="sign_in_login"
-                   placeholder="+7(___)___ __ __"
-                   minlength="16"
-                   required>
+
+    <div class="modal" id="modal-sign-up">
+        <div class="modal__title">
+            Регистрация
         </div>
-        <div class="form__item">
-            <label for="sign_in_password">Пароль</label>
-            <input type="password"
-                   name="password"
-                   id="sign_in_password"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="sign_up_name">Имя</label>
+                <input type="text"
+                    name="name"
+                    id="sign_up_name"
+                    placeholder="Введите ваше имя"
+                    minlength="2"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_up_phone">Телефон</label>
+                <input type="text"
+                    name="phone"
+                    id="sign_up_phone"
+                    placeholder="+7(___)___ __ __"
+                    minlength="16"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_up_email">Почта (необязательное)</label>
+                <input type="email"
+                    name="email"
+                    id="sign_up_email"
+                    placeholder="name@mail.ru">
+            </div>
+            <div class="form__item">
+                <label for="sign_up_password">Пароль</label>
+                <input type="password"
+                    name="password"
+                    id="sign_up_password"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_up_confirm_password">Подтверждение пароля</label>
+                <input type="password"
+                    name="confirm_password"
+                    id="sign_up_confirm_password"
+                    placeholder="Повторите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <button type="submit" class="modal__btn btn btn--red">
+                Зарегистрироваться
+            </button>
+        </form>
+    </div>
+
+    <div class="modal" id="modal-recover-phone">
+        <div class="modal__title">
+            Востановление пароля
         </div>
-        <span class="modal__forgot"
-              data-fancybox
-              data-src="#modal-recover-phone">
-            Забыли пароль?
-        </span>
-        <div class="modal__sign-in">
-            <div class="input-block">
-                <input type="checkbox" name="remember" id="sign_in_remember">
-                <label for="sign_in_remember">Запомнить меня</label>
+        <form action="#" class="modal__form form form-recover">
+            <div class="form__item">
+                <label for="recover_phone">Телефон</label>
+                <input type="tel"
+                    name="phone"
+                    id="recover_phone"
+                    placeholder="+7(___)___ __ __"
+                    required>
+            </div>
+            <div class="modal__text">
+                Укажите телефон, который привязывали к личному кабинету. Мы пришлем новый пароль по СМС.
+                <span class="modal__link"
+                    data-fancybox
+                    data-src="#modal-recover-email">
+                    Востановить по почте
+                </span>
+            </div>
+            <button type="submit" class="modal__btn btn btn--red">
+                Отправить
+            </button>
+            <div class="on-submit"
+                data-fancybox
+                data-src="#modal-success-phone"></div>
+        </form>
+    </div>
+
+    <div class="modal" id="modal-recover-email">
+        <div class="modal__title">
+            Востановление пароля
+        </div>
+        <form action="#" class="modal__form form form-recover">
+            <div class="form__item">
+                <label for="recover_email">Email</label>
+                <input type="email"
+                    name="email"
+                    id="recover_email"
+                    placeholder="name@mail.ru"
+                    required>
+            </div>
+            <div class="modal__text">
+                Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
+                <span class="modal__link"
+                    data-fancybox
+                    data-src="#modal-recover-phone">
+                    Востановить по телефону
+                </span>
+            </div>
+            <button type="submit" class="modal__btn btn btn--red">
+                Отправить
+            </button>
+            <div class="on-submit"
+                data-fancybox
+                data-src="#modal-success-email"></div>
+        </form>
+    </div>
+
+    <div class="modal modal--notice" id="modal-error-phone">
+        <div class="modal__title">
+            Ошибка
+        </div>
+        <div class="modal__text">
+            Номер телефона не найден.<br> Проверьте номер или попробуйте<br> восстановить доступ по почте.
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox
+                data-src="#modal-recover-phone">
+            Назад
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal modal--notice" id="modal-error-email">
+        <div class="modal__title">
+            Ошибка
+        </div>
+        <div class="modal__text">
+            Указанная почта не найдена.<br> Проверьте почту или попробуйте<br> восстановить доступ по СМС.
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox
+                data-src="#modal-recover-email">
+            Назад
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal modal--notice" id="modal-success-phone">
+        <div class="modal__title">
+            Успешно
+        </div>
+        <div class="modal__text">
+            На ваш телефон выслан пароль<br> в личный кабинет
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox
+                data-src="#modal-new-pass-phone">
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal modal--notice" id="modal-success-email">
+        <div class="modal__title">
+            Успешно
+        </div>
+        <div class="modal__text">
+            Скоро на вашу почту придут данные<br> для входа в личный кабинет
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox
+                data-src="#modal-new-pass-email">
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal" id="modal-new-pass-phone">
+        <div class="modal__title">
+            Востановление пароля
+        </div>
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="new_pass_phone">Новый пароль</label>
+                <input type="password"
+                    name="password"
+                    id="new_pass_phone"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <div class="modal__text">
+                <div class="modal__timer">
+                    Запросить повторно код можно через <span>60</span> секунд.
+                </div>
+                <div class="modal__new-code"
+                    data-fancybox
+                    data-src="#modal-success-phone">
+                    Запросить повторно код
+                </div>
+                <span class="modal__link"
+                    data-fancybox
+                    data-src="#modal-recover-email">
+                    Востановить по почте
+                </span>
             </div>
             <button type="submit" class="modal__btn btn btn--red">
                 Войти
             </button>
-        </div>
-        <div class="modal__no-account">
-            Нет аккаунта?
-            <span data-fancybox
-                  data-src="#modal-sign-up">
-                Зарегистрируйтесь
-            </span>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 
-<div class="modal" id="modal-sign-up">
-    <div class="modal__title">
-        Регистрация
-    </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="sign_up_name">Имя</label>
-            <input type="text"
-                   name="name"
-                   id="sign_up_name"
-                   placeholder="Введите ваше имя"
-                   minlength="2"
-                   required>
+    <div class="modal" id="modal-new-pass-email">
+        <div class="modal__title">
+            Востановление пароля
         </div>
-        <div class="form__item">
-            <label for="sign_up_phone">Телефон</label>
-            <input type="text"
-                   name="phone"
-                   id="sign_up_phone"
-                   placeholder="+7(___)___ __ __"
-                   minlength="16"
-                   required>
-        </div>
-        <div class="form__item">
-            <label for="sign_up_email">Почта (необязательное)</label>
-            <input type="email"
-                   name="email"
-                   id="sign_up_email"
-                   placeholder="name@mail.ru">
-        </div>
-        <div class="form__item">
-            <label for="sign_up_password">Пароль</label>
-            <input type="password"
-                   name="password"
-                   id="sign_up_password"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <div class="form__item">
-            <label for="sign_up_confirm_password">Подтверждение пароля</label>
-            <input type="password"
-                   name="confirm_password"
-                   id="sign_up_confirm_password"
-                   placeholder="Повторите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <button type="submit" class="modal__btn btn btn--red">
-            Зарегистрироваться
-        </button>
-    </form>
-</div>
-
-<div class="modal" id="modal-recover-phone">
-    <div class="modal__title">
-        Востановление пароля
-    </div>
-    <form action="#" class="modal__form form form-recover">
-        <div class="form__item">
-            <label for="recover_phone">Телефон</label>
-            <input type="tel"
-                   name="phone"
-                   id="recover_phone"
-                   placeholder="+7(___)___ __ __"
-                   required>
-        </div>
-        <div class="modal__text">
-            Укажите телефон, который привязывали к личному кабинету. Мы пришлем новый пароль по СМС.
-            <span class="modal__link"
-                data-fancybox
-                data-src="#modal-recover-email">
-                Востановить по почте
-            </span>
-        </div>
-        <button type="submit" class="modal__btn btn btn--red">
-            Отправить
-        </button>
-        <div class="on-submit"
-              data-fancybox
-              data-src="#modal-success-phone"></div>
-    </form>
-</div>
-
-<div class="modal" id="modal-recover-email">
-    <div class="modal__title">
-        Востановление пароля
-    </div>
-    <form action="#" class="modal__form form form-recover">
-        <div class="form__item">
-            <label for="recover_email">Email</label>
-            <input type="email"
-                   name="email"
-                   id="recover_email"
-                   placeholder="name@mail.ru"
-                   required>
-        </div>
-        <div class="modal__text">
-            Укажите эл. почту, которую привязывали к личному кабинету. Мы пришлем на нее ваш пароль.
-            <span class="modal__link"
-                data-fancybox
-                data-src="#modal-recover-phone">
-                Востановить по телефону
-            </span>
-        </div>
-        <button type="submit" class="modal__btn btn btn--red">
-            Отправить
-        </button>
-        <div class="on-submit"
-              data-fancybox
-              data-src="#modal-success-email"></div>
-    </form>
-</div>
-
-<div class="modal modal--notice" id="modal-error-phone">
-    <div class="modal__title">
-        Ошибка
-    </div>
-    <div class="modal__text">
-        Номер телефона не найден.<br> Проверьте номер или попробуйте<br> восстановить доступ по почте.
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox
-            data-src="#modal-recover-phone">
-        Назад
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal modal--notice" id="modal-error-email">
-    <div class="modal__title">
-        Ошибка
-    </div>
-    <div class="modal__text">
-        Указанная почта не найдена.<br> Проверьте почту или попробуйте<br> восстановить доступ по СМС.
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox
-            data-src="#modal-recover-email">
-        Назад
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal modal--notice" id="modal-success-phone">
-    <div class="modal__title">
-        Успешно
-    </div>
-    <div class="modal__text">
-        На ваш телефон выслан пароль<br> в личный кабинет
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox
-            data-src="#modal-new-pass-phone">
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal modal--notice" id="modal-success-email">
-    <div class="modal__title">
-        Успешно
-    </div>
-    <div class="modal__text">
-        Скоро на вашу почту придут данные<br> для входа в личный кабинет
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox
-            data-src="#modal-new-pass-email">
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal" id="modal-new-pass-phone">
-    <div class="modal__title">
-        Востановление пароля
-    </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="new_pass_phone">Новый пароль</label>
-            <input type="password"
-                   name="password"
-                   id="new_pass_phone"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <div class="modal__text">
-            <div class="modal__timer">
-                Запросить повторно код можно через <span>60</span> секунд.
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="new_pass_email">Новый пароль</label>
+                <input type="password"
+                    name="password"
+                    id="new_pass_email"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
             </div>
-            <div class="modal__new-code"
-                data-fancybox
-                data-src="#modal-success-phone">
-                Запросить повторно код
-            </div>
-            <span class="modal__link"
-                data-fancybox
-                data-src="#modal-recover-email">
-                Востановить по почте
-            </span>
-        </div>
-        <button type="submit" class="modal__btn btn btn--red">
-            Войти
-        </button>
-    </form>
-</div>
-
-<div class="modal" id="modal-new-pass-email">
-    <div class="modal__title">
-        Востановление пароля
-    </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="new_pass_email">Новый пароль</label>
-            <input type="password"
-                   name="password"
-                   id="new_pass_email"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <div class="modal__text">
-            <div class="modal__timer">
-                Запросить повторно код можно через <span>60</span> секунд.
-            </div>
-            <div class="modal__new-code"
-                data-fancybox
-                data-src="#modal-success-email">
-                Запросить повторно код
-            </div>
-            <span class="modal__link"
-                data-fancybox
-                data-src="#modal-recover-phone">
-                Востановить по телефону
-            </span>
-        </div>
-        <button type="submit" class="modal__btn btn btn--red">
-            Войти
-        </button>
-    </form>
-</div>
-
-<div class="modal modal--notice" id="modal-success-sign-up">
-    <div class="modal__title">
-        Успешно
-    </div>
-    <div class="modal__text">
-        Регистрация в личный кабинет<br> прошла успешно
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox-close>
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<!-- Гараж -->
-<div class="modal modal--small" id="modal-auto-remove">
-    <div class="modal__title">
-        Пожалуйста,<br> подтвердите
-    </div>
-    <div class="modal__text">
-        Вы действительно хотите удалить<br> автомобиль из гаража?
-    </div>
-    <div class="modal__buttons">
-        <button class="btn btn--red">
-            Удалить
-        </button>
-        <button class="btn" data-fancybox-close>
-            Отменить
-        </button>
-    </div>
-</div>
-
-<div class="modal modal--big" id="modal-order">
-    <div class="modal-order">
-        <div class="modal-order__title h3">
-            Замена задних дисков и колодок (комплект)
-        </div>
-        <div class="modal-order__table">
-            <div class="modal-order__header">
-                <span class="title-title">Работа</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
+            <div class="modal__text">
+                <div class="modal__timer">
+                    Запросить повторно код можно через <span>60</span> секунд.
                 </div>
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
+                <div class="modal__new-code"
+                    data-fancybox
+                    data-src="#modal-success-email">
+                    Запросить повторно код
                 </div>
+                <span class="modal__link"
+                    data-fancybox
+                    data-src="#modal-recover-phone">
+                    Востановить по телефону
+                </span>
             </div>
-            <div class="modal-order__header">
-                <span class="title-title">Запчасти</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Колодки (2 шт.)</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-                <div class="modal-order__item modal-order__item--deleted">
-                    <span class="title">Колодки</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-            </div>
-            <div class="modal-order__header modal-order__header--total">
-                <span class="title-title">Общая стоимость</span>
-                <span class="sale">-344 ₽</span>
-                <span class="price">6 234 ₽</span>
-                <span class="total">6 234 ₽</span>
-            </div>
-        </div>
-        <div class="modal-order__footer">
-            <button class="modal-order__btn btn btn--red" data-fancybox-close>
-                Вернуться в калькулятор
+            <button type="submit" class="modal__btn btn btn--red">
+                Войти
             </button>
-        </div>
+        </form>
     </div>
-</div>
 
-<div class="modal modal--big" id="modal-order-clarify">
-    <div class="modal-order">
-        <div class="modal-order__title h3">
-            Замена задних дисков и колодок (комплект)
+    <div class="modal modal--notice" id="modal-success-sign-up">
+        <div class="modal__title">
+            Успешно
         </div>
-        <div class="modal-order__table">
-            <div class="modal-order__header">
-                <span class="title-title">Работа</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-            </div>
-            <div class="modal-order__header">
-                <span class="title-title">Запчасти</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Колодки (2 шт.)</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-                <div class="modal-order__item">
-                    <span class="title">Колодки</span>
-                    <span class="total-title">Итого</span>
-                    <span class="clarify">Требует уточнения</span>
-                </div>
-            </div>
-            <div class="modal-order__header modal-order__total">
-                <span class="title-title">Общая стоимость</span>
-                <span class="clarify">Требует уточнения</span>
-            </div>
+        <div class="modal__text">
+            Регистрация в личный кабинет<br> прошла успешно
         </div>
-        <div class="modal-order__footer">
-            <button class="modal-order__btn btn btn--red" data-fancybox-close>
-                Вернуться в калькулятор
-            </button>
-        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox-close>
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
     </div>
-</div>
 
-<div class="modal modal--cancel" id="modal-cancel-visit">
-    <div class="modal__title">
-        Отмена записи
-    </div>
-    <div class="modal__text">
-        Выберите причину отмены записи
-    </div>
-    <form action="#" class="modal__cancel-form">
-        <div class="modal__options">
-            <div class="modal__option">
-                <label for="reason_secret">Секрет</label>
-                <input type="radio" name="cancel_reason" id="reason_secret" checked>
-            </div>
-            <div class="modal__option">
-                <label for="reason_overprice">Нашел Дешевле</label>
-                <input type="radio" name="cancel_reason" id="reason_overprice">
-            </div>
-            <div class="modal__option">
-                <label for="reason_wait">Долго ждать</label>
-                <input type="radio" name="cancel_reason" id="reason_wait">
-            </div>
-            <div class="modal__option">
-                <label for="reason_actual">Уже неактуально</label>
-                <input type="radio" name="cancel_reason" id="reason_actual">
-            </div>
+    <!-- Гараж -->
+    <div class="modal modal--small" id="modal-auto-remove">
+        <div class="modal__title">
+            Пожалуйста,<br> подтвердите
+        </div>
+        <div class="modal__text">
+            Вы действительно хотите удалить<br> автомобиль из гаража?
         </div>
         <div class="modal__buttons">
-            <button class="btn" type="submit">
-                Отменить запись
+            <button class="btn btn--red">
+                Удалить
             </button>
-        </div>
-    </form>
-</div>
-
-<!-- Корзина -->
-<div class="modal" id="modal-sign-in-cart">
-    <div class="modal__title">
-        Авторизируйтесь для записи на ремонт
-    </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="sign_in_login_1">Логин</label>
-            <input type="text"
-                   name="login"
-                   id="sign_in_login_1"
-                   placeholder="+7(___)___ __ __"
-                   minlength="16"
-                   required>
-        </div>
-        <div class="form__item">
-            <label for="sign_in_password_1">Пароль</label>
-            <input type="password"
-                   name="password"
-                   id="sign_in_password_1"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <span class="modal__forgot"
-              data-fancybox
-              data-src="#modal-recover-phone">
-            Забыли пароль?
-        </span>
-        <div class="modal__sign-in">
-            <div class="input-block">
-                <input type="checkbox" name="remember" id="sign_in_remember_1">
-                <label for="sign_in_remember_1">Запомнить меня</label>
-            </div>
-            <button type="submit" class="modal__btn btn btn--red">
-                Войти
-            </button>
-        </div>
-        <div class="modal__no-account">
-            Нет аккаунта?
-            <span data-fancybox
-                  data-src="#modal-sign-up">
-                Зарегистрируйтесь
-            </span>
-        </div>
-    </form>
-</div>
-
-<div class="modal" id="modal-sign-in-cart-actual">
-    <div class="modal__title">
-        Авторизируйтесь для записи на ремонт
-    </div>
-    <div class="modal__text">
-        Чтобы менеджер смог сообщить актуальную стоимость, вам нужно зайти в личный кабинет
-    </div>
-    <form action="#" class="modal__form form">
-        <div class="form__item">
-            <label for="sign_in_login_2">Логин</label>
-            <input type="text"
-                   name="login"
-                   id="sign_in_login_2"
-                   placeholder="+7(___)___ __ __"
-                   minlength="16"
-                   required>
-        </div>
-        <div class="form__item">
-            <label for="sign_in_password_2">Пароль</label>
-            <input type="password"
-                   name="password"
-                   id="sign_in_password_2"
-                   placeholder="Введите пароль"
-                   minlength="8"
-                   required>
-        </div>
-        <span class="modal__forgot"
-              data-fancybox
-              data-src="#modal-recover-phone">
-            Забыли пароль?
-        </span>
-        <div class="modal__sign-in">
-            <div class="input-block">
-                <input type="checkbox" name="remember" id="sign_in_remember_2">
-                <label for="sign_in_remember_2">Запомнить меня</label>
-            </div>
-            <button type="submit" class="modal__btn btn btn--red">
-                Войти
-            </button>
-        </div>
-        <div class="modal__no-account">
-            Нет аккаунта?
-            <span data-fancybox
-                  data-src="#modal-sign-up">
-                Зарегистрируйтесь
-            </span>
-        </div>
-    </form>
-</div>
-
-<div class="modal modal--notice" id="modal-success-actual">
-    <div class="modal__title">
-        Успешно
-    </div>
-    <div class="modal__text">
-        В течение 1 часа менеджер актуализирует<br> цены на запчасти в корзине. Вам поступит СМС&nbsp;о&nbsp;готовности
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox-close>
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal modal--notice" id="modal-success-appointment">
-    <div class="modal__title">
-        Успешно
-    </div>
-    <div class="modal__text">
-        Вы записаны в автосервис Solvik на 22.11 к 11.00.<br> В ближайшее время вам придёт СМС с&nbsp;подтверждением записи.
-    </div>
-    <button class="modal__btn btn btn--red"
-            data-fancybox-close>
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
-</div>
-
-<div class="modal modal--big" id="modal-cart-order">
-    <div class="modal-order">
-        <div class="modal-order__title h3">
-            Замена задних дисков и колодок (комплект)
-        </div>
-        <div class="modal-order__table">
-            <div class="modal-order__header">
-                <span class="title-title">Работа</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-            </div>
-            <div class="modal-order__header">
-                <span class="title-title">Запчасти</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Колодки (2 шт.)</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-                <div class="modal-order__item modal-order__item--deleted">
-                    <span class="title">Колодки</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
-                </div>
-            </div>
-            <div class="modal-order__header modal-order__header--total">
-                <span class="title-title">Общая стоимость</span>
-                <span class="sale">-344 ₽</span>
-                <span class="price">6 234 ₽</span>
-                <span class="total">6 234 ₽</span>
-            </div>
-        </div>
-        <div class="modal-order__footer">
-            <button class="modal-order__btn btn btn--red" data-fancybox-close>
-                Вернуться в корзину
+            <button class="btn" data-fancybox-close>
+                Отменить
             </button>
         </div>
     </div>
-</div>
 
-<div class="modal modal--big" id="modal-cart-order-clarify">
-    <div class="modal-order">
-        <div class="modal-order__title h3">
-            Замена задних дисков и колодок (комплект)
+    <div class="modal modal--big" id="modal-order">
+        <div class="modal-order">
+            <div class="modal-order__title h3">
+                Замена задних дисков и колодок (комплект)
+            </div>
+            <div class="modal-order__table">
+                <div class="modal-order__header">
+                    <span class="title-title">Работа</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                </div>
+                <div class="modal-order__header">
+                    <span class="title-title">Запчасти</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Колодки (2 шт.)</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item modal-order__item--deleted">
+                        <span class="title">Колодки</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                </div>
+                <div class="modal-order__header modal-order__header--total">
+                    <span class="title-title">Общая стоимость</span>
+                    <span class="sale">-344 ₽</span>
+                    <span class="price">6 234 ₽</span>
+                    <span class="total">6 234 ₽</span>
+                </div>
+            </div>
+            <div class="modal-order__footer">
+                <button class="modal-order__btn btn btn--red" data-fancybox-close>
+                    Вернуться в калькулятор
+                </button>
+            </div>
         </div>
-        <div class="modal-order__table">
-            <div class="modal-order__header">
-                <span class="title-title">Работа</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
+    </div>
+
+    <div class="modal modal--big" id="modal-order-clarify">
+        <div class="modal-order">
+            <div class="modal-order__title h3">
+                Замена задних дисков и колодок (комплект)
             </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
+            <div class="modal-order__table">
+                <div class="modal-order__header">
+                    <span class="title-title">Работа</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
                     <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
                 </div>
-                <div class="modal-order__item">
-                    <span class="title">Замена задних дисков и колодок</span>
-                    <span class="sale">50 %</span>
-                    <span class="price">3 234 ₽</span>
-                    <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-order__header">
-                <span class="title-title">Запчасти</span>
-                <span class="sale-title">Скидка</span>
-                <span class="price-title">Цена</span>
-                <span class="total-title">Итого</span>
-            </div>
-            <div class="modal-order__content">
-                <div class="modal-order__item">
-                    <span class="title">Колодки (2 шт.)</span>
-                    <span class="sale">15 %</span>
-                    <span class="price">3 234 ₽</span>
+                <div class="modal-order__header">
+                    <span class="title-title">Запчасти</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
                     <span class="total-title">Итого</span>
-                    <span class="total">3 234 ₽</span>
                 </div>
-                <div class="modal-order__item">
-                    <span class="title">Колодки</span>
-                    <span class="total-title">Итого</span>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Колодки (2 шт.)</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Колодки</span>
+                        <span class="total-title">Итого</span>
+                        <span class="clarify">Требует уточнения</span>
+                    </div>
+                </div>
+                <div class="modal-order__header modal-order__total">
+                    <span class="title-title">Общая стоимость</span>
                     <span class="clarify">Требует уточнения</span>
                 </div>
             </div>
-            <div class="modal-order__header modal-order__total">
-                <span class="title-title">Общая стоимость</span>
-                <span class="clarify">Требует уточнения</span>
+            <div class="modal-order__footer">
+                <button class="modal-order__btn btn btn--red" data-fancybox-close>
+                    Вернуться в калькулятор
+                </button>
             </div>
         </div>
-        <div class="modal-order__footer">
-            <button class="modal-order__btn btn btn--red" data-fancybox-close>
-                Вернуться в корзину
-            </button>
+    </div>
+
+    <div class="modal modal--cancel" id="modal-cancel-visit">
+        <div class="modal__title">
+            Отмена записи
+        </div>
+        <div class="modal__text">
+            Выберите причину отмены записи
+        </div>
+        <form action="#" class="modal__cancel-form">
+            <div class="modal__options">
+                <div class="modal__option">
+                    <label for="reason_secret">Секрет</label>
+                    <input type="radio" name="cancel_reason" id="reason_secret" checked>
+                </div>
+                <div class="modal__option">
+                    <label for="reason_overprice">Нашел Дешевле</label>
+                    <input type="radio" name="cancel_reason" id="reason_overprice">
+                </div>
+                <div class="modal__option">
+                    <label for="reason_wait">Долго ждать</label>
+                    <input type="radio" name="cancel_reason" id="reason_wait">
+                </div>
+                <div class="modal__option">
+                    <label for="reason_actual">Уже неактуально</label>
+                    <input type="radio" name="cancel_reason" id="reason_actual">
+                </div>
+            </div>
+            <div class="modal__buttons">
+                <button class="btn" type="submit">
+                    Отменить запись
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Корзина -->
+    <div class="modal" id="modal-sign-in-cart">
+        <div class="modal__title">
+            Авторизируйтесь для записи на ремонт
+        </div>
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="sign_in_login_1">Логин</label>
+                <input type="text"
+                    name="login"
+                    id="sign_in_login_1"
+                    placeholder="+7(___)___ __ __"
+                    minlength="16"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_in_password_1">Пароль</label>
+                <input type="password"
+                    name="password"
+                    id="sign_in_password_1"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <span class="modal__forgot"
+                data-fancybox
+                data-src="#modal-recover-phone">
+                Забыли пароль?
+            </span>
+            <div class="modal__sign-in">
+                <div class="input-block">
+                    <input type="checkbox" name="remember" id="sign_in_remember_1">
+                    <label for="sign_in_remember_1">Запомнить меня</label>
+                </div>
+                <button type="submit" class="modal__btn btn btn--red">
+                    Войти
+                </button>
+            </div>
+            <div class="modal__no-account">
+                Нет аккаунта?
+                <span data-fancybox
+                    data-src="#modal-sign-up">
+                    Зарегистрируйтесь
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" id="modal-sign-in-cart-actual">
+        <div class="modal__title">
+            Авторизируйтесь для записи на ремонт
+        </div>
+        <div class="modal__text">
+            Чтобы менеджер смог сообщить актуальную стоимость, вам нужно зайти в личный кабинет
+        </div>
+        <form action="#" class="modal__form form">
+            <div class="form__item">
+                <label for="sign_in_login_2">Логин</label>
+                <input type="text"
+                    name="login"
+                    id="sign_in_login_2"
+                    placeholder="+7(___)___ __ __"
+                    minlength="16"
+                    required>
+            </div>
+            <div class="form__item">
+                <label for="sign_in_password_2">Пароль</label>
+                <input type="password"
+                    name="password"
+                    id="sign_in_password_2"
+                    placeholder="Введите пароль"
+                    minlength="8"
+                    required>
+            </div>
+            <span class="modal__forgot"
+                data-fancybox
+                data-src="#modal-recover-phone">
+                Забыли пароль?
+            </span>
+            <div class="modal__sign-in">
+                <div class="input-block">
+                    <input type="checkbox" name="remember" id="sign_in_remember_2">
+                    <label for="sign_in_remember_2">Запомнить меня</label>
+                </div>
+                <button type="submit" class="modal__btn btn btn--red">
+                    Войти
+                </button>
+            </div>
+            <div class="modal__no-account">
+                Нет аккаунта?
+                <span data-fancybox
+                    data-src="#modal-sign-up">
+                    Зарегистрируйтесь
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal modal--notice" id="modal-success-actual">
+        <div class="modal__title">
+            Успешно
+        </div>
+        <div class="modal__text">
+            В течение 1 часа менеджер актуализирует<br> цены на запчасти в корзине. Вам поступит СМС&nbsp;о&nbsp;готовности
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox-close>
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal modal--notice" id="modal-success-appointment">
+        <div class="modal__title">
+            Успешно
+        </div>
+        <div class="modal__text">
+            Вы записаны в автосервис Solvik на 22.11 к 11.00.<br> В ближайшее время вам придёт СМС с&nbsp;подтверждением записи.
+        </div>
+        <button class="modal__btn btn btn--red"
+                data-fancybox-close>
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
+    </div>
+
+    <div class="modal modal--big" id="modal-cart-order">
+        <div class="modal-order">
+            <div class="modal-order__title h3">
+                Замена задних дисков и колодок (комплект)
+            </div>
+            <div class="modal-order__table">
+                <div class="modal-order__header">
+                    <span class="title-title">Работа</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                </div>
+                <div class="modal-order__header">
+                    <span class="title-title">Запчасти</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Колодки (2 шт.)</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item modal-order__item--deleted">
+                        <span class="title">Колодки</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                </div>
+                <div class="modal-order__header modal-order__header--total">
+                    <span class="title-title">Общая стоимость</span>
+                    <span class="sale">-344 ₽</span>
+                    <span class="price">6 234 ₽</span>
+                    <span class="total">6 234 ₽</span>
+                </div>
+            </div>
+            <div class="modal-order__footer">
+                <button class="modal-order__btn btn btn--red" data-fancybox-close>
+                    Вернуться в корзину
+                </button>
+            </div>
         </div>
     </div>
-</div>
+
+    <div class="modal modal--big" id="modal-cart-order-clarify">
+        <div class="modal-order">
+            <div class="modal-order__title h3">
+                Замена задних дисков и колодок (комплект)
+            </div>
+            <div class="modal-order__table">
+                <div class="modal-order__header">
+                    <span class="title-title">Работа</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Замена задних дисков и колодок</span>
+                        <span class="sale">50 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                </div>
+                <div class="modal-order__header">
+                    <span class="title-title">Запчасти</span>
+                    <span class="sale-title">Скидка</span>
+                    <span class="price-title">Цена</span>
+                    <span class="total-title">Итого</span>
+                </div>
+                <div class="modal-order__content">
+                    <div class="modal-order__item">
+                        <span class="title">Колодки (2 шт.)</span>
+                        <span class="sale">15 %</span>
+                        <span class="price">3 234 ₽</span>
+                        <span class="total-title">Итого</span>
+                        <span class="total">3 234 ₽</span>
+                    </div>
+                    <div class="modal-order__item">
+                        <span class="title">Колодки</span>
+                        <span class="total-title">Итого</span>
+                        <span class="clarify">Требует уточнения</span>
+                    </div>
+                </div>
+                <div class="modal-order__header modal-order__total">
+                    <span class="title-title">Общая стоимость</span>
+                    <span class="clarify">Требует уточнения</span>
+                </div>
+            </div>
+            <div class="modal-order__footer">
+                <button class="modal-order__btn btn btn--red" data-fancybox-close>
+                    Вернуться в корзину
+                </button>
+            </div>
+        </div>
+    </div>
 
 
-<!-- Директор -->
-<div class="modal modal--notice" id="modal-success-director">
-    <div class="modal__title">
-        Успешно
+    <!-- Директор -->
+    <div class="modal modal--notice" id="modal-success-director">
+        <div class="modal__title">
+            Успешно
+        </div>
+        <div class="modal__text">
+            Спасибо, директор получил ваше<br> письмо и в скором времени вам ответит
+        </div>
+        <button class="modal__btn btn btn--red" data-fancybox-close>
+            Понятно
+        </button>
+        <div class="modal__bg"></div>
     </div>
-    <div class="modal__text">
-        Спасибо, директор получил ваше<br> письмо и в скором времени вам ответит
-    </div>
-    <button class="modal__btn btn btn--red" data-fancybox-close>
-        Понятно
-    </button>
-    <div class="modal__bg"></div>
 </div>

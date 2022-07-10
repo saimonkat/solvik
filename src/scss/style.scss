@@ -26,13 +26,14 @@
 @import "components/sidebar";
 @import "components/sliders";
 @import "components/hamburger";
-@import "components/calendar";
+@import "components/datepicker";
 
 // LAYOUT
 @import "layout/nav";
 @import "layout/header";
 @import "layout/footer";
 
+// COMMON SECTIONS
 @import "common/director-form";
 
 // HOMEPAGE

@@ -16,6 +16,7 @@ import autoSelect from './components/auto-select';
 // Pages
 import lk from './pages/lk';
 import about from './pages/about';
+import appointment from './pages/appointment';
 
 // DOM content load
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     cookies();
     sliders();
     modals();
+    autoSelect();
 
     lk();
     about();
-    autoSelect();
+    appointment();
 })
