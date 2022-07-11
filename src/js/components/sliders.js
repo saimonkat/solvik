@@ -46,4 +46,19 @@ export default function () {
             }
         },
     });
+
+    const contactsGallerySlider = document.querySelector('.contacts-gallery__slider');
+    contactsGallerySlider && new Swiper(contactsGallerySlider, {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button--next',
+            prevEl: '.swiper-button--prev',
+        },
+        speed: 700,
+    });
 }

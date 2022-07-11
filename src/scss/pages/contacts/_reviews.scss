@@ -1,0 +1,76 @@
+.contacts-reviews {
+  padding: 30px 0 60px;
+
+  @include media-up(md) {
+    padding: 40px 0 80px;
+  }
+
+  @include media-up(xl) {
+    padding: 50px 0 120px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+
+    @include media-down(sm) {
+      margin: 0 -24px;
+      padding: 0 24px;
+    }
+
+    @include media-up(md) {
+      gap: 16px;
+      margin: 0 -40px;
+      padding: 0 40px;
+    }
+
+    @include media-up(xl) {
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.contacts-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: calc((100% - 12px) / 2);
+  height: 56px;
+  border-radius: 16px;
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include media-up(sm) {
+    width: calc((100% - 24px) / 3);
+  }
+
+  @include media-up(md) {
+    width: calc((100% - 64px) / 4);
+    height: 64px;
+    border-radius: 24px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include media-up(lg) {
+    width: calc((100% - 64px) / 5);
+  }
+
+  @include media-up(xl) {
+    width: calc((100% - 128px) / 5);
+    height: 78px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:first-child:not(:hover) {
+    background: $color-blue;
+    color: #fff;
+  }
+}

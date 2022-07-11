@@ -1,4 +1,18 @@
 .about-team {
+  overflow: hidden;
+  padding-top: 30px;
+
+  @include media-up(md) {
+    padding-top: 60px;
+  }
+
+  &__title {
+    @include media-up(xl) {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
+
   &__filters {
     width: calc(100% + 24px);
     padding-right: 24px;

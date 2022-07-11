@@ -182,11 +182,15 @@ label {
     padding: 40px 0 100px;
   }
 
+  @include media-up(xl) {
+    padding: 40px 0 120px;
+  }
+
   &--bg {
     background: $color-light;
   }
 
-  .section:last-child {
+  section:last-child {
     padding-bottom: 0;
   }
 }

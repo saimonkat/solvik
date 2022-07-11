@@ -17,6 +17,11 @@
     @include media-up(md) {
       margin-bottom: 32px;
     }
+
+    @include media-up(xl) {
+      font-size: 32px;
+      line-height: 44px;
+    }
   }
 
   &__wrapper {

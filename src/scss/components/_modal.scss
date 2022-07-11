@@ -7,6 +7,7 @@
 
   @include media-down(sm) {
     width: 100%;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
   }
@@ -16,6 +17,29 @@
     max-width: 578px;
     padding: 60px 80px;
     border-radius: 24px;
+  }
+
+  .fancybox-change & {
+    animation-duration: 0s;
+  }
+
+  .carousel__button.is-close {
+    top: 24px;
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    background: $color-blue-10;
+    color: $color-gray;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      filter: none;
+    }
   }
 
   &--big {

@@ -3,7 +3,7 @@
   width: 100%;
   padding: 9px 20px;
   font-family: $font;
-  background: $color-blue;
+  background-color: $color-blue;
   color: $color-white;
   @include fz14-16;
   font-weight: 500;
@@ -25,49 +25,87 @@
   }
 
   &:hover {
-    background: $color-blue-hover;
+    background-color: $color-blue-hover;
   }
 
   &:active {
-    background: $color-blue-active;
+    background-color: $color-blue-active;
   }
 
   &:disabled {
-    background: $color-gray-2;
+    background-color: $color-gray-2;
     pointer-events: none;
   }
 
   &--red {
-    background: $color-red;
+    background-color: $color-red;
 
     &:hover {
-      background: $color-red-hover;
+      background-color: $color-red-hover;
     }
 
     &:active {
-      background: $color-red-active;
+      background-color: $color-red-active;
     }
   }
 
   &--transparent {
     color: $color-blue;
     outline: 1px solid $color-border-2;
-    background: transparent;
+    background-color: transparent;
 
     &:hover {
       color: $color-blue-hover;
       outline-color: $color-blue-hover;
-      background: transparent;
+      background-color: transparent;
     }
 
     &:active {
       color: $color-blue-active;
       outline-color: $color-blue-active;
-      background: transparent;
+      background-color: transparent;
+    }
+  }
+
+  &--light {
+    color: $color-blue;
+    border: 1px solid $color-blue;
+    background-color: $color-light;
+
+    &:hover {
+      background-color: $color-blue-hover;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $color-blue-active;
+      color: #fff;
     }
   }
 
   &--plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    padding: 0;
+
+    @include media-down(sm) {
+      width: 44px;
+      height: 44px;
+
+      span {
+        display: none;
+      }
+    }
+
+    @include media-up(md) {
+      padding: 8px 20px;
+    }
+  }
+
+  &--icon {
     display: flex;
     justify-content: center;
     align-items: center;

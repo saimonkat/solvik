@@ -27,6 +27,7 @@
 @import "components/sliders";
 @import "components/hamburger";
 @import "components/datepicker";
+@import "components/inline-scroll";
 
 // LAYOUT
 @import "layout/nav";
@@ -50,6 +51,12 @@
 @import "pages/about/history";
 @import "pages/about/why";
 @import "pages/about/team";
+
+// CONTACTS
+@import "pages/contacts/hero";
+@import "pages/contacts/schemes";
+@import "pages/contacts/gallery";
+@import "pages/contacts/reviews";
 
 // SERVICE
 @import "pages/service/wrapper";

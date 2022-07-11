@@ -7,8 +7,6 @@
 
   &__title {
     @include media-up(xl) {
-      font-size: 48px;
-      line-height: 58px;
       margin-bottom: 60px;
     }
   }

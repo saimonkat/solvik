@@ -24,11 +24,11 @@
   &__row {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     gap: 12px;
 
     @include media-up(md) {
       flex-direction: row;
+      align-items: flex-end;
       gap: 16px;
     }
 
@@ -41,6 +41,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     @include media-up(md) {
       flex: 1 1 0;
@@ -142,10 +143,18 @@
   &__item {
     position: relative;
     display: block;
-    padding: 12px 24px;
+    padding: 10px 24px;
     color: $color-blue;
     cursor: pointer;
     transition: color .25s;
+
+    @include media-up(xs) {
+      padding: 10px 32px;
+    }
+
+    @include media-up(md) {
+      padding: 12px 24px;
+    }
 
     &:after {
       content: '';

@@ -12,6 +12,7 @@ import cookies from './components/cookies';
 import sliders from './components/sliders';
 import modals from './components/modals';
 import autoSelect from './components/auto-select';
+import inlineScroll from './components/inline-scroll';
 
 // Pages
 import lk from './pages/lk';
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sliders();
     modals();
     autoSelect();
+    inlineScroll();
 
     lk();
     about();

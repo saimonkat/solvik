@@ -3,11 +3,21 @@
 }) %>
 
 <main class="main">
-    <div class="section">
+    <div class="page">
         <div class="container">
-            <h1>Контакты</h1>
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Контакты'}
+                ]
+            }) %>
+            <%=_.template(require('../templates/contacts/hero.html'))() %>
+            <%=_.template(require('../templates/contacts/schemes.html'))() %>
+            <%=_.template(require('../templates/contacts/gallery.html'))() %>
+            <%=_.template(require('../templates/contacts/reviews.html'))() %>
         </div>
     </div>
+    <%=_.template(require('../templates/common/director-form.html'))() %>
 </main>
 
 <%=_.template(require('../templates/modals.html'))() %>

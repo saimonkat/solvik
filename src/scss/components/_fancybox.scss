@@ -5,49 +5,20 @@
 
   &__container {
     color: inherit;
-  }
-
-  &__slide {
-    @include media-down(sm) {
-      display: block;
-      padding: 0;
-    }
-  }
-
-  &__content {
-    padding: 0;
-    color: inherit;
-
-    @include media-down(sm) {
-      min-height: 100vh;
-    }
-
-    .fancybox-change & {
-      animation-duration: 0s;
-    }
-
-    .carousel__button.is-close {
-      top: 24px;
-      right: 24px;
-      width: 32px;
-      height: 32px;
-      background: $color-blue-10;
-      color: $color-gray;
-
-      &:hover {
-        color: $color-blue;
-      }
-
-      svg {
-        width: 16px;
-        height: 16px;
-        filter: none;
-      }
-    }
+    --carousel-button-color: #fff;
 
     :focus {
       outline: inherit !important;
       box-shadow: inherit !important;
+    }
+  }
+
+  &__slide {
+    @include media-down(sm) {
+      &.has-inline {
+        display: block;
+        padding: 0;
+      }
     }
   }
 }
