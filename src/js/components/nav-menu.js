@@ -8,7 +8,7 @@ export default function(){
     const burgerItems = document.querySelectorAll('.nav .menu-item-hidden');
     const search = document.querySelector('.header__search');
     const searchBtn = document.querySelector('.header__search-btn');
-    const isMobile = window.matchMedia('(max-width: 991px)').matches;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const menuClass = 'show-nav';
     const searchClass = 'show-search';
 

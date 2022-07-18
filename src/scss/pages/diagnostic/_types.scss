@@ -1,0 +1,116 @@
+.diagnostic-types {
+  padding-top: 20px;
+
+  @include media-up(md) {
+    padding-top: 40px;
+  }
+
+  @include media-up(xl) {
+    padding-top: 60px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+
+    @include media-up(xl) {
+      max-width: 840px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__nav {
+    @include overscroll;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+
+    @include media-up(xl) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.diagnostic-nav-item {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border: 1px solid $color-blue;
+  border-radius: 24px;
+  color: $color-blue;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+
+  &.active {
+    background: $color-blue;
+    color: $color-white;
+  }
+}
+
+.diagnostic-tab {
+  @include overscroll;
+  display: flex;
+  gap: 12px;
+
+  &:not(.active) {
+    display: none;
+  }
+
+  @include media-up(md) {
+    gap: 16px;
+  }
+
+  @include media-up(xl) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.diagnostic-type {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 24px 32px;
+  background: $color-light;
+  border-radius: 32px;
+
+  @include media-only(sm) {
+    width: calc((100% - 12px) / 2);
+  }
+
+  @include media-only(md) {
+    width: calc((100% - 16px) / 2);
+  }
+
+  @include media-only(lg) {
+    width: calc((100% - 32px) / 3);
+  }
+
+  &__title {
+    @include fz16;
+    font-weight: 500;
+    color: $color-blue;
+    margin-bottom: 12px;
+  }
+
+  &__price {
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-blue;
+    margin-bottom: 16px;
+
+    @include media-up(xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: auto;
+    @include fz14-16;
+  }
+}

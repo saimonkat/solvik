@@ -1,0 +1,161 @@
+.diagnostic-quiz {
+  @include section-pad;
+  background: $color-light;
+}
+
+.quiz {
+  $self: &;
+
+  &__step {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: .5s;
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      transform: translateX(0);
+
+      & ~ #{$self}__step {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__title {
+    @include media-up(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+
+    @include media-up(md) {
+      margin-top: 40px;
+    }
+
+    #{$self}__step:first-child & {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    @include btn-big;
+
+    @include media-up(md) {
+      min-width: 240px;
+    }
+  }
+
+  &__final {
+    @include media-up(md) {
+      text-align: center;
+    }
+
+    #{$self}__btns {
+      margin-top: 32px;
+
+      @include media-up(md) {
+        justify-content: center;
+        margin-top: 56px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+
+    @include media-up(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__to-start {
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    text-align: left;
+    color: $color-red;
+    margin-bottom: 24px;
+
+    @include media-up(md) {
+      font-weight: 500;
+      padding-left: 32px;
+      margin-bottom: 40px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50% - 8px);
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../img/icon/back-arrow.svg);
+      pointer-events: none;
+    }
+  }
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #164168;
+  border-radius: 24px;
+
+  @include media-up(md) {
+    padding: 12px;
+    border-radius: 32px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include media-up(md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: #fff;
+    border-radius: 24px;
+
+    @include media-up(md) {
+      padding: 24px 32px;
+      border-radius: 32px;
+    }
+  }
+
+  &__title {
+    @include media-down(sm) {
+      font-family: $font;
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  &__radio {
+    flex-shrink: 0;
+
+    &:not(:hover),
+    &:not(:checked) {
+      border-color: $color-gray;
+    }
+  }
+}

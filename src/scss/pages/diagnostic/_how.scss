@@ -1,0 +1,86 @@
+.diagnostic-how {
+  @include section-pad-big;
+
+  &__title {
+    @include media-up(md) {
+      margin-bottom: 60px;
+    }
+
+    @include media-up(xl) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media-up(md) {
+      gap: 60px;
+    }
+
+    @include media-up(xl) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 120px;
+    }
+  }
+
+  &__content {
+    @include media-up(xl) {
+      flex: 1 1 0;
+    }
+  }
+
+  &__list {
+    color: $color-blue;
+
+    li {
+      position: relative;
+      padding-left: 25px;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+
+        @include media-up(md) {
+          margin-bottom: 16px;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: $color-red;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__sidebar {
+    background: $color-light;
+    border: 1px solid $color-blue;
+    border-width: 1px 6px 6px 1px;
+    border-radius: 32px;
+    padding: 40px 24px 40px;
+
+    @include media-up(md) {
+      padding: 40px 50px 50px;
+    }
+
+    @include media-up(xl) {
+      width: 428px;
+      flex-shrink: 0;
+      border-width: 1px 1px 8px 8px;
+    }
+
+    .btn {
+      margin-top: 40px;
+    }
+  }
+}

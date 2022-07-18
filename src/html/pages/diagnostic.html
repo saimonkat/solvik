@@ -1,0 +1,24 @@
+<%=_.template(require('../templates/header.html'))({
+    title: "Диагностика | Solvik"
+}) %>
+
+<main class="main">
+    <div class="page">
+        <div class="container container--wide">
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Диагностика'}
+                ]
+            }) %>
+            <%=_.template(require("../templates/diagnostic/hero.html"))() %>
+            <%=_.template(require("../templates/diagnostic/types.html"))() %>
+        </div>
+    </div>
+    <%=_.template(require("../templates/diagnostic/quiz.html"))() %>
+    <%=_.template(require("../templates/diagnostic/how.html"))() %>
+    <%=_.template(require("../templates/diagnostic/main.html"))() %>
+</main>
+
+<%=_.template(require('../templates/modals.html'))() %>
+<%=_.template(require('../templates/footer.html'))() %>

@@ -37,11 +37,15 @@
   width: 100%;
   flex-shrink: 0;
 
-  @include media-up(sm) {
+  @include media-only(sm) {
     width: calc((100% - 12px) / 2);
   }
 
-  @include media-up(md) {
+  @include media-only(md) {
+    width: calc((100% - 16px) / 2);
+  }
+
+  @include media-only(lg) {
     width: calc((100% - 32px) / 3);
   }
 

@@ -3,18 +3,17 @@ export default function() {
 
     inlineScroll && inlineScroll.forEach(scrollEl => {
         const pos = { left: 0, x: 0 };
-        let scrolling = false;
 
         scrollEl.addEventListener("wheel", (e) => {
-            if (scrollEl.scrollWidth > scrollEl.offsetWidth) {
-                e.preventDefault();
-                if (!scrolling) {
+            const scrollSize = scrollEl.scrollWidth - scrollEl.offsetWidth;
+            if (scrollSize > 0) {
+                const isStart = (scrollEl.scrollLeft == 0) && (e.deltaX + e.deltaY < 0);
+                const isEnd = (scrollEl.scrollLeft >= scrollSize) && (e.deltaX + e.deltaY > 0);
+                if (!isStart && !isEnd) {
+                    e.preventDefault();
                     scrollEl.scroll({
                         left: scrollEl.scrollLeft + e.deltaX + e.deltaY,
-                        behavior: 'smooth'
                     })
-                    scrolling = true;
-                    setTimeout(() => {scrolling = false;}, 300)
                 }
             }
         });

@@ -190,6 +190,10 @@ label {
     background: $color-light;
   }
 
+  section:first-child {
+    padding-bottom: 0;
+  }
+
   section:last-child {
     padding-bottom: 0;
   }

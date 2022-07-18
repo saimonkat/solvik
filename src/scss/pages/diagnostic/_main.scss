@@ -1,0 +1,40 @@
+.diagnostic-main {
+  @include section-pad;
+  background: $color-light;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 24px 40px;
+
+    @include media-up(md) {
+      gap: 60px;
+      padding: 40px 50px 50px;
+    }
+
+    @include media-up(xl) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 120px;
+    }
+  }
+
+  &__content {
+    @include media-up(xl) {
+      flex: 1 1 0;
+      max-width: 600px;
+    }
+
+    .btn {
+      margin-top: 40px;
+    }
+  }
+
+  &__img {
+    @include media-up(xl) {
+      width: 450px;
+      flex-shrink: 0;
+    }
+  }
+}

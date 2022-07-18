@@ -227,10 +227,7 @@
 }
 
 @mixin fz12-14 {
-  font-size: 12px;
-  line-height: 24px;
-
-  @include media-up(md) {
+  @include media-up(xl) {
     font-size: 14px;
     line-height: 26px;
   }
@@ -261,6 +258,12 @@
   }
 }
 
+@mixin fz16 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+// HEADLINES
 @mixin title-margin {
   margin-bottom: 32px;
 
@@ -294,6 +297,30 @@
   }
 }
 
+@mixin section-pad {
+  padding: 40px 0;
+
+  @include media-up(md) {
+    padding: 60px 0;
+  }
+
+  @include media-up(xl) {
+    padding: 80px 0;
+  }
+}
+
+@mixin section-pad-big {
+  padding: 60px 0;
+
+  @include media-up(md) {
+    padding: 80px 0;
+  }
+
+  @include media-up(xl) {
+    padding: 120px 0;
+  }
+}
+
 // BUTTONS
 @mixin btn-big {
   @include media-up(lg) {
@@ -309,4 +336,25 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+// OVERFLOW SCROLL
+@mixin overscroll {
+  @include media-down(sm) {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include media-between(md, lg) {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include media-down(lg) {
+    overflow-x: auto;
+  }
 }

@@ -17,6 +17,7 @@ import inlineScroll from './components/inline-scroll';
 // Pages
 import lk from './pages/lk';
 import about from './pages/about';
+import diagnostic from './pages/diagnostic';
 import appointment from './pages/appointment';
 
 // DOM content load
@@ -38,5 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     lk();
     about();
+    diagnostic();
     appointment();
 })
