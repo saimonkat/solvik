@@ -80,7 +80,11 @@
     }
 
     .btn {
-      margin-top: 40px;
+      margin-top: 24px;
+
+      @include media-up(md) {
+        margin-top: 40px;
+      }
     }
   }
 }
