@@ -1,4 +1,6 @@
 .service-work {
+  display: flex;
+  flex-direction: column;
   background: $color-light;
   border-radius: 12px;
   font-size: 16px;
@@ -29,6 +31,9 @@
   }
 
   &__content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
     padding: 24px;
 
     @include media-up(md) {
@@ -54,12 +59,13 @@
     font-size: 20px;
     line-height: 30px;
     color: $color-red;
+    margin-bottom: 16px;
   }
 
   &__btns {
     display: flex;
     gap: 8px;
-    margin-top: 16px;
+    margin-top: auto;
   }
 
   &__btn {

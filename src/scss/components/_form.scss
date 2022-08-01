@@ -44,7 +44,8 @@
     width: 100%;
 
     @include media-up(md) {
-      flex: 1 1 0;
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     &--hidden {
