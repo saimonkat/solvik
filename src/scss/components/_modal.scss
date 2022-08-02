@@ -283,12 +283,12 @@
     label {
       display: block;
       width: 100%;
-      padding: 16px 24px;
+      padding: 16px 50px 16px 24px;
       font-weight: 500;
       text-align: left;
 
       @include media-up(md) {
-        padding: 16px 80px;
+        padding: 16px 110px 16px 80px;
       }
     }
 
