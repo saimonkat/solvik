@@ -1,4 +1,5 @@
 .service-work {
+  $self: &;
   display: flex;
   flex-direction: column;
   background: $color-light;
@@ -60,6 +61,45 @@
     line-height: 30px;
     color: $color-red;
     margin-bottom: 16px;
+  }
+
+  &__hint {
+    margin-top: auto;
+
+    & ~ #{$self}__btns {
+      margin-top: 0;
+    }
+
+    &-title {
+      position: relative;
+      padding-left: 36px;
+      color: $color-blue;
+      font-weight: 500;
+      margin-bottom: 12px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        background: url(../img/icon/hint-yellow.svg) center / contain no-repeat;
+
+        @include media-up(md) {
+          top: 1px;
+          width: 24px;
+          height: 24px;
+        }
+
+        @include media-up(xl) {
+          top: 2px;
+        }
+      }
+    }
   }
 
   &__btns {
