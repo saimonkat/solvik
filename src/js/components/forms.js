@@ -48,7 +48,13 @@ export default function() {
     const autoVinInputs = document.querySelectorAll('input[name="auto_vin"]');
     autoVinInputs && autoVinInputs.forEach(input => {
         IMask(input, {
-            mask: '0000-0000-0000'
+            mask: '#################',
+            definitions: {
+                '#': /[A-HJ-NPR-Za-hj-npr-z0-9]/
+            },
+            prepare: function (str) {
+              return str.toUpperCase();
+            },
         });
     })
 
