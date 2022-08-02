@@ -14,7 +14,7 @@
   z-index: 1;
   width: 100%;
 
-  &:last-child &__check {
+  &:first-child:last-child &__check {
     display: none;
   }
 
