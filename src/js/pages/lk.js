@@ -4,7 +4,8 @@ export default function() {
         const form = document.querySelector('.lk-form');
         const lkInputs = form.querySelectorAll('input');
 
-        form.classList.add('active', 'edited');
+        form.classList.toggle('active');
+        form.classList.toggle('edited');
         lkInputs && lkInputs.forEach((lkInput) => {
             lkInput.disabled = false;
         })

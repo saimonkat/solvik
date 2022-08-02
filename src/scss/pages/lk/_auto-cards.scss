@@ -18,9 +18,14 @@
   padding: 16px 24px;
   border-radius: 32px;
   background: $color-light;
+  transition: background-color .25s;
 
   @include media-up(md) {
     padding: 24px;
+  }
+
+  &:hover {
+    background-color: $color-light-hover;
   }
 
   &__content {
@@ -38,20 +43,13 @@
     display: block;
     padding-right: 100px;
     color: $color-blue;
-    margin-bottom: 16px;
 
     @include media-up(md) {
       font-weight: 500;
-      margin-bottom: 32px;
     }
 
     p {
       margin-bottom: 4px;
     }
-  }
-
-  &__remove {
-    font-weight: 500;
-    @include link-red;
   }
 }

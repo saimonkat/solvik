@@ -57,7 +57,6 @@
 
     #{$self}.edited & {
       background: $color-red;
-      pointer-events: none;
     }
 
     svg {
@@ -145,6 +144,21 @@
 
     @include media-up(md) {
       display: none;
+    }
+  }
+
+  &__remove {
+    font-weight: 500;
+    @include link-red;
+    margin-top: 16px;
+
+    @include media-up(md) {
+      margin-top: 0;
+    }
+
+    @include media-up(lg) {
+      margin-bottom: 18px;
+      margin-left: auto;
     }
   }
 }

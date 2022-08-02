@@ -40,15 +40,6 @@
             <span class="lk-auto__info-title">Опция 2</span>
             <span class="lk-auto__info-value">Нет защиты двигателя</span>
         </div>
-        <!-- Инлайн-стили для демо, на бэке не нужны -->
-        <div class="lk-auto__info" style="grid-column-start: 1;">
-            <span class="lk-auto__info-title">Опция 3</span>
-            <span class="lk-auto__info-value">Мощность двигателя:72KW</span>
-        </div>
-        <div class="lk-auto__info">
-            <span class="lk-auto__info-title">Опция 4</span>
-            <span class="lk-auto__info-value">Мощность двигателя:72KW</span>
-        </div>
     </div>
     <div class="lk-auto__footer">
         <div class="form__item">
@@ -68,6 +59,11 @@
             <input type="checkbox" name="remember" class="red" id="is_main_auto" checked>
             <label for="is_main_auto">Сделать главным</label>
         </div>
+        <button class="lk-auto__remove"
+                data-fancybox
+                data-src="#modal-auto-remove">
+            Удалить из гаража
+        </button>
         <button type="submit"
                 class="lk-auto__save-btn btn btn--red">
             Сохранить изменения
