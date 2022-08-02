@@ -143,7 +143,6 @@ input[type="radio"] {
 
 .input-block {
   display: flex;
-  gap: 12px;
   color: $color-blue;
 
   input {
@@ -156,5 +155,9 @@ input[type="radio"] {
     @include media-up(xl) {
       margin-top: 4px;
     }
+  }
+
+  label {
+    padding-left: 12px;
   }
 }
