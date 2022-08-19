@@ -2,16 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   color: $color-gray;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   @include fz12-14;
 
   @include media-up(md) {
     margin-bottom: 40px;
     font-weight: 500;
-  }
-
-  @include media-up(xl) {
-    margin-bottom: 60px;
   }
 
   li {

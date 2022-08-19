@@ -3,9 +3,15 @@
 }) %>
 
 <main class="main">
-    <div class="section">
+    <div class="page">
         <div class="container">
-            <h1>Новости</h1>
+            <%=_.template(require('../templates/breadcrumbs.html'))({
+                pages: [
+                    {name: 'Главная', url: 'home.html'},
+                    {name: 'Новости'}
+                ]
+            }) %>
+            <%=_.template(require("../templates/news/archive.html"))() %>
         </div>
     </div>
 </main>

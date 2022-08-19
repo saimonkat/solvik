@@ -1,5 +1,6 @@
 .cart {
   &__header {
+    position: relative;
     margin-bottom: 24px;
 
     @include media-up(md) {
@@ -7,6 +8,24 @@
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 60px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 40%;
+        top: -20px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(../img/vector/star.svg) center / contain no-repeat;
+      }
+    }
+
+    @include media-up(lg) {
+      &:before {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -37,9 +56,32 @@
     margin-top: 24px;
 
     @include media-up(md) {
+      position: relative;
       margin-top: 40px;
       gap: 24px;
       align-items: flex-end;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 8%;
+        top: 30px;
+        display: block;
+        width: 27px;
+        height: 27px;
+        background: url(../img/vector/star.svg) center / contain no-repeat;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 32%;
+        top: 10px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(../img/vector/star-2.svg) center / contain no-repeat;
+      }
     }
 
     &--clarify {
