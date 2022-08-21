@@ -55,7 +55,7 @@
     gap: 16px;
     margin-top: 24px;
 
-    @include media-up(md) {
+    @include media-up(lg) {
       position: relative;
       margin-top: 40px;
       gap: 24px;
@@ -89,6 +89,14 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
+
+        &:before {
+          top: 70px;
+        }
+
+        &:after {
+          top: 40px;
+        }
       }
     }
   }
