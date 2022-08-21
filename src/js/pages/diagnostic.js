@@ -13,6 +13,22 @@ export default function() {
         })
     })
 
+    // Diagnostic how toggler
+    const toggler = document.querySelector('.diagnostic-how__toggler');
+    const text = document.querySelector('.diagnostic-how__list');
+    if (toggler && text) {
+        text.style.maxHeight = text.scrollHeight + "px";
+        toggler.addEventListener('click', () => {
+            toggler.classList.toggle('active');
+            text.classList.toggle('hidden');
+            if (text.classList.contains('hidden')) {
+                text.style.maxHeight = '370px';
+            } else {
+                text.style.maxHeight = text.scrollHeight + "px";
+            }
+        })
+    }
+
     // Diagnostic quiz
     const quiz = document.querySelector('.quiz');
     if (quiz) {

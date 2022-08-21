@@ -35,6 +35,8 @@
 
   &__list {
     color: $color-blue;
+    overflow: hidden;
+    transition: max-height .5s;
 
     li {
       position: relative;
@@ -58,6 +60,37 @@
         height: 12px;
         background: $color-red;
         border-radius: 50%;
+      }
+    }
+  }
+
+  &__toggler {
+    width: fit-content;
+    margin-top: 24px;
+    padding-left: 32px;
+    font-weight: 500;
+    color: $color-blue;
+    background-image: url(../img/vector/btn-minus.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: left center;
+    cursor: pointer;
+
+    span:last-child {
+      display: none;
+    }
+
+    &.active {
+      background-image: url(../img/vector/btn-plus.svg);
+
+      span {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
       }
     }
   }
