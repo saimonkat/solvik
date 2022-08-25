@@ -124,4 +124,13 @@ export default function() {
             Fancybox.close();
         })
     });
+
+    // Open by hash on page loading
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        const uri = window.location.toString();
+        const clean_uri = uri.substring(0, uri.indexOf('#'));
+        window.history.replaceState({}, document.title, clean_uri);
+        Fancybox.show([{src: hash}]);
+    }
 }
