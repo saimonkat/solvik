@@ -1,4 +1,6 @@
 .lk-work {
+  display: flex;
+  flex-direction: column;
   padding: 24px;
   background: $color-light;
   border-radius: 24px;
@@ -38,12 +40,13 @@
     font-size: 20px;
     line-height: 30px;
     color: $color-red;
+    margin-bottom: 16px;
   }
 
   &__btns {
     display: flex;
     gap: 8px;
-    margin-top: 16px;
+    margin-top: auto;
   }
 
   &__btn {

@@ -70,6 +70,8 @@
 }
 
 .diagnostic-type {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   flex-shrink: 0;
   padding: 24px 32px;

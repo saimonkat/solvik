@@ -33,10 +33,15 @@
     .form {
       &__row {
         flex-direction: row;
+        align-items: flex-end;
 
         @include media-up(lg) {
           gap: 16px;
         }
+      }
+
+      &__item {
+        flex: unset;
       }
     }
   }
